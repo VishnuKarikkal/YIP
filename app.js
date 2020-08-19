@@ -1,28 +1,29 @@
 const express = require("express");
 const path = require("path");
 const cors = require('cors');
-const checkAuth=require('./src/middleware/check-auth')
-const bodyParser = require('body-parser')
+const checkAuth = require('./src/middleware/check-auth')
+const bodyParser = require('body-parser');
+const loginRouter=require('./src/routes/loginRouter');
+const gameRouter = require('./src/routes/gameRouter')
 const app = new express();
-app.use(express.urlencoded({extended:true}))
-app.use(express.static("./public"));
-app.use(bodyParser.urlencoded({ extended:true }))
+app.use(cors({ origin: "*" }));
+app.use(express.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
 app.set("view engine", "html");
-//app.set("views", "./src/views");
-
-app.set('views',__dirname+"/src/views");
+app.set("views", "./src/views");
 app.use(cors());
+app.use(express.static("./public"));
 
-//app.use('',api);
-app.get('/',(req,res)=>
-                        {
-                           res.sendFile(__dirname+'/src/views/team.html');
-                        });
+const port=process.env.PORT||5000;
+app.use('/login',loginRouter);
+app.use('/game',gameRouter);
+app.get('/',function(req,res){
+    res.send('hi');
+})
 
-app.listen(3232,()=>
-                    {
-                        console.log("Server Listening On Port:3232");
-                    });
+app.listen(port, () => {
+    console.log(`Server Listening On Port:${port}`);
+});
 
-//const port=process.env.PORT||5000;
+
