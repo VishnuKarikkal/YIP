@@ -1,8 +1,6 @@
 const express = require("express");
 const loginRouter = express.Router();
 const user = require("../model/user");
-const cors=require('cors');
-app.use(cors({ origin: "*" }));
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
 /* copy paste as of now,Eventually i will correct it.. */

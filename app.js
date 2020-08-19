@@ -3,8 +3,9 @@ const path = require("path");
 const cors = require('cors');
 const checkAuth = require('./src/middleware/check-auth')
 const bodyParser = require('body-parser');
-const login=require('./src/routes/loginRouter')
-const app = new express();
+const loginRouter=require('./src/routes/loginRouter')
+const app = new express();;
+app.use(cors({ origin: "*" }));
 app.use(express.urlencoded({extended: true}))
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({extended: true}))
@@ -16,7 +17,7 @@ app.set("views", "./src/views");
 app.use(cors());
 
 //app.use('',api);
-app.use(login,loginRouter)
+app.use('login',loginRouter)
 
 app.listen(3232, () => {
     console.log("Server Listening On Port:3232");
