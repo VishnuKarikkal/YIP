@@ -3,8 +3,71 @@ const loginRouter = express.Router();
 const user = require("../model/user");
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
-/* copy paste as of now,Eventually i will correct it.. */
+const jwtKey='secret'|| process.env.JWT_KEY;
+    /* code for login */
 loginRouter.post("/",function(req,res){
+    user.find({id:req.body.name}).exec()
+        .then(
+            user=>{
+                if(user.length<1){
+                    // if user is not present in database
+                    return res.status(401).json(
+                        {
+                            message:"Auth failed ",
+
+                        }
+                    )
+                }
+                else{
+                     //checking wether password matches
+                    bcrypt.compare(req.body.password,user[0].password,(err,result)=>{
+                        //if it doesn't match
+                        if(err){
+
+                            return res.status(401).json({
+                                message:"Auth failed"
+                            })
+                        }
+                        else if(result){
+                         //if it matches then sign user
+                            const token=jwt.sign(
+                                {
+
+                                    username:user[0].name
+                                },
+                                jwtKey,
+                                {
+                                    expiresIn:"1hr"
+                                }
+                            )
+                            console.log("authsuccessful")
+                            return res.status(200).json({
+                                message:"Auth successful",
+                                redirect:true,
+                                token:token
+                            })
+
+                        }
+                        else{
+                            return res.status(401).json({
+                                message:"Auth failed wrong password"
+                            })
+                        }
+                    })
+                }
+            }
+        )
+        .catch(
+            (err=>{
+                console.log(err);
+                res.status(500).json({
+                    error:err
+                })
+            })
+        )
+})
+
+loginRouter.post("/changePassword",function(req,res){
     user.find({id:req.body._id}).exec()
         .then(
             user=>{
