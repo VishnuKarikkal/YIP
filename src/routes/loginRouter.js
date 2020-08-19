@@ -4,7 +4,10 @@ const user = require("../model/user");
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
 const jwtKey='secret'|| process.env.JWT_KEY;
-    /* code for login */
+
+loginRouter.get('/',function(req,res){
+    res.send('hi');
+})
 loginRouter.post("/",function(req,res){
     user.find({id:req.body.name}).exec()
         .then(
@@ -32,7 +35,6 @@ loginRouter.post("/",function(req,res){
                          //if it matches then sign user
                             const token=jwt.sign(
                                 {
-
                                     username:user[0].name
                                 },
                                 jwtKey,
@@ -66,7 +68,7 @@ loginRouter.post("/",function(req,res){
             })
         )
 })
-
+/*---------------------code to handle password change request------------------------*/
 loginRouter.post("/changePassword",function(req,res){
     user.find({id:req.body._id}).exec()
         .then(

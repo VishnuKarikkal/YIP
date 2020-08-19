@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.set("view engine", "html");
 app.set("views", "./src/views");
 app.use(cors());
+app.use(express.static("./public"));
 const port=process.env.PORT||5000;
 app.use('login',loginRouter)
 app.get('/',function(req,res){
