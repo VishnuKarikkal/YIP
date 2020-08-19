@@ -1,0 +1,7 @@
+.navbar-brand{
+    transform: scale(1.1);
+    font-family: 'Rye', cursive;
+}
+.nav-link{
+    font-family: 'Poppins', sans-serif;
+}

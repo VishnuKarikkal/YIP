@@ -4,75 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEAM-Page</title>
+    
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/team.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Berkshire+Swash&family=Cairo:wght@400;900&family=Gayathri&family=Indie+Flower&family=Titan+One&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Berkshire+Swash&family=Cairo:wght@400;900&family=Gayathri&family=Indie+Flower&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap">
 </head>
-<body>
+<body onload="gameCheck()">
 
-    <nav class="navbar navbar-expand-sm">
-        <a class="navbar-brand" href="/"></a>   
-       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-     
-       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-         <ul class="navbar-nav mr-auto">
-                                        <!-- TEAM Page Header -->
-           <li class="nav-item">
-             <a class="nav-link" href="#">Home</a>
-           </li>
-           <li class="nav-item">
-            <a class="nav-link " href="#">Game</a>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bold" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#">Logout</a>
+            <a class="nav-link font-weight-bold" href="#">Game</a>
           </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a class="nav-link font-weight-bold my-2 my-sm-0" onclick="logout()">LogOut</a>
+          <!-- <button class="btn btn-success my-2 my-sm-0 font-weight-bold" type="submit">Login</button> -->
+        </form>
+      </div>
+  </nav>
+        <!-- Gaming Area -->
+     <div class="container text-center">
 
-         </ul>
-       </div>
-     </nav>
-    
-     <div class="container">
+        <h2 id="teamName" style="font-family: 'Berkshire Swash', cursive;color: fuchsia;">TEAM NAME</h1>
+            <!-- instructions -->          
 
-        <h2>TEAM NAME</h1>
-            <!-- instructions -->
-            <div class="alert alert-primary" role="alert" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-               Instructions!
-              </div>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    inssssss
-                    insss
-                </div>
-              </div>
-        
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary alert alert-primary" data-toggle="modal" data-target="#staticBackdrop" style="font-family: 'Baloo 2', cursive;">
+  Instructions!
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel" style="color:royalblue;">Maximize Your Resources!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="text-indent: 70px;font-family: 'Baloo 2', cursive;color: chocolate;">
+          You are required to send a message C or D to the World Bank every month. Depending on the following rules, the Bank will either give you funds during that month or ask you to contribute a specific sum from your resources. Sometimes the World Bank may have additional funds and this information will be announced in advance.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-family: 'Baloo 2', cursive;background-color: blueviolet;">Ready For Fun?!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
               <div class="card text-center">                <!--Active Games Vote Section-->
-                <h5 class="card-header">Active Game</h5>
-                <div class="card-body">
-                  <h5 class="card-title">Current Game-Play Month</h5>
-                  <div>
+                <h5 class="card-header" style="font-family: 'Baloo 2', cursive;color: darkmagenta;">Active Game</h5>
+                <div class="card-body"> 
+                  
+                  <h5 class="card-title" style="font-family: 'Titan One', cursive;color: crimson;">Current Game-Play Month</h5>
+                  <div>       <!--Voting Options-->
                     <div class="row" style="width: fit-content;margin: 10px auto;">
-                        <div class="col-md-5" style="border: 1px solid rebeccapurple;border-radius: 50%;margin-left: 5px;">
-
-                            <input type="radio" name="vote" id="" value="c" style="margin-right: 10px;"><Label><h1>C</h1></Label>
+                        <div class="col-md-5" style="margin-left: 5px;">
+                            <button id="bt1" class="opt radio-btn" type="button" style="border: 1px solid rebeccapurple;border-radius: 50%;width: 70px;height: 70px;margin: auto auto;">
+                              <h1 style="color: White;">C</h1>
+                            </button>
                         </div>
-                        <div class="col-md-5" style="border: 1px solid rebeccapurple;border-radius: 50%;margin-left: 5px;">
-
-                            <input type="radio" name="vote" id="" value="d" style="margin-right: 10px;"><Label><h1>D</h1></Label><br>
+                        <div class="col-md-5" style="margin-left: 5px;">
+                          <button id="bt2" class="opt radio-btn" type="button" style="border: 1px solid rebeccapurple;border-radius: 50%;width: 70px;height: 70px;margin: auto auto;">
+                            <h1 style="color: White;">D</h1>
+                          </button>
                         </div>
                     </div>
                 </div>
-                  <a href="#" class="btn btn-primary">Vote!</a>
+                  <a href="#" class="btn btn-primary" style="font-family: 'Baloo 2', cursive;">Vote!</a>
                 </div>
               </div>
 
      </div>
+                <!-- Game History section -->
+<div class="container text-center" style="border: 2px solid red;border-radius: 15px;margin: 20px auto 10px auto;">
+
+  <h2 style="font-family: 'Baloo 2', cursive;color: darkmagenta;">TEAM Stats</h2>
+  <h4 id="balance" style="font-family: 'Titan One', cursive;color: chartreuse;">Balance Available:</h2>
+  
+              <!-- game history grid -->
+                         <!-- 3 rows conataining 4 months each -->
+<div class="container" style="border: 2px solid violet;margin: 15px 0 10px 0;border-radius: 15px;">
+  <h6 style="margin-top: 15px;font-family: 'Baloo 2', cursive;color: darkmagenta;">Game History</h6>
+  <div class="row" style="margin-top: 10px;margin-bottom: 10px;">     <!-- row1 -->
+      <div class="col-md-3">    <!-- history of january -->
+
+        <div class="card">
+          <div class="card-header" id="historyMonth">
+            JAN
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="historyBalance">Balance</h5>
+            <h4 class="card-title" id="historyVote">Vote</h4>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+
+        <div class="card">
+          <div class="card-header" id="historyMonth">
+            FEB
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="historyBalance">Balance</h5>
+            <h4 class="card-title" id="historyVote">Vote</h4>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+
+        <div class="card">
+          <div class="card-header" id="historyMonth">
+            MAR
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="historyBalance">Balance</h5>
+            <h4 class="card-title" id="historyVote">Vote</h4>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+
+        <div class="card">
+          <div class="card-header" id="historyMonth">
+            APR
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="historyBalance">Balance</h5>
+            <h4 class="card-title" id="historyVote">Vote</h4>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+  <div class="row" style="margin-top: 10px;margin-bottom: 10px;">     <!-- row2 -->
+
+    <div class="col-md-3">
+
+      <div class="card">
+        <div class="card-header" id="historyMonth">
+          MAY
+        </div>
+        <div class="card-body">
+          <h5 class="card-title" id="historyBalance">Balance</h5>
+          <h4 class="card-title" id="historyVote">Vote</h4>
+        </div>
+      </div>
+
+    </div>
+<div class="col-md-3">
+
+  <div class="card">
+    <div class="card-header" id="historyMonth">
+      JUN
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" id="historyBalance">Balance</h5>
+      <h4 class="card-title" id="historyVote">Vote</h4>
+    </div>
+  </div>
+
+</div>
+<div class="col-md-3">
+
+  <div class="card">
+    <div class="card-header" id="historyMonth">
+      JUL
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" id="historyBalance">Balance</h5>
+      <h4 class="card-title" id="historyVote">Vote</h4>
+    </div>
+  </div>
+
+</div>
+<div class="col-md-3">
+
+  <div class="card">
+    <div class="card-header" id="historyMonth">
+      AUG
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" id="historyBalance">Balance</h5>
+      <h4 class="card-title" id="historyVote">Vote</h4>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+  <div class="row" style="margin-top: 10px;margin-bottom: 10px;">     <!-- row3 -->
+    <div class="col-md-3">
+
+      <div class="card">
+        <div class="card-header" id="historyMonth">
+          SEP
+        </div>
+        <div class="card-body">
+          <h5 class="card-title" id="historyBalance">Balance</h5>
+          <h4 class="card-title" id="historyVote">Vote</h4>
+        </div>
+      </div>
+
+    </div>
+<div class="col-md-3">
+
+  <div class="card">
+    <div class="card-header" id="historyMonth">
+      OCT
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" id="historyBalance">Balance</h5>
+      <h4 class="card-title" id="historyVote">Vote</h4>
+    </div>
+  </div>
+
+</div>
+<div class="col-md-3">
+
+  <div class="card">
+    <div class="card-header" id="historyMonth">
+      NOV
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" id="historyBalance">Balance</h5>
+      <h4 class="card-title" id="historyVote">Vote</h4>
+    </div>
+  </div>
+
+</div>
+<div class="col-md-3">
+
+  <div class="card">
+    <div class="card-header" id="historyMonth">
+      DEC
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" id="historyBalance">Balance</h5>
+      <h4 class="card-title" id="historyVote">Vote</h4>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</div>
+
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  
+    <script src="/js/team.js"></script>
 </body>
 </html>
