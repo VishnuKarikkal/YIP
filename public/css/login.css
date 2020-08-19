@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap");
 
 /*  --------------------------------------
 font-family: 'Dancing Script', cursive;
@@ -14,114 +14,124 @@ font-family: 'Rye', cursive;
 -----------------------------------------
  */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgb(233, 233, 199);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: rgb(233, 233, 199); */
 }
-
-.navbar-brand{
-    transform: scale(1.1);
-    font-family: 'Rye', cursive;
+body{
+  background: rgb(0,201,162);
+background: -moz-linear-gradient(315deg, rgba(0,201,162,1) 0%, rgba(0,212,255,1) 100%);
+background: -webkit-linear-gradient(315deg, rgba(0,201,162,1) 0%, rgba(0,212,255,1) 100%);
+background: linear-gradient(315deg, rgba(0,201,162,1) 0%, rgba(0,212,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c9a2",endColorstr="#00d4ff",GradientType=1);
 }
-.nav-link{
-    font-family: 'Poppins', sans-serif;
+.navbar-brand {
+  transform: scale(1.1);
+  font-family: "Rye", cursive;
 }
-.login-content{
-    /* background-color: rgba(184, 183, 183, 0.699); */
+.nav-link {
+  font-family: "Poppins", sans-serif;
 }
-.box{
-    width: 350px;
-    padding: 20px;
-    position: absolute;
-    top: 350px;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    background-color: rgba(30, 33, 82, 0.3);
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .5) ;
-    overflow: hidden;
+.login-content {
+  /* background-color: rgba(184, 183, 183, 0.699); */
 }
-.box .hd{
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 30px;
-    font-family: 'Piedra', cursive;
-    color: black;
-    font-size: 40px;
+.box {
+  width: 350px;
+  padding: 20px;
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
-.hd:hover{
-    color: rgba(255, 255, 255, 0.75);
+.box .hd {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-family: "Piedra", cursive;
+  color: black;
+  font-size: 40px;
 }
-.box input[type = "email"], .box input[type="password"]{
-    background: rgba(190, 189, 189, 0.5);
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid rgb(39, 36, 204);
-    padding: 14px 10px;
-    width: 250px;
-    outline: none;
-    color: black;
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
-    border-radius: 10px;
-    transition: 0.25s;
+.hd:hover {
+  color: rgb(39, 36, 204);
 }
-.box input[type = "email"]:hover, .box input[type="password"]:hover{
-    border-color:white;
+.box input[type="email"],
+.box input[type="password"] {
+  background: rgba(201, 201, 201, 0.5);
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid rgb(39, 36, 204);
+  padding: 14px 10px;
+  width: 250px;
+  outline: none;
+  color: black;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  transition: 0.25s;
 }
-.box input[type = "email"]:focus, .box input[type="password"]:focus{
-    width: 300px;
-    border-color:lightseagreen;
+.box input[type="email"]:hover,
+.box input[type="password"]:hover {
+  border-color: rgba(0,212,255,1);
 }
-.login-btn{
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid rgb(39, 36, 204);
-    padding: 14px 40px;
-    width: 150px;
-    outline: none;
-    color: rgb(39, 36, 204);
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 44px;
-    transition: 0.25s;
-    cursor: pointer;
+.box input[type="email"]:focus,
+.box input[type="password"]:focus {
+  width: 300px;
+  border-color: lightseagreen;
 }
-.login-btn:hover{
-    background: rgb(39, 36, 204);
-    color: white;
-    font-weight: bold;
-    transform: scale(0.9);
+.login-btn {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid rgb(39, 36, 204);
+  padding: 14px 40px;
+  width: 150px;
+  outline: none;
+  color: rgb(39, 36, 204);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 44px;
+  transition: 0.25s;
+  cursor: pointer;
 }
-.b1{
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    font-family: 'Russo One', sans-serif;
-    font-size: 14px;
-    padding: 10px;
-    transition: 0.8s;
-    display: block;
+.login-btn:hover {
+  background: rgb(39, 36, 204);
+  color: white;
+  font-weight: bold;
+  transform: scale(0.9);
 }
-.b2{
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    font-family: 'Russo One', sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    transition: 0.8s;
-    display: block;
+.b1 {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-family: "Russo One", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  transition: 0.8s;
+  display: block;
 }
-.b1:hover, .b2:hover{
-    background: rgba(0, 0, 0, .3);
-    color: white;
+.b2 {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-family: "Russo One", sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  transition: 0.8s;
+  display: block;
+}
+.b1:hover,
+.b2:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
 }
