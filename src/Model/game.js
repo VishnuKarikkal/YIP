@@ -2,7 +2,7 @@ const mongoose=require("mongoose")
 
 const game=new mongoose.Schema({
     teamName:String,
-    month:[{input:String,amount:Number,isBonus:Boolean,isActive:Boolean,bonusOrPenalty:Number}],
+    gameMonth:[{input:String,amount:Number,isBonus:Boolean,isActive:Boolean,bonusOrPenalty:Number}],
     totalBalance:String,
     totalBonus:String,
     totalPenalty:String
