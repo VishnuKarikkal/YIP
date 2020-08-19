@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.set("view engine", "html");
 app.set("views", "./src/views");
 
-
+/* copy paste as of now,Eventually i will correct it.. */
 
 
 const port=process.env.PORT||5000;
