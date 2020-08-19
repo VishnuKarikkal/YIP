@@ -1,54 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome | Yamuni</title>
 
     <!-- CSS only -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/welcome.css">
-<!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
-
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/css/welcome.css" />
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation Bar starts here  -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link font-weight-bold" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="#">Game</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link font-weight-bold my-2 my-sm-0" href="#">Sign In</a>
-            <!-- <button class="btn btn-success my-2 my-sm-0 font-weight-bold" type="submit">Login</button> -->
-          </form>
-        </div>
+      <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bold" href="#"
+              >Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="#">Game</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a
+            class="nav-link font-weight-bold my-2 my-sm-0"
+            href="/src/views/login.html"
+            >Sign In</a>
+        </form>
+      </div>
     </nav>
 
-    <div class="container wel-content p-5" style="border: 1px solid royalblue;border-radius: 15px;margin: 10px auto 10px auto;">
+    <!-- Content starts here  -->
+    <div class="wel-content p-5">
       <div class="mx-5 text-justify">
-        <strong class="display-4 mb-3">Rules of the Game</strong><br>
-        <p class="mt-4" style="text-indent: 70px;">Yamuni is a small developing country. It consists of four provinces: Northern Province (N), Southern Province (S), Eastern Province (E), and Western Province (W). You represent the top administrative council of your province. Your main goal is to maximize your resources by the end of the current year. Now is January, the beginning of the year.</p>
-        <p style="text-indent: 70px;">The World Bank is providing financial support. Each province has been given initial resources of $200 million. It will follow some rules to distribute the funds. The rules are given below. It will release the funds every month of the year. You may keep a record of your own receipts and contributions. You will not communicate with other provinces, unless meetings are arranged from time to time. During some months the World Banks will have additional funds, and the pay-offs (both receipts and payments) or contributions will be multiplied several times. These are indicated in parentheses after some months. For example, the payoff in March is 3 times the normal payoff, so F you receive funds you receive 3 times, and if you have to contribute, your contributions will be 3 times.</p>
-        <p style="text-indent: 70px;">You are required to send a message C or D to the World Bank every month. Depending on the following rules, the Bank will either give you funds during that month or ask you to contribute a specific sum from your resources. Sometimes the World Bank may have additional funds and this information will be announced in advance.</p>
-        <p style="text-indent: 70px;">You will have 3 minutes to discuss your strategy for sending the January message. Subsequently you will have only I minute every month to decide what message to send. The message will be sent on behalf of the province.</p>
+        <strong class="display-4 mb-3">Rules of the Game</strong><br />
+        <p class="mt-4" style="text-indent: 70px;">
+          Yamuni is a small developing country. It consists of four provinces:
+          Northern Province (N), Southern Province (S), Eastern Province (E),
+          and Western Province (W). You represent the top administrative council
+          of your province. Your main goal is to maximize your resources by the
+          end of the current year. Now is January, the beginning of the year.
+        </p>
+        <p style="text-indent: 70px;">
+          The World Bank is providing financial support. Each province has been
+          given initial resources of $200 million. It will follow some rules to
+          distribute the funds. The rules are given below. It will release the
+          funds every month of the year. You may keep a record of your own
+          receipts and contributions. You will not communicate with other
+          provinces, unless meetings are arranged from time to time. During some
+          months the World Banks will have additional funds, and the pay-offs
+          (both receipts and payments) or contributions will be multiplied
+          several times. These are indicated in parentheses after some months.
+          For example, the payoff in March is 3 times the normal payoff, so F
+          you receive funds you receive 3 times, and if you have to contribute,
+          your contributions will be 3 times.
+        </p>
+        <p style="text-indent: 70px;">
+          You are required to send a message C or D to the World Bank every
+          month. Depending on the following rules, the Bank will either give you
+          funds during that month or ask you to contribute a specific sum from
+          your resources. Sometimes the World Bank may have additional funds and
+          this information will be announced in advance.
+        </p>
+        <p style="text-indent: 70px;">
+          You will have 3 minutes to discuss your strategy for sending the
+          January message. Subsequently you will have only I minute every month
+          to decide what message to send. The message will be sent on behalf of
+          the province.
+        </p>
       </div>
     </div>
 
-</body>
+    <!-- Footer starts here  -->
+    <footer></footer>
+
+    <!-- External JS files linked here  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script>
+      var tl = gsap.timeline({ defaults: { duration: 1 } });
+
+      tl.from("strong", { y: -50, opacity: 0 }).from(
+        "p",
+        { y: -50, stagger: 0.6, opacity: 0 },
+        "-=.5"
+      );
+    </script>
+  </body>
 </html>
