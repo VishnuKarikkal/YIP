@@ -20,7 +20,7 @@ const port=process.env.PORT||5000;
 //app.use('/game',gameRouter);          //gameRoutes
 app.get('/',function(req,res){
     // res.send('hi');
-    res.sendFile(__dirname+'/src/views/adminDashboard.html');
+    res.sendFile(__dirname+'/src/views/welcome.html');
 })
 
 app.listen(port, () => {

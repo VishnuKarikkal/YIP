@@ -34,9 +34,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c9a2",endCo
 .nav-link {
   font-family: "Poppins", sans-serif;
 }
-.login-content {
-  /* background-color: rgba(184, 183, 183, 0.699); */
-}
+/* .login-content {
+  background-color: rgba(184, 183, 183, 0.699);
+} */
 .box {
   width: 350px;
   padding: 20px;
@@ -62,7 +62,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c9a2",endCo
 .hd:hover {
   color: rgb(39, 36, 204);
 }
-.box input[type="email"],
+.box input[type="text"],
 .box input[type="password"] {
   background: rgba(201, 201, 201, 0.5);
   display: block;
