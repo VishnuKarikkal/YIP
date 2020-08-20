@@ -1,39 +1,34 @@
-.radio-btn{
-    background-color:royalblue;
-    /* border: 1px solid #4A4A4A; */
-    color: #4A5362;   
-    font-family: 'Titan One', cursive;
-    font-size: 14px;  
-    line-height: 26px;    
-    outline: none;
-  }
-  
-  .radio-btn-selected{
-    background-color: darkgreen;
-    /* border: 1px solid #55BC7E; */
-    color: #55BC7E;
-    font-family: 'Titan One', cursive;
-    font-size: 14px;  
-    line-height: 26px;    
-    outline: none;
-  }
-  #historyMonth
-  {
-    font-family: 'Titan One', cursive;
-  }
-  .row .card-body
-  {
-    font-family: 'Baloo 2', cursive;
-  }
-  .row .card-body h5
-  {
-    color:darkolivegreen ;
-  }
-  .row .card-body h4
-  {
-    color: blue;
-  }
-  .row .card-header
-  {
-    color: darkorchid;
-  }
+.radio-btn {
+  background-color: royalblue;
+  /* border: 1px solid #4A4A4A; */
+  color: #4a5362;
+  font-family: "Titan One", cursive;
+  font-size: 14px;
+  line-height: 26px;
+  outline: none;
+}
+
+.radio-btn-selected {
+  background-color: darkgreen;
+  /* border: 1px solid #55BC7E; */
+  color: #55bc7e;
+  font-family: "Titan One", cursive;
+  font-size: 14px;
+  line-height: 26px;
+  outline: none;
+}
+#historyMonth {
+  font-family: "Titan One", cursive;
+}
+.row .card-body {
+  font-family: "Baloo 2", cursive;
+}
+.row .card-body h5 {
+  color: darkolivegreen;
+}
+.row .card-body h4 {
+  color: blue;
+}
+.row .card-header {
+  color: darkorchid;
+}

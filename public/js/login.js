@@ -19,4 +19,3 @@ function checkLogIn()
     }
     return true;
 }
-

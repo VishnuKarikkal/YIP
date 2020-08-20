@@ -1,73 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Yamuni</title>
 
     <!-- CSS only -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/login.css">
-<!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!-- Navigation Bar starts here  -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-                <a class="nav-link font-weight-bold" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link font-weight-bold" href="#">Game</a>
-            </li>
-            </ul>
-        </div>
+      <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="#">Game</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Login content starts here  -->
     <div class="login-content">
-        <form class="box" method="POST" action="/userLogin" onsubmit="return checkLogIn()">
-            <a class="Display-4 hd text-decoration-none">Login</a><br>
-            <!-- TEAM NAME Dropdown -->
-<div class="btn-group">
-    <button type="button" id="drop" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Select TEAM
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">NORTH</a>
-      <a class="dropdown-item" href="#">SOUTH</a>
-      <a class="dropdown-item" href="#">EAST</a>
-      <a class="dropdown-item" href="#">WEST</a>
-    </div>
-  </div>
-            <input type="text" id="team" name="team" style="visibility:hidden;width: 1px;height: 1px;">
-            <input type="password" required="" id="password" placeholder="Password" name="password">
-            <p for="password-check" id="password-error"></p>
-            <input type="submit" value="Sign In" id="submit" class="login-btn text-decoration-none">
-            <a class="b1 text-decoration-none" href="#" target="_blank">FORGOT PASSWORD ?</a>
-            <a class="b2 text-decoration-none" href="#" target="_blank">Know more about YIP</a>
-        </form>
+      <form class="box was-validated" method="POST" action="/userLogin" onsubmit="return checkLogIn()">
+        <a class="Display-4 hd text-decoration-none">Login</a><br />
+        <!-- TEAM NAME Dropdown -->
+        <div class="form-group mt-5">
+          <select
+            class="custom-select h-50 text-muted text-center"
+            id="selectedTeam"
+            required
+          >
+            <option value="">Select a Team</option>
+            <option value="North">North</option>
+            <option value="East">East</option>
+            <option value="West">West</option>
+            <option value="South">South</option>
+            <option value="Admin">Admin</option>
+          </select>
+          <!-- <div class="invalid-feedback font-weight-bold mt-n2">Invalid option</div> -->
+        </div>
+
+        <input
+          type="password"
+          class="form-control h-50"
+          required=""
+          id="password"
+          placeholder="Password"
+          name="password"
+        />
+        <p for="password-check" id="password-error"></p>
+        <input
+          type="submit"
+          value="Sign In"
+          id="submit"
+          class="login-btn text-decoration-none"
+        />
+        <a class="b1 text-decoration-none" href="#" target="_blank"
+          >FORGOT PASSWORD ?</a
+        >
+        <a class="b2 text-decoration-none" href="#" target="_blank"
+          >Know more about YIP</a
+        >
+      </form>
     </div>
 
     <!-- Footer starts here  -->
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <!-- JS scripts starts here  -->
-    <script src="/js/login.js">
-
-    </script>
-
-</body>
+    <script src="/js/login.js"></script>
+  </body>
 </html>

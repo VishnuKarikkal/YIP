@@ -1,131 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Yamuni</title>
 
-    <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="/css/team.css">
-    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/team.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Berkshire+Swash&family=Cairo:wght@400;900&family=Gayathri&family=Indie+Flower&family=Titan+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Berkshire+Swash&family=Cairo:wght@400;900&family=Gayathri&family=Indie+Flower&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap"
+    />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-</head>
-<body>
-    
-     <!-- nav -->
-     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link font-weight-bold" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="#">Game</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link font-weight-bold my-2 my-sm-0" onclick="logout()">LogOut</a>
-            <!-- <button class="btn btn-success my-2 my-sm-0 font-weight-bold" type="submit">Login</button> -->
-          </form>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bold" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="#">Game</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a class="nav-link font-weight-bold my-2 my-sm-0" onclick="logout()"
+            >LogOut</a
+          >
+          <!-- <button class="btn btn-success my-2 my-sm-0 font-weight-bold" type="submit">Login</button> -->
+        </form>
+      </div>
     </nav>
 
     <div class="container">
-        <div class="row">
-            <!-- game setup section -->
-            <div class="col-md-5 mx-auto" style="border: 1px solid blueviolet;border-radius: 15px;margin-top: 5px;">
+      <div class="row">
+        <!-- game setup section -->
+        <div
+          class="col-md-5 mx-auto"
+          style="
+            border: 1px solid blueviolet;
+            border-radius: 15px;
+            margin-top: 5px;
+          "
+        >
+          <div class="card text-center">
+            <h5
+              class="card-header"
+              style="font-family: 'Baloo 2', cursive; color: darkmagenta;"
+            >
+              Game-Setup
+            </h5>
+            <div class="card-body">
+              <!-- <h5 class="card-title" style="font-family: 'Titan One', cursive;color: crimson;">Select Month</h5> -->
 
-                <div class="card text-center">                
-                    <h5 class="card-header" style="font-family: 'Baloo 2', cursive;color: darkmagenta;">Game-Setup</h5>
-                    <div class="card-body"> 
-                      
-                      <!-- <h5 class="card-title" style="font-family: 'Titan One', cursive;color: crimson;">Select Month</h5> -->
+              <!-- Months available to play -->
+              <div class="btn-group">
+                <button
+                  type="button"
+                  id="month"
+                  class="btn btn-success dropdown-toggle"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Select Game Month
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">JAN</a>
+                  <a class="dropdown-item" href="#">FEB</a>
+                  <a class="dropdown-item" href="#">MAR</a>
+                </div>
+              </div>
+              <!-- to activate the month for playing -->
+              <a
+                href="#"
+                class="btn btn-primary"
+                style="font-family: 'Baloo 2', cursive;"
+                >Activate!</a
+              >
 
-<!-- Months available to play -->
-<div class="btn-group">
-    <button type="button" id="month" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Select Game Month
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">JAN</a>
-      <a class="dropdown-item" href="#">FEB</a>
-      <a class="dropdown-item" href="#">MAR</a>
-    </div>
-  </div>
-                        <!-- to activate the month for playing -->
-  <a href="#" class="btn btn-primary" style="font-family: 'Baloo 2', cursive;">Activate!</a>
-
-                      <div>       <!--Team Votes Area-->
-                        <div class="row text-center" style="width: fit-content;margin: 15px auto;">
-                            <label style="width: 70px;">N</label>
-                            <label style="width: 70px;">S</label>
-                            <label style="width: 70px;">E</label>
-                            <label style="width: 70px;">W</label>
-                        </div>
-                                <!--Team Votes From DB-->
-                        <div class="row text-center" style="width: fit-content;margin: 10px auto;">
-                            <input type="text" class="votes" name="" id="N" readonly value="C" style="width: 70px;">
-                            <input type="text" class="votes" name="" id="S" readonly value="D" style="width: 70px;">
-                            <input type="text" class="votes" name="" id="E" readonly value="D" style="width: 70px;">
-                            <input type="text" class="votes" name="" id="W" readonly value="C" style="width: 70px;">
-                        </div>
-                    </div>
-                    <h6 class="text-center">Bonus</h6>  <!-- Bonus/Penalty : Admin Choice-->
-                    <div class="row text-center" style="width: fit-content;margin: 10px auto;">
-                        <label class="switch">      <!-- checked means BONUS-->
-                            <input type="checkbox" value="1">
-                            <span class="slider round"></span>
-                          </label>
-                          <label class="switch">      <!-- checked means BONUS-->
-                            <input type="checkbox" value="2">
-                            <span class="slider round"></span>
-                          </label>
-                          <label class="switch">      <!-- checked means BONUS-->
-                            <input type="checkbox" value="3">
-                            <span class="slider round"></span>
-                          </label>
-                          <label class="switch">      <!-- checked means BONUS-->
-                            <input type="checkbox" value="4">
-                            <span class="slider round"></span>
-                          </label>
-                        </div>
-                    <div class="row text-center" style="width: fit-content;margin: 10px auto;">
-                        <input type="text" class="votes" name="" id="bonus" placeholder="BONUS" style="width: 130px;">
-                        <input type="text" class="votes" name="" id="penalty" placeholder="PENALTY" style="width: 130px;">
-                    </div>
-                      <a href="#" class="btn btn-primary" style="font-family: 'Baloo 2', cursive;">Publish!</a>
-                    </div>
-                  </div>
-
+              <div>
+                <!--Team Votes Area-->
+                <div
+                  class="row text-center"
+                  style="width: fit-content; margin: 15px auto;"
+                >
+                  <label style="width: 70px;">N</label>
+                  <label style="width: 70px;">S</label>
+                  <label style="width: 70px;">E</label>
+                  <label style="width: 70px;">W</label>
+                </div>
+                <!--Team Votes From DB-->
+                <div
+                  class="row text-center"
+                  style="width: fit-content; margin: 10px auto;"
+                >
+                  <input
+                    type="text"
+                    class="votes"
+                    name=""
+                    id="N"
+                    readonly
+                    value="C"
+                    style="width: 70px;"
+                  />
+                  <input
+                    type="text"
+                    class="votes"
+                    name=""
+                    id="S"
+                    readonly
+                    value="D"
+                    style="width: 70px;"
+                  />
+                  <input
+                    type="text"
+                    class="votes"
+                    name=""
+                    id="E"
+                    readonly
+                    value="D"
+                    style="width: 70px;"
+                  />
+                  <input
+                    type="text"
+                    class="votes"
+                    name=""
+                    id="W"
+                    readonly
+                    value="C"
+                    style="width: 70px;"
+                  />
+                </div>
+              </div>
+              <h6 class="text-center">Bonus</h6>
+              <!-- Bonus/Penalty : Admin Choice-->
+              <div
+                class="row text-center"
+                style="width: fit-content; margin: 10px auto;"
+              >
+                <label class="switch">
+                  <!-- checked means BONUS-->
+                  <input type="checkbox" value="1" />
+                  <span class="slider round"></span>
+                </label>
+                <label class="switch">
+                  <!-- checked means BONUS-->
+                  <input type="checkbox" value="2" />
+                  <span class="slider round"></span>
+                </label>
+                <label class="switch">
+                  <!-- checked means BONUS-->
+                  <input type="checkbox" value="3" />
+                  <span class="slider round"></span>
+                </label>
+                <label class="switch">
+                  <!-- checked means BONUS-->
+                  <input type="checkbox" value="4" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div
+                class="row text-center"
+                style="width: fit-content; margin: 10px auto;"
+              >
+                <input
+                  type="text"
+                  class="votes"
+                  name=""
+                  id="bonus"
+                  placeholder="BONUS"
+                  style="width: 130px;"
+                />
+                <input
+                  type="text"
+                  class="votes"
+                  name=""
+                  id="penalty"
+                  placeholder="PENALTY"
+                  style="width: 130px;"
+                />
+              </div>
+              <a
+                href="#"
+                class="btn btn-primary"
+                style="font-family: 'Baloo 2', cursive;"
+                >Publish!</a
+              >
             </div>
-           
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="container">
       <div class="row mx-auto" style="margin: 5px auto;">
-         <!-- game stats table section -->
-         <div class="col" style="border: 1px solid blueviolet;padding-top: 10px;padding-bottom: 10px;border-radius: 15px;margin: 5px 5px;">
-          <h5 class="card-header text-center" style="font-family: 'Baloo 2', cursive;color: darkmagenta;border-radius: 15px;">Game Stats</h5>
-      <!-- table showing Game stats so far.. -->
+        <!-- game stats table section -->
+        <div
+          class="col"
+          style="
+            border: 1px solid blueviolet;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 15px;
+            margin: 5px 5px;
+          "
+        >
+          <h5
+            class="card-header text-center"
+            style="
+              font-family: 'Baloo 2', cursive;
+              color: darkmagenta;
+              border-radius: 15px;
+            "
+          >
+            Game Stats
+          </h5>
+          <!-- table showing Game stats so far.. -->
           <div class="table-responsive text-center table-bordered">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th rowspan="2">Month</th>
-                    <th scope="colgroup" colspan="3">N</th>
-                    <th scope="colgroup" colspan="3">S</th>
-                    <th scope="colgroup" colspan="3">E</th>
-                    <th scope="colgroup" colspan="3">W</th>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th rowspan="2">Month</th>
+                  <th scope="colgroup" colspan="3">N</th>
+                  <th scope="colgroup" colspan="3">S</th>
+                  <th scope="colgroup" colspan="3">E</th>
+                  <th scope="colgroup" colspan="3">W</th>
                 </tr>
                 <tr>
                   <th>Vote</th>
@@ -142,66 +270,163 @@
                   <th>B/P</th>
                 </tr>
               </thead>
-                
-              </table>
+            </table>
           </div>
-
-      </div>
+        </div>
       </div>
     </div>
 
-            <!-- Game Summary section -->
-    <div class="container" style="border: 1px solid blueviolet;padding-top: 15px;padding-bottom: 10px;margin: 10px auto;border-radius: 15px;">
-      <h5 class="card-header text-center" style="font-family: 'Baloo 2', cursive;color: darkmagenta;border-radius: 15px;margin-bottom: 10px;">Game-Summary</h5>
+    <!-- Game Summary section -->
+    <div
+      class="container"
+      style="
+        border: 1px solid blueviolet;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        margin: 10px auto;
+        border-radius: 15px;
+      "
+    >
+      <h5
+        class="card-header text-center"
+        style="
+          font-family: 'Baloo 2', cursive;
+          color: darkmagenta;
+          border-radius: 15px;
+          margin-bottom: 10px;
+        "
+      >
+        Game-Summary
+      </h5>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div style="width: 200px;height: 200px;border: 1px solid rebeccapurple;border-radius: 115px;background-color: blueviolet;margin: 0 auto;">
-                    <div class="col">
-                        <img src="/img/wnr.jpg" alt="winner" style="width: 150px;height: 150px;border-radius: 50%;">
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div
+            style="
+              width: 200px;
+              height: 200px;
+              border: 1px solid rebeccapurple;
+              border-radius: 115px;
+              background-color: blueviolet;
+              margin: 0 auto;
+            "
+          >
+            <div class="col">
+              <img
+                src="/img/wnr.jpg"
+                alt="winner"
+                style="width: 150px; height: 150px; border-radius: 50%;"
+              />
             </div>
-            <div class="col-md-7 text-center" style="margin: auto auto;">
-                <input type="text" class="votes" name="" id="leadingTeam" readonly value="C" style="text-align: center;">
-                <label for="">Leads With..</label>
-                <input type="text" class="votes" name="" id="leadingBalance" readonly value="202 ml" style="text-align: center;">
-                <label for="">Balance!</label>
-            </div>
+          </div>
         </div>
-
-        <div class="row text-center" style="border: 1px solid blueviolet;width: fit-content;margin: 5px auto;border-radius: 15px;padding: 5px 10px 5px 10px;">
-            <div class="col-md-2" style="margin: 0 auto;">
-                <label for=""><h3>N</h3></label><br>
-                <input type="text" class="votes" name="" id="summaryN" readonly value="200" style="width: 80px;">
-            </div>
-            <div class="col-md-2" style="margin: 0 auto;">
-                <label for=""><h3>S</h3></label><br>
-                <input type="text" class="votes" name="" id="summaryS" readonly value="198" style="width: 80px;">
-            </div>
-            <div class="col-md-2" style="margin: 0 auto;"> 
-                <label for=""><h3>E</h3></label><br>
-                <input type="text" class="votes" name="" id="summaryE" readonly value="185" style="width: 80px;">
-            </div>
-            <div class="col-md-2" style="margin: 0 auto;">
-                <label for=""><h3>W</h3></label><br>
-                <input type="text" class="votes" name="" id="summaryW" readonly value="192" style="width: 80px;">
-            </div>
+        <div class="col-md-7 text-center" style="margin: auto auto;">
+          <input
+            type="text"
+            class="votes"
+            name=""
+            id="leadingTeam"
+            readonly
+            value="C"
+            style="text-align: center;"
+          />
+          <label for="">Leads With..</label>
+          <input
+            type="text"
+            class="votes"
+            name=""
+            id="leadingBalance"
+            readonly
+            value="202 ml"
+            style="text-align: center;"
+          />
+          <label for="">Balance!</label>
         </div>
+      </div>
 
+      <div
+        class="row text-center"
+        style="
+          border: 1px solid blueviolet;
+          width: fit-content;
+          margin: 5px auto;
+          border-radius: 15px;
+          padding: 5px 10px 5px 10px;
+        "
+      >
+        <div class="col-md-2" style="margin: 0 auto;">
+          <label for=""><h3>N</h3></label><br />
+          <input
+            type="text"
+            class="votes"
+            name=""
+            id="summaryN"
+            readonly
+            value="200"
+            style="width: 80px;"
+          />
+        </div>
+        <div class="col-md-2" style="margin: 0 auto;">
+          <label for=""><h3>S</h3></label><br />
+          <input
+            type="text"
+            class="votes"
+            name=""
+            id="summaryS"
+            readonly
+            value="198"
+            style="width: 80px;"
+          />
+        </div>
+        <div class="col-md-2" style="margin: 0 auto;">
+          <label for=""><h3>E</h3></label><br />
+          <input
+            type="text"
+            class="votes"
+            name=""
+            id="summaryE"
+            readonly
+            value="185"
+            style="width: 80px;"
+          />
+        </div>
+        <div class="col-md-2" style="margin: 0 auto;">
+          <label for=""><h3>W</h3></label><br />
+          <input
+            type="text"
+            class="votes"
+            name=""
+            id="summaryW"
+            readonly
+            value="192"
+            style="width: 80px;"
+          />
+        </div>
+      </div>
     </div>
-            <!-- To End The Current Game -->
+    <!-- To End The Current Game -->
     <div class="container text-center" style="margin: 10px auto;">
-        <button type="button" class="btn btn-danger">
-            End Game!!!
-        </button>
+      <button type="button" class="btn btn-danger">
+        End Game!!!
+      </button>
     </div>
-    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
     <script src="/js/admin.js"></script>
-</body>
+  </body>
 </html>
