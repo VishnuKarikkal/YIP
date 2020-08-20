@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link font-weight-bold" href="/src/views/welcome.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link font-weight-bold" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link font-weight-bold" href="#">Game</a>
@@ -36,10 +36,21 @@
 
     <!-- Login content starts here  -->
     <div class="login-content">
-        <form class="box" method="POST" action="/">
-            <a class="Display-4 hd text-decoration-none">Login</a>
-            <input type="text" required="" id="username" placeholder="Team Name" name="useremail">
-            <p for="username-check" id="user-error"></p>
+        <form class="box" method="POST" action="/login" onsubmit="return checkLogIn()">
+            <a class="Display-4 hd text-decoration-none">Login</a><br>
+            <!-- TEAM NAME Dropdown -->
+<div class="btn-group">
+    <button type="button" id="drop" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select TEAM
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">NORTH</a>
+      <a class="dropdown-item" href="#">SOUTH</a>
+      <a class="dropdown-item" href="#">EAST</a>
+      <a class="dropdown-item" href="#">WEST</a>
+    </div>
+  </div>
+            <input type="text" id="team" name="team" style="visibility:hidden;width: 1px;height: 1px;">
             <input type="password" required="" id="password" placeholder="Password" name="password">
             <p for="password-check" id="password-error"></p>
             <input type="submit" value="Sign In" id="submit" class="login-btn text-decoration-none">
@@ -54,7 +65,7 @@
     </footer>
 
     <!-- JS scripts starts here  -->
-    <script>
+    <script src="/js/login.js">
 
     </script>
 

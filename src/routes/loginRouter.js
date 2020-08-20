@@ -1,15 +1,17 @@
 const express = require("express");
 const loginRouter = express.Router();
-const user = require("../model/user");
+//const user = require("../model/user");
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
 const jwtKey='secret'|| process.env.JWT_KEY;
 
 loginRouter.get('/',function(req,res){
-    res.send('hi');
+    res.sendFile('E:/WORKS/YIP-Collab/src/views/login.html');
 })
 loginRouter.post("/",function(req,res){
-    user.find({id:req.body.name}).exec()
+    name=req.body.team;
+    password=req.body.password;
+    user.find({username:name}).exec()
         .then(
             user=>{
                 if(user.length<1){
@@ -17,7 +19,7 @@ loginRouter.post("/",function(req,res){
                     return res.status(401).json(
                         {
                             message:"Auth failed ",
-
+                            
                         }
                     )
                 }
