@@ -62,9 +62,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c9a2",endCo
 .hd:hover {
   color: rgb(39, 36, 204);
 }
-.box input[type="text"],
+.box select,
 .box input[type="password"] {
-  background: rgba(201, 201, 201, 0.5);
   display: block;
   margin: 20px auto;
   text-align: center;
@@ -78,11 +77,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c9a2",endCo
   border-radius: 10px;
   transition: 0.25s;
 }
-.box input[type="email"]:hover,
 .box input[type="password"]:hover {
   border-color: rgba(0,212,255,1);
 }
-.box input[type="email"]:focus,
+.box select:focus,
 .box input[type="password"]:focus {
   width: 300px;
   border-color: lightseagreen;
