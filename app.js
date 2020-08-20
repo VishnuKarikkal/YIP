@@ -19,7 +19,7 @@ app.set("views", "./src/views");
 app.use(cors());
 app.use(express.static("./public"));
 
-//app.use('/login',loginRouter);        //loginRoutes
+//app.use('/userLogin',loginRouter);        //loginRoutes
 //app.use('/game',gameRouter);          //gameRoutes
 
 app.get("/", function (req, res) {
@@ -29,7 +29,7 @@ app.get("/login", function (req, res) {
   res.sendFile(__dirname + "/src/views/login.html");
 });
 // app.get("/gameIndex", function (req, res) {
-//   res.sendFile(__dirname + "/src/views/");
+//   res.sendFile(__dirname + "/src/views/index.html");
 // });
 app.get("/gameTeam", function (req, res) {
   res.sendFile(__dirname + "/src/views/team.html");
