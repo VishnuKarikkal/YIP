@@ -20,12 +20,24 @@ font-family: 'Rye', cursive;
   box-sizing: border-box;
   /* background-color: rgb(233, 233, 199); */
 }
-body{
-  background: rgb(0,201,162);
-background: -moz-linear-gradient(315deg, rgba(0,201,162,1) 0%, rgba(0,212,255,1) 100%);
-background: -webkit-linear-gradient(315deg, rgba(0,201,162,1) 0%, rgba(0,212,255,1) 100%);
-background: linear-gradient(315deg, rgba(0,201,162,1) 0%, rgba(0,212,255,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c9a2",endColorstr="#00d4ff",GradientType=1);
+body {
+  background: rgb(0, 201, 162);
+  background: -moz-linear-gradient(
+    315deg,
+    rgba(0, 201, 162, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    315deg,
+    rgba(0, 201, 162, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: linear-gradient(
+    315deg,
+    rgba(0, 201, 162, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c9a2",endColorstr="#00d4ff",GradientType=1);
 }
 .navbar-brand {
   transform: scale(1.1);
@@ -78,7 +90,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c9a2",endCo
   transition: 0.25s;
 }
 .box input[type="password"]:hover {
-  border-color: rgba(0,212,255,1);
+  border-color: rgba(0, 212, 255, 1);
 }
 .box select:focus,
 .box input[type="password"]:focus {

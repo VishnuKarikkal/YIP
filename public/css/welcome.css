@@ -19,12 +19,24 @@ font-family: 'Rye', cursive;
   box-sizing: border-box;
   /* background-color: beige; */
 }
-body{
+body {
   height: 100vh;
-  background: rgb(56,210,160);
-  background: -moz-linear-gradient(312deg, rgba(56,210,160,1) 0%, rgba(0,212,255,1) 100%);
-  background: -webkit-linear-gradient(312deg, rgba(56,210,160,1) 0%, rgba(0,212,255,1) 100%);
-  background: linear-gradient(312deg, rgba(56,210,160,1) 0%, rgba(0,212,255,1) 100%);
+  background: rgb(56, 210, 160);
+  background: -moz-linear-gradient(
+    312deg,
+    rgba(56, 210, 160, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    312deg,
+    rgba(56, 210, 160, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: linear-gradient(
+    312deg,
+    rgba(56, 210, 160, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#38d2a0",endColorstr="#00d4ff",GradientType=1);
 }
 
@@ -35,12 +47,12 @@ body{
 .nav-link {
   font-family: "Poppins", sans-serif;
 }
-form .nav-link{
+form .nav-link {
   color: rgba(0, 0, 0, 0.5);
 }
-form .nav-link:hover{
+form .nav-link:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-p{
+p {
   font-weight: bold;
 }
