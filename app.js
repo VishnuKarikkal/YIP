@@ -19,7 +19,7 @@ app.set("views", "./src/views");
 app.use(cors());
 app.use(express.static("./public"));
 
-//app.use('/userLogin',loginRouter);        //loginRoutes
+app.use('/userLogin',loginRouter);        //loginRoutes
 //app.use('/game',gameRouter);          //gameRoutes
 
 app.get("/", function (req, res) {

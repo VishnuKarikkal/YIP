@@ -18,8 +18,8 @@ const user = new mongoose.Schema({
 });
 const User = mongoose.model("user", user);
 
-connect()
-  .then(console.log("db connected"))
-  .catch((e) => console.log(e));
+// connect()
+//   .then(console.log("db connected"))
+//   .catch((e) => console.log(e));
 
 module.exports = User;

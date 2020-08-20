@@ -1,6 +1,6 @@
 const express = require("express");
 const loginRouter = express.Router();
-//const user = require("../model/user");
+const user = require("../model/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const jwtKey = "secret" || process.env.JWT_KEY;
@@ -11,20 +11,25 @@ loginRouter.get("/", function (req, res) {
 loginRouter.post("/", function (req, res) {
   name = req.body.team;
   password = req.body.password;
+  console.log(name)
+  console.log(password)
   user
     .find({ username: name })
     .exec()
     .then((user) => {
       if (user.length < 1) {
-        // if user is not present in database
+        //if user is not present in database
+        console.log("not exits")
         return res.status(401).json({
           message: "Auth failed ",
         });
       } else {
-        //checking wether password matches
-        bcrypt.compare(req.body.password, user[0].password, (err, result) => {
-          //if it doesn't match
+       // checking wether password matches
+       console.log("un exits")
+       bcrypt.compare(password, user[0].password, (err, result) => {
+         // if it doesn't match
           if (err) {
+            console.log("no maths")
             return res.status(401).json({
               message: "Auth failed",
             });
@@ -46,6 +51,8 @@ loginRouter.post("/", function (req, res) {
               token: token,
             });
           } else {
+            console.log("failed")
+            console.log(user[0].password)
             return res.status(401).json({
               message: "Auth failed wrong password",
             });

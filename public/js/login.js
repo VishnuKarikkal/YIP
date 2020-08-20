@@ -5,7 +5,8 @@ $(document).ready(function()
     {
         team=e.target.text;
         $('#drop').text(team);
-        $('#team').text(team);       
+        $('#team').val(team);
+        console.log(team)       
     });
 });
 
@@ -18,3 +19,4 @@ function checkLogIn()
     }
     return true;
 }
+
