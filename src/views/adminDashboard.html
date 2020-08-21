@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard | Yamuni</title>
 
-    <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/team.css" />
     <link rel="stylesheet" href="/css/admin.css" />
 
@@ -42,28 +41,373 @@
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link font-weight-bold" href="#"
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link font-weight-bold" href="#">Game</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <a class="nav-link font-weight-bold my-2 my-sm-0" onclick="logout()"
-            >LogOut</a
+          <a
+            class="nav-link font-weight-bold my-2 my-sm-0"
+            href="/"
+            onclick="logout()"
+            >Log Out</a
           >
           <!-- <button class="btn btn-success my-2 my-sm-0 font-weight-bold" type="submit">Login</button> -->
         </form>
       </div>
     </nav>
 
-    <div class="container">
-      <div class="row">
-        <!-- game setup section -->
-        <div
+    <div class="container mt-5 game-controller">
+      <h1 class="display-4 text-center mb-5">Game Controller</h1>
+      <div class="table-responsive">
+        <table
+          class="table table-bordered table-striped table-hover text-center"
+        >
+          <thead>
+            <tr>
+              <th scope="col" class="align-middle" rowspan="2">Months</th>
+              <th scope="col" class="align-middle" rowspan="2">
+                Month Activator
+              </th>
+              <th scope="col" colspan="2">North</th>
+              <th scope="col" colspan="2">East</th>
+              <th scope="col" colspan="2">West</th>
+              <th scope="col" colspan="2">South</th>
+            </tr>
+            <tr>
+              <th scope="col">Vote</th>
+              <th scope="col">Result</th>
+              <th scope="col">Vote</th>
+              <th scope="col">Result</th>
+              <th scope="col">Vote</th>
+              <th scope="col">Result</th>
+              <th scope="col">Vote</th>
+              <th scope="col">Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">January</th>
+              <td><input type="checkbox" name="activator" id="actJan" /></td>
+              <td id="niJan"></td>
+              <td id="nrJan"></td>
+              <td id="eiJan"></td>
+              <td id="erJan"></td>
+              <td id="wiJan"></td>
+              <td id="wrJan"></td>
+              <td id="siJan"></td>
+              <td id="srJan"></td>
+            </tr>
+            <tr>
+              <th scope="row">February</th>
+              <td><input type="checkbox" name="activator" id="actFeb" /></td>
+              <td id="niFeb"></td>
+              <td id="nrFeb"></td>
+              <td id="eiFeb"></td>
+              <td id="erFeb"></td>
+              <td id="wiFeb"></td>
+              <td id="wrFeb"></td>
+              <td id="siFeb"></td>
+              <td id="srFeb"></td>
+            </tr>
+            <tr>
+              <th scope="row">March</th>
+              <td><input type="checkbox" name="activator" id="actMar" /></td>
+              <td id="niMar"></td>
+              <td id="nrMar"></td>
+              <td id="eiMar"></td>
+              <td id="erMar"></td>
+              <td id="wiMar"></td>
+              <td id="wrMar"></td>
+              <td id="siMar"></td>
+              <td id="srMar"></td>
+            </tr>
+            <tr>
+              <th scope="row">April</th>
+              <td><input type="checkbox" name="activator" id="actApr" /></td>
+              <td id="niapr"></td>
+              <td id="nrapr"></td>
+              <td id="eiapr"></td>
+              <td id="erapr"></td>
+              <td id="wiapr"></td>
+              <td id="wrapr"></td>
+              <td id="siapr"></td>
+              <td id="srapr"></td>
+            </tr>
+            <tr>
+              <th scope="row">May</th>
+              <td><input type="checkbox" name="activator" id="actMay" /></td>
+              <td id="niMay"></td>
+              <td id="nrMay"></td>
+              <td id="eiMay"></td>
+              <td id="erMay"></td>
+              <td id="wiMay"></td>
+              <td id="wrMay"></td>
+              <td id="siMay"></td>
+              <td id="srMay"></td>
+            </tr>
+            <tr>
+              <th scope="row">June</th>
+              <td><input type="checkbox" name="activator" id="actJun" /></td>
+              <td id="niJun"></td>
+              <td id="nrJun"></td>
+              <td id="eiJun"></td>
+              <td id="erJun"></td>
+              <td id="wiJun"></td>
+              <td id="wrJun"></td>
+              <td id="siJun"></td>
+              <td id="srJun"></td>
+            </tr>
+            <tr>
+              <th scope="row">July</th>
+              <td><input type="checkbox" name="activator" id="actJul" /></td>
+              <td id="niJul"></td>
+              <td id="nrJul"></td>
+              <td id="eiJul"></td>
+              <td id="erJul"></td>
+              <td id="wiJul"></td>
+              <td id="wrJul"></td>
+              <td id="siJul"></td>
+              <td id="srJul"></td>
+            </tr>
+            <tr>
+              <th scope="row">August</th>
+              <td><input type="checkbox" name="activator" id="actAug" /></td>
+              <td id="niAug"></td>
+              <td id="nrAug"></td>
+              <td id="eiAug"></td>
+              <td id="erAug"></td>
+              <td id="wiAug"></td>
+              <td id="wrAug"></td>
+              <td id="siAug"></td>
+              <td id="srAug"></td>
+            </tr>
+            <tr>
+              <th scope="row">September</th>
+              <td><input type="checkbox" name="activator" id="actSep" /></td>
+              <td id="niSep"></td>
+              <td id="nrSep"></td>
+              <td id="eiSep"></td>
+              <td id="erSep"></td>
+              <td id="wiSep"></td>
+              <td id="wrSep"></td>
+              <td id="siSep"></td>
+              <td id="srSep"></td>
+            </tr>
+            <tr>
+              <th scope="row">October</th>
+              <td><input type="checkbox" name="activator" id="actOct" /></td>
+              <td id="niOct"></td>
+              <td id="nrOct"></td>
+              <td id="eiOct"></td>
+              <td id="erOct"></td>
+              <td id="wiOct"></td>
+              <td id="wrOct"></td>
+              <td id="siOct"></td>
+              <td id="srOct"></td>
+            </tr>
+            <tr>
+              <th scope="row">November</th>
+              <td><input type="checkbox" name="activator" id="actNov" /></td>
+              <td id="niNov"></td>
+              <td id="nrNov"></td>
+              <td id="eiNov"></td>
+              <td id="erNov"></td>
+              <td id="wiNov"></td>
+              <td id="wrNov"></td>
+              <td id="siNov"></td>
+              <td id="srNov"></td>
+            </tr>
+            <tr>
+              <th scope="row">December</th>
+              <td><input type="checkbox" name="activator" id="actDec" /></td>
+              <td id="niDec"></td>
+              <td id="nrDec"></td>
+              <td id="eiDec"></td>
+              <td id="erDec"></td>
+              <td id="wiDec"></td>
+              <td id="wrDec"></td>
+              <td id="siDec"></td>
+              <td id="srDec"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Activators -->
+      <div class="even-flex my-3">
+        <button class="btn btn-primary btn-lg">Activate Months</button>
+        <button class="btn btn-success btn-lg">Publish Months</button>
+      </div>
+
+      <!-- Bonus-Penalty table  -->
+      <div class="bonus-penalty-adder table-responsive">
+        <table
+          class="table table-bordered table-striped table-hover text-center"
+        >
+          <thead>
+            <tr>
+              <th scope="col">Months</th>
+              <th scope="col">Month Activator</th>
+              <th scope="col">North</th>
+              <th scope="col">East</th>
+              <th scope="col">West</th>
+              <th scope="col">South</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">January</th>
+              <td><input type="checkbox" name="activator" id="actJanBP" /></td>
+              <td id="nJanBP"></td>
+              <td id="eJanBP"></td>
+              <td id="wJanBP"></td>
+              <td id="sJanBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">February</th>
+              <td><input type="checkbox" name="activator" id="actFebBP" /></td>
+              <td id="nFebBP"></td>
+              <td id="eFebBP"></td>
+              <td id="wFebBP"></td>
+              <td id="sFebBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">March</th>
+              <td><input type="checkbox" name="activator" id="actMarBP" /></td>
+              <td id="nMarBP"></td>
+              <td id="eMarBP"></td>
+              <td id="wMarBP"></td>
+              <td id="sMarBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">April</th>
+              <td><input type="checkbox" name="activator" id="actAprBP" /></td>
+              <td id="nAprBP"></td>
+              <td id="eAprBP"></td>
+              <td id="wAprBP"></td>
+              <td id="sAprBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">May</th>
+              <td><input type="checkbox" name="activator" id="actMayBP" /></td>
+              <td id="nMayBP"></td>
+              <td id="eMayBP"></td>
+              <td id="wMayBP"></td>
+              <td id="sMayBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">June</th>
+              <td><input type="checkbox" name="activator" id="actJunBP" /></td>
+              <td id="nJunBP"></td>
+              <td id="eJunBP"></td>
+              <td id="wJunBP"></td>
+              <td id="sJunBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">July</th>
+              <td><input type="checkbox" name="activator" id="actJulBP" /></td>
+              <td id="nJulBP"></td>
+              <td id="eJulBP"></td>
+              <td id="wJulBP"></td>
+              <td id="sJulBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">August</th>
+              <td><input type="checkbox" name="activator" id="actAugBP" /></td>
+              <td id="nAugBP"></td>
+              <td id="eAugBP"></td>
+              <td id="wAugBP"></td>
+              <td id="sAugBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">September</th>
+              <td><input type="checkbox" name="activator" id="actSepBP" /></td>
+              <td id="nSepBP"></td>
+              <td id="eSepBP"></td>
+              <td id="wSepBP"></td>
+              <td id="sSepBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">October</th>
+              <td><input type="checkbox" name="activator" id="actOctBP" /></td>
+              <td id="nOctBP"></td>
+              <td id="eOctBP"></td>
+              <td id="wOctBP"></td>
+              <td id="sOctBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">November</th>
+              <td><input type="checkbox" name="activator" id="actNovBP" /></td>
+              <td id="nNovBP"></td>
+              <td id="eNovBP"></td>
+              <td id="wNovBP"></td>
+              <td id="sNovBP"></td>
+            </tr>
+            <tr>
+              <th scope="row">December</th>
+              <td><input type="checkbox" name="activator" id="actDecBP" /></td>
+              <td id="nDecBP"></td>
+              <td id="eDecBP"></td>
+              <td id="wDecBP"></td>
+              <td id="sDecBP"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Activators -->
+      <div class="even-flex my-3">
+        <button class="btn btn-primary btn-lg">Activate Months</button>
+        <button class="btn btn-success btn-lg">Publish Months</button>
+      </div>
+
+      <!-- Toggle switch  -->
+      <div class="even-flex my-4">
+        <div class="northBP">
+          <span class="font-weight-bold">Bonus</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span class="font-weight-bold">Penalty</span>
+        </div>
+        <div class="eastBP">
+          <span class="font-weight-bold">Bonus</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span class="font-weight-bold">Penalty</span>
+        </div>
+        <div class="westBP">
+          <span class="font-weight-bold">Bonus</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span class="font-weight-bold">Penalty</span>
+        </div>
+        <div class="southBP">
+          <span class="font-weight-bold">Bonus</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span class="font-weight-bold">Penalty</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="row"> -->
+    <!-- game setup section -->
+    <!-- <div
           class="col-md-5 mx-auto py-3"
           style="
             border: 1px solid blueviolet;
@@ -71,7 +415,7 @@
             margin-top: 5px;
           "
         >
-          <div class="card text-center">
+          <div class="text-center">
             <h5
               class="card-header"
               style="
@@ -83,26 +427,6 @@
               Game-Setup
             </h5>
             <div class="card-body">
-              <!-- <h5 class="card-title" style="font-family: 'Titan One', cursive;color: crimson;">Select Month</h5> -->
-
-              <!-- Months available to play -->
-              <!-- <div class="btn-group">
-                <button
-                  type="button"
-                  id="month"
-                  class="btn btn-success dropdown-toggle"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Select Game Month
-                </button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">JAN</a>
-                  <a class="dropdown-item" href="#">FEB</a>
-                  <a class="dropdown-item" href="#">MAR</a>
-                </div>
-              </div> -->
 
               <form class="was-validated">
                 <div class="form-group">
@@ -126,9 +450,9 @@
                       <option value="November">November</option>
                       <option value="December">December</option>
                     </select>
-                  </div>
-                  <!-- to activate the month for playing -->
-                  <button
+                  </div> -->
+    <!-- to activate the month for playing -->
+    <!-- <button
                     type="submit"
                     class="btn btn-group-sm btn-success mt-2"
                     style="font-family: 'Baloo 2', cursive;"
@@ -137,41 +461,25 @@
                   </button>
                 </div>
               </form>
-              <hr />
-              <!-- Dropdown disable function -->
-              <script type="text/javascript">
+              <hr /> -->
+    <!-- Dropdown disable function -->
+    <!-- <script type="text/javascript">
                 $(function () {
                   $(".selectmonth").selected({});
                 });
-              </script>
+              </script> -->
 
-              <!-- <a
-                href="#"
-                class="btn btn-sm btn-success"
-                style="font-family: 'Baloo 2', cursive;"
-                >Activate!</a
-              > -->
-
-              <!--Team Votes Area-->
-              <div id="teamVote">
+    <!--Team Votes Area-->
+    <!-- <div id="teamVote">
                 <h4 id="month">January</h4>
                 <div class="team-n evenly-flex mx-auto">
                   <label for="north">North</label>
                   <label for="east">East</label>
                   <label for="west">West</label>
                   <label for="south">South</label>
-                </div>
-                <!-- <div
-                  class="row text-center mt-3 mx-auto"
-                  style="width: fit-content;"
-                >
-                  <label style="width: 90px;">North</label>
-                  <label style="width: 90px;">East</label>
-                  <label style="width: 90px;">West</label>
-                  <label style="width: 90px;">South</label>
                 </div> -->
-                <!--Team Votes From DB-->
-                <div
+    <!--Team Votes From DB-->
+    <!-- <div
                   class="row text-center mx-auto"
                   style="width: fit-content;"
                 >
@@ -214,29 +522,25 @@
                 </div>
               </div>
               <hr />
-              <h6 class="text-center my-2">Bonus || Penalty</h6>
-              <!-- Bonus/Penalty : Admin Choice-->
-              <div
+              <h6 class="text-center my-2">Bonus || Penalty</h6> -->
+    <!-- Bonus/Penalty : Admin Choice-->
+    <!-- <div
                 class="row text-center"
                 style="width: fit-content; margin: 10px auto;"
               >
                 <label class="switch">
-                  <!-- checked means BONUS-->
                   <input type="checkbox" value="1" />
                   <span class="slider round"></span>
                 </label>
                 <label class="switch">
-                  <!-- checked means BONUS-->
                   <input type="checkbox" value="2" />
                   <span class="slider round"></span>
                 </label>
                 <label class="switch">
-                  <!-- checked means BONUS-->
                   <input type="checkbox" value="3" />
                   <span class="slider round"></span>
                 </label>
                 <label class="switch">
-                  <!-- checked means BONUS-->
                   <input type="checkbox" value="4" />
                   <span class="slider round"></span>
                 </label>
@@ -273,7 +577,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
       <div class="row mx-auto my-3">
@@ -301,25 +605,25 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th class="align-middle" rowspan="2">Month</th>
-                  <th scope="colgroup" colspan="3">N</th>
-                  <th scope="colgroup" colspan="3">S</th>
-                  <th scope="colgroup" colspan="3">E</th>
-                  <th scope="colgroup" colspan="3">W</th>
+                  <th scope="col" class="align-middle" rowspan="2">Month</th>
+                  <th scope="col" colspan="3">North</th>
+                  <th scope="col" colspan="3">East</th>
+                  <th scope="col" colspan="3">West</th>
+                  <th scope="col" colspan="3">South</th>
                 </tr>
                 <tr>
                   <th>Vote</th>
                   <th>Result</th>
-                  <th>B/P</th>
+                  <th>Remarks</th>
                   <th>Vote</th>
                   <th>Result</th>
-                  <th>B/P</th>
+                  <th>Remarks</th>
                   <th>Vote</th>
                   <th>Result</th>
-                  <th>B/P</th>
+                  <th>Remarks</th>
                   <th>Vote</th>
                   <th>Result</th>
-                  <th>B/P</th>
+                  <th>Remarks</th>
                 </tr>
               </thead>
             </table>
@@ -360,7 +664,9 @@
           />
         </div>
         <div class="stat-content my-auto">
-          <h3><a class="display-4 mr-2" id="leading">North </a> Leading...</h3>
+          <h3>
+            <a class="display-4 mr-2 ml-2" id="leading">North </a> Leading...
+          </h3>
           <h3>
             with remaining amount
             <a class="ml-2 display-4" id="leadAmount" style="font-size: 1.5em;"
