@@ -1,3 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  transform: scale(1.1);
+  font-family: "Rye", cursive;
+}
+.nav-link {
+  font-family: "Poppins", sans-serif;
+}
+form .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+form .nav-link:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.team-name {
+  font-family: "Grenze Gotisch", cursive;
+  /* font-family: 'Rye', cursive; */
+  position: relative;
+}
+.instructions {
+  position: absolute;
+  right: 5%;
+  font-family: "Piedra", cursive;
+}
+.modal-title {
+  font-family: "Piedra", cursive;
+  font-size: 1.7em;
+}
+.modal-body {
+  font-family: "Quicksand", sans-serif;
+}
+.input-heading {
+  font-family: "Russo One", sans-serif;
+}
+.input-controller {
+  padding: 5px;
+  border: 2px solid red;
+  border-radius: 10px;
+}
 .radio-btn {
   background-color: royalblue;
   /* border: 1px solid #4A4A4A; */
