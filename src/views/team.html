@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Berkshire+Swash&family=Cairo:wght@400;900&family=Gayathri&family=Indie+Flower&family=Titan+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap">
 </head>
-<body onload="gameCheck()">
+<body onload="gameCheck()" onfocus="gameCheck()">
 
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -73,9 +73,9 @@
                 <h5 class="card-header" style="font-family: 'Baloo 2', cursive;color: darkmagenta;">Active Game</h5>
                 <div class="card-body"> 
                   
-                  <h5 class="card-title" style="font-family: 'Titan One', cursive;color: crimson;">Current Game-Play Month</h5>
+                  <h5 class="card-title" id="active" style="font-family: 'Titan One', cursive;color: crimson;">Current Game-Play Month</h5>
                   <div>       <!--Voting Options-->
-                    <div class="row" style="width: fit-content;margin: 10px auto;">
+                    <div class="row" id="voteOptions" style="width: fit-content;margin: 10px auto;">
                         <div class="col-md-5" style="margin-left: 5px;">
                             <button id="bt1" class="opt radio-btn" type="button" style="border: 1px solid rebeccapurple;border-radius: 50%;width: 70px;height: 70px;margin: auto auto;">
                               <h1 style="color: White;">C</h1>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-                  <a href="#" class="btn btn-primary" style="font-family: 'Baloo 2', cursive;">Vote!</a>
+                  <a href="#" class="btn btn-primary" id="voteBtn" style="font-family: 'Baloo 2', cursive;">Vote!</a>
                 </div>
               </div>
 

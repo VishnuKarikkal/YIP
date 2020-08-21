@@ -1,7 +1,11 @@
 const express = require("express");
 const gameRouter = express.Router();
-const game = require("../model/game");
-gameRouter.get("/activeGame", function (req, res) {});
+//const game = require("../model/game");
+gameRouter.get("/activeGame", function (req, res) {
+  console.log("req.params.team")  
+  active=["JN","MY"]    //active months in an array
+  res.send({message:"none",active:active})
+});
 
 gameRouter.post("/vote", function (req, res) {
   /*-------------quiz section---------------*/
