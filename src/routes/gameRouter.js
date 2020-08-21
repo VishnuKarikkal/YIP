@@ -1,29 +1,17 @@
 const express = require("express");
 const gameRouter = express.Router();
-const game = require("../model/game");
-gameRouter.get("/activeGame", function (req, res) {});
+const gameHistory = require("../Model/gameHistory");
+const teamSummary=require("../Model/teamSummary");
+const activatedMonth=require("../Model/activatedMonth");
+
+gameRouter.get("/activeGame", function (req, res) {
+    //to get all months that admin set to 'active' : from 'activemonths' collection
+  console.log("active games")  
+  
+  res.send({message:"none"})    //if none is active
+});
 
 gameRouter.post("/vote", function (req, res) {
-  /*-------------quiz section---------------*/
-  console.log("inside game");
-  console.log(req.body);
-  game
-    .find({ teamName: req.body._id })
-    .exec()
-    .then((game) => {
-      game(req.body)
-        .save()
-        .then((data) => {
-          return res.status(200).json({
-            message: "successfully added ",
-            data: data,
-          });
-        })
-        .catch((error) => {
-          return res.status(401).json({
-            message: error,
-          });
-        });
-    });
+    //to save the vote of a team into the database : to 'gameHistorys' collection
 });
 module.exports = gameRouter;
