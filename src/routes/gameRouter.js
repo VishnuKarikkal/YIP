@@ -1,14 +1,31 @@
 const express = require("express");
 const gameRouter = express.Router();
+const activatedMonth=require('../Model/activatedMonth')
 const gameHistory = require("../Model/gameHistory");
 const teamSummary=require("../Model/teamSummary");
-const activatedMonth=require("../Model/activatedMonth");
+
 
 gameRouter.get("/activeGame", function (req, res) {
     //to get all months that admin set to 'active' : from 'activemonths' collection
-  console.log("active games")  
-  
-  res.send({message:"none"})    //if none is active
+  console.log("active games")
+  let activatedMonths=[];
+  activatedMonth.find().then((months)=>{
+    months.forEach(month=>{
+      if(month.activated){
+        activatedMonths.push(month);
+      }
+    })
+    return activatedMonths;
+  }).then(activatedMonths => {
+    if(activatedMonths.length>0) {
+      res.send(activatedMonths);
+    }else{
+      res.send({message: "none"})
+    }
+  })
+
+
+  //if none is active
 });
 
 gameRouter.post("/vote", function (req, res) {

@@ -3,7 +3,7 @@ const path = require("path");
 const cors = require("cors");
 const checkAuth = require("./src/middleware/check-auth");
 const bodyParser = require("body-parser");
-//const loginRouter = require("./src/routes/loginRouter");
+const loginRouter = require("./src/routes/loginRouter");
 const port = process.env.PORT || 5000;
 const app = new express();
 
@@ -19,7 +19,7 @@ app.set("views", "./src/views");
 app.use(cors());
 app.use(express.static("./public"));
 
-//app.use('/userLogin',loginRouter);        //loginRoutes
+app.use('/userLogin',loginRouter);        //loginRoutes
 app.use('/game',gameRouter);          //gameRoutes
 
 app.get("/", function (req, res) {
