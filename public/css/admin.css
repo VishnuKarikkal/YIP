@@ -1,3 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap");
+/*  --------------------------------------
+font-family: 'Dancing Script', cursive;
+font-family: 'Grenze Gotisch', cursive;
+font-family: 'Just Another Hand', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Piedra', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Rye', cursive;
+-----------------------------------------
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: beige; */
+}
+
+.navbar-brand {
+  transform: scale(1.1);
+  font-family: "Rye", cursive;
+}
+.nav-link {
+  font-family: "Poppins", sans-serif;
+}
+.panel {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.bpInput {
+  width: 60px;
+}
+.even-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
 .votes {
   border-radius: 15px 50px 30px;
   border: 2px solid #609;
@@ -8,15 +49,6 @@
   margin-right: 5px;
 }
 
-table td {
-  margin: auto auto;
-}
-table,
-th,
-td {
-  border: 1px dotted brown;
-  border-collapse: collapse;
-}
 .switch {
   position: relative;
   display: inline-block;
@@ -79,17 +111,34 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.evenly-flex{
-  display: flex;
-  justify-content: space-evenly;
+/* .bonus label, .penalty label{
+  font-size: 175%;
 }
-.bdr{
+.bonus input, .penalty input{
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+.bonus input:hover, .penalty input:hover{
+  border-color: orange;
+}
+.bonus input:focus, .penalty input:focus{
+  border-color: black;
+} */
+.bdr {
   border: 1px solid blueviolet;
   border-radius: 50px;
   margin: 0px 10px;
   padding: 7px;
 }
-.bdr:hover{
+.bdr:hover {
   transform: scale(1.1);
   /* border: none; */
 }
