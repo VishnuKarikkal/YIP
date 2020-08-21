@@ -12,12 +12,13 @@ mongoose.connect(database, (err) => {
 //     return mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost:27017/yip', { useNewUrlParser: true, useUnifiedTopology: true });
 // };
 
-const user = new mongoose.Schema({
-  username: String,
-  password: String,
+const activemonth = new mongoose.Schema({
+  month: String,
+  activated: Boolean,
 });
-const User = mongoose.model("user", user);
-module.exports = User;
+const Activemonth = mongoose.model("activemonth", activemonth);
+
+module.exports = Activemonth;
 //********
-//'users' collection stores each team's credentials which is "PRESET" by admin
+//'activemonths' collection stores all months and specifies whether admin 'activated'(true) or not(false)
 //*********
