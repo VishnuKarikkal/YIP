@@ -63,7 +63,9 @@
     </nav>
 
     <div class="container mt-5 game-controller">
-      <h1 class="display-4 text-center mb-5">Game Controller</h1>
+      <h1 class="display-4 text-center controller-heading mb-5">
+        Game Controller
+      </h1>
       <div class="table-responsive">
         <table
           class="table table-bordered table-striped table-hover text-center"
@@ -407,13 +409,27 @@
       <div class="BP-dropdown">
         <form action="" class="was-validated form-inline even-flex">
           <div class="form-group">
+            <h3 for="bonusValue">Bonus:</h3>
             <select
-              class="custom-select h-50 text-muted text-center"
-              id="selectedBPValue"
+              class="custom-select h-50 text-muted text-center mx-3"
+              id="selectedBonusValue"
               required
             >
               <option value="">Select a Value</option>
-              <option value="10000">10,000</option>
+              <option value="0">0</option>
+              <option value="20000">20,000</option>
+              <option value="30000">30,000</option>
+              <option value="40000">40,000</option>
+              <option value="50000">50,000</option>
+            </select>
+            <h3 for="penaltyValue">Penalty:</h3>
+            <select
+              class="custom-select h-50 text-muted text-center ml-3"
+              id="selectedPenaltyValue"
+              required
+            >
+              <option value="">Select a Value</option>
+              <option value="0">0</option>
               <option value="20000">20,000</option>
               <option value="30000">30,000</option>
               <option value="40000">40,000</option>
@@ -422,7 +438,7 @@
             <!-- <div class="invalid-feedback font-weight-bold mt-n2">Invalid option</div> -->
           </div>
           <button class="btn btn-lg btn-success" type="submit">
-            Publish Bonus (Penality)
+            Publish Bonus (Penalty)
           </button>
         </form>
       </div>
@@ -615,12 +631,8 @@
           "
         >
           <h5
-            class="card-header text-center mb-2"
-            style="
-              font-family: 'Baloo 2', cursive;
-              color: darkmagenta;
-              border-radius: 15px;
-            "
+            class="card-header display-4 text-center mb-2"
+            style="color: darkmagenta; border-radius: 15px;"
           >
             Game Stats
           </h5>
@@ -659,27 +671,16 @@
     <!-- Game Summary section -->
     <div
       class="container"
-      style="
-        border: 1px solid blueviolet;
-        padding-top: 15px;
-        padding-bottom: 10px;
-        margin: 10px auto;
-        border-radius: 15px;
-      "
+      style="border: 1px solid blueviolet; border-radius: 15px;"
     >
       <h5
-        class="card-header text-center"
-        style="
-          font-family: 'Baloo 2', cursive;
-          color: darkmagenta;
-          border-radius: 15px;
-          margin-bottom: 10px;
-        "
+        class="card-header text-center display-4 my-2"
+        style="color: darkmagenta; border-radius: 15px;"
       >
-        Game-Summary
+        Game Summary
       </h5>
 
-      <div class="gameStat evenly-flex">
+      <div class="gameStat even-flex">
         <div class="trophy-image">
           <img
             src="/img/wnr.jpg"
@@ -702,17 +703,17 @@
       </div>
       <hr />
 
-      <div class="game-summary-table px-3 mx-auto">
+      <div class="game-summary-table px-3 mx-auto mb-3">
         <div class="row">
           <div class="col bdr">
-            <div class="row evenly-flex">
+            <div class="row even-flex">
               <h3>North</h3>
             </div>
-            <div class="row evenly-flex">
+            <div class="row even-flex">
               <h5>
                 Balance:
                 <a
-                  class="ml-2 display-4"
+                  class="mx-auto display-4"
                   id="northBal"
                   style="font-size: 1.2em;"
                   >150</a
@@ -722,13 +723,16 @@
             </div>
           </div>
           <div class="col bdr">
-            <div class="row evenly-flex">
+            <div class="row even-flex">
               <h3>East</h3>
             </div>
-            <div class="row evenly-flex">
+            <div class="row even-flex">
               <h5>
                 Balance:
-                <a class="ml-2 display-4" id="eastBal" style="font-size: 1.2em;"
+                <a
+                  class="mx-auto display-4"
+                  id="eastBal"
+                  style="font-size: 1.2em;"
                   >140</a
                 >
                 millions
@@ -736,13 +740,16 @@
             </div>
           </div>
           <div class="col bdr">
-            <div class="row evenly-flex">
+            <div class="row even-flex">
               <h3>West</h3>
             </div>
-            <div class="row evenly-flex">
+            <div class="row even-flex">
               <h5>
                 Balance:
-                <a class="ml-2 display-4" id="westBal" style="font-size: 1.2em;"
+                <a
+                  class="mx-auto display-4"
+                  id="westBal"
+                  style="font-size: 1.2em;"
                   >133</a
                 >
                 millions
@@ -750,14 +757,14 @@
             </div>
           </div>
           <div class="col bdr">
-            <div class="row evenly-flex">
+            <div class="row even-flex">
               <h3>South</h3>
             </div>
-            <div class="row evenly-flex">
+            <div class="row even-flex">
               <h5>
                 Balance:
                 <a
-                  class="ml-2 display-4"
+                  class="mx-auto display-4"
                   id="southBal"
                   style="font-size: 1.2em;"
                   >145</a
@@ -875,7 +882,7 @@
       </div> -->
     </div>
     <!-- To End The Current Game -->
-    <div class="mx-auto my-3 evenly-flex">
+    <div class="my-3 even-flex">
       <button class="btn btn-lg btn-danger">End Game</button>
       <button class="btn btn-lg btn-primary">Restart Game</button>
     </div>
