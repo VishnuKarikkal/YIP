@@ -78,7 +78,7 @@ body {
 .box input[type="password"] {
   display: block;
   margin: 20px auto;
-  text-align: center;
+  /* text-align: center; */
   border: 2px solid rgb(39, 36, 204);
   padding: 14px 10px;
   width: 250px;

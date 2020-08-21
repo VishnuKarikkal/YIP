@@ -40,7 +40,7 @@ td {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-color: green;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -58,7 +58,7 @@ td {
 }
 
 input:checked + .slider {
-  background-color: green;
+  background-color: red;
 }
 
 input:focus + .slider {
@@ -78,4 +78,18 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.evenly-flex{
+  display: flex;
+  justify-content: space-evenly;
+}
+.bdr{
+  border: 1px solid blueviolet;
+  border-radius: 50px;
+  margin: 0px 10px;
+  padding: 7px;
+}
+.bdr:hover{
+  transform: scale(1.1);
+  /* border: none; */
 }
