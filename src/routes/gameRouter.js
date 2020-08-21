@@ -29,6 +29,7 @@ gameRouter.get("/activeGame", function (req, res) {
 });
 
 gameRouter.post("/vote", function (req, res) {
+
     //to save the vote of a team into the database : to 'gameHistorys' collection
 });
 module.exports = gameRouter;
