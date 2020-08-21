@@ -6,15 +6,17 @@ const jwt = require("jsonwebtoken");
 const jwtKey = "secret" || process.env.JWT_KEY;
 
 loginRouter.get("/", function (req, res) {
-  res.sendFile(__dirname + "/src/views/login.html");
+  res.send('hi');
 });
 loginRouter.post("/", function (req, res) {
-  name = req.body.team;
-  password = req.body.password;
-  console.log(name)
+  console.log(req.body);
+  let username=req.body.username;
+  let password=req.body.password;
+  console.log(username)
   console.log(password)
+
   user
-    .find({ username: name })
+    .find({ username:username })
     .exec()
     .then((user) => {
       if (user.length < 1) {
@@ -25,16 +27,8 @@ loginRouter.post("/", function (req, res) {
         });
       } else {
        // checking wether password matches
-       console.log("un exits")
-       bcrypt.compare(password, user[0].password, (err, result) => {
-         // if it doesn't match
-          if (err) {
-            console.log("no maths")
-            return res.status(401).json({
-              message: "Auth failed",
-            });
-          } else if (result) {
-            //if it matches then sign user
+          console.log('here',password,user[0].password);
+         if(password===user[0].password){
             const token = jwt.sign(
               {
                 username: user[0].name,
@@ -57,16 +51,11 @@ loginRouter.post("/", function (req, res) {
               message: "Auth failed wrong password",
             });
           }
+        }})
+
+
         });
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json({
-        error: err,
-      });
-    });
-});
+
 /*---------------------code to handle password change request------------------------*/
 loginRouter.post("/changePassword", function (req, res) {
   user
