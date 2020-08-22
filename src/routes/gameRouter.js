@@ -20,7 +20,7 @@ gameRouter.get("/activeGame", function (req, res) {
     if(activatedMonths.length>0) {
       res.status(200).json({message:activatedMonths});
     }else{
-      res.status(200).json({message: "none"})
+      res.status(200).json({message: null})
     }
   })
 
