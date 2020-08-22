@@ -66,176 +66,175 @@
       <h1 class="display-4 text-center controller-heading mb-5">
         Game Controller
       </h1>
+      <!-- instructions -->
+      <button
+        type="button"
+        class="btn instructions"
+        data-toggle="modal"
+        data-target="#exampleModalScrollable"
+      >
+        <h3>Instructions</h3>
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModalScrollable"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalScrollableTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="exampleModalScrollableTitle">
+                Instructions
+              </h6>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-justify">
+              You are required to send a message C or D to the World Bank every
+              month. Depending on the following rules, the Bank will either give
+              you funds during that month or ask you to contribute a specific
+              sum from your resources. Sometimes the World Bank may have
+              additional funds and this information will be announced in
+              advance.
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <!-- <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="table-responsive">
         <table
           class="table table-bordered table-striped table-hover text-center"
         >
           <thead>
             <tr>
-              <th scope="col" class="align-middle" rowspan="2">Months</th>
-              <th scope="col" class="align-middle" rowspan="2">
+              <th scope="col">Months</th>
+              <th scope="col">
                 Month Activator
               </th>
-              <th scope="col" colspan="2">North</th>
-              <th scope="col" colspan="2">East</th>
-              <th scope="col" colspan="2">West</th>
-              <th scope="col" colspan="2">South</th>
-            </tr>
-            <tr>
-              <th scope="col">Vote</th>
-              <th scope="col">Result</th>
-              <th scope="col">Vote</th>
-              <th scope="col">Result</th>
-              <th scope="col">Vote</th>
-              <th scope="col">Result</th>
-              <th scope="col">Vote</th>
-              <th scope="col">Result</th>
+              <th scope="col">North</th>
+              <th scope="col">East</th>
+              <th scope="col">West</th>
+              <th scope="col">South</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">January</th>
               <td><input type="checkbox" name="activator" id="actJan" /></td>
-              <td id="niJan"></td>
-              <td id="nrJan"></td>
-              <td id="eiJan"></td>
-              <td id="erJan"></td>
-              <td id="wiJan"></td>
-              <td id="wrJan"></td>
-              <td id="siJan"></td>
-              <td id="srJan"></td>
+              <td id="nJan"></td>
+              <td id="eJan"></td>
+              <td id="wJan"></td>
+              <td id="sJan"></td>
             </tr>
             <tr>
               <th scope="row">February</th>
               <td><input type="checkbox" name="activator" id="actFeb" /></td>
-              <td id="niFeb"></td>
-              <td id="nrFeb"></td>
-              <td id="eiFeb"></td>
-              <td id="erFeb"></td>
-              <td id="wiFeb"></td>
-              <td id="wrFeb"></td>
-              <td id="siFeb"></td>
-              <td id="srFeb"></td>
+              <td id="nFeb"></td>
+              <td id="eFeb"></td>
+              <td id="wFeb"></td>
+              <td id="sFeb"></td>
             </tr>
             <tr>
               <th scope="row">March</th>
               <td><input type="checkbox" name="activator" id="actMar" /></td>
-              <td id="niMar"></td>
-              <td id="nrMar"></td>
-              <td id="eiMar"></td>
-              <td id="erMar"></td>
-              <td id="wiMar"></td>
-              <td id="wrMar"></td>
-              <td id="siMar"></td>
-              <td id="srMar"></td>
+              <td id="nMar"></td>
+              <td id="eMar"></td>
+              <td id="wMar"></td>
+              <td id="sMar"></td>
             </tr>
             <tr>
               <th scope="row">April</th>
               <td><input type="checkbox" name="activator" id="actApr" /></td>
-              <td id="niapr"></td>
-              <td id="nrapr"></td>
-              <td id="eiapr"></td>
-              <td id="erapr"></td>
-              <td id="wiapr"></td>
-              <td id="wrapr"></td>
-              <td id="siapr"></td>
-              <td id="srapr"></td>
+              <td id="nApr"></td>
+              <td id="eApr"></td>
+              <td id="wApr"></td>
+              <td id="sApr"></td>
             </tr>
             <tr>
               <th scope="row">May</th>
               <td><input type="checkbox" name="activator" id="actMay" /></td>
-              <td id="niMay"></td>
-              <td id="nrMay"></td>
-              <td id="eiMay"></td>
-              <td id="erMay"></td>
-              <td id="wiMay"></td>
-              <td id="wrMay"></td>
-              <td id="siMay"></td>
-              <td id="srMay"></td>
+              <td id="nMay"></td>
+              <td id="eMay"></td>
+              <td id="wMay"></td>
+              <td id="sMay"></td>
             </tr>
             <tr>
               <th scope="row">June</th>
               <td><input type="checkbox" name="activator" id="actJun" /></td>
-              <td id="niJun"></td>
-              <td id="nrJun"></td>
-              <td id="eiJun"></td>
-              <td id="erJun"></td>
-              <td id="wiJun"></td>
-              <td id="wrJun"></td>
-              <td id="siJun"></td>
-              <td id="srJun"></td>
+              <td id="nJun"></td>
+              <td id="eJun"></td>
+              <td id="wJun"></td>
+              <td id="sJun"></td>
             </tr>
             <tr>
               <th scope="row">July</th>
               <td><input type="checkbox" name="activator" id="actJul" /></td>
-              <td id="niJul"></td>
-              <td id="nrJul"></td>
-              <td id="eiJul"></td>
-              <td id="erJul"></td>
-              <td id="wiJul"></td>
-              <td id="wrJul"></td>
-              <td id="siJul"></td>
-              <td id="srJul"></td>
+              <td id="nJul"></td>
+              <td id="eJul"></td>
+              <td id="wJul"></td>
+              <td id="sJul"></td>
             </tr>
             <tr>
               <th scope="row">August</th>
               <td><input type="checkbox" name="activator" id="actAug" /></td>
-              <td id="niAug"></td>
-              <td id="nrAug"></td>
-              <td id="eiAug"></td>
-              <td id="erAug"></td>
-              <td id="wiAug"></td>
-              <td id="wrAug"></td>
-              <td id="siAug"></td>
-              <td id="srAug"></td>
+              <td id="nAug"></td>
+              <td id="eAug"></td>
+              <td id="wAug"></td>
+              <td id="sAug"></td>
             </tr>
             <tr>
               <th scope="row">September</th>
               <td><input type="checkbox" name="activator" id="actSep" /></td>
-              <td id="niSep"></td>
-              <td id="nrSep"></td>
-              <td id="eiSep"></td>
-              <td id="erSep"></td>
-              <td id="wiSep"></td>
-              <td id="wrSep"></td>
-              <td id="siSep"></td>
-              <td id="srSep"></td>
+              <td id="nSep"></td>
+              <td id="eSep"></td>
+              <td id="wSep"></td>
+              <td id="sSep"></td>
             </tr>
             <tr>
               <th scope="row">October</th>
               <td><input type="checkbox" name="activator" id="actOct" /></td>
-              <td id="niOct"></td>
-              <td id="nrOct"></td>
-              <td id="eiOct"></td>
-              <td id="erOct"></td>
-              <td id="wiOct"></td>
-              <td id="wrOct"></td>
-              <td id="siOct"></td>
-              <td id="srOct"></td>
+              <td id="nOct"></td>
+              <td id="eOct"></td>
+              <td id="wOct"></td>
+              <td id="sOct"></td>
             </tr>
             <tr>
               <th scope="row">November</th>
               <td><input type="checkbox" name="activator" id="actNov" /></td>
-              <td id="niNov"></td>
-              <td id="nrNov"></td>
-              <td id="eiNov"></td>
-              <td id="erNov"></td>
-              <td id="wiNov"></td>
-              <td id="wrNov"></td>
-              <td id="siNov"></td>
-              <td id="srNov"></td>
+              <td id="nNov"></td>
+              <td id="eNov"></td>
+              <td id="wNov"></td>
+              <td id="sNov"></td>
             </tr>
             <tr>
               <th scope="row">December</th>
               <td><input type="checkbox" name="activator" id="actDec" /></td>
-              <td id="niDec"></td>
-              <td id="nrDec"></td>
-              <td id="eiDec"></td>
-              <td id="erDec"></td>
-              <td id="wiDec"></td>
-              <td id="wrDec"></td>
-              <td id="siDec"></td>
-              <td id="srDec"></td>
+              <td id="nDec"></td>
+              <td id="eDec"></td>
+              <td id="wDec"></td>
+              <td id="sDec"></td>
             </tr>
           </tbody>
         </table>
@@ -249,115 +248,418 @@
 
       <!-- Bonus-Penalty table  -->
       <div class="bonus-penalty-adder table-responsive">
+        <h3 class="display-4 text-center remark-heading">Remarks</h3>
         <table
           class="table table-bordered table-striped table-hover text-center"
         >
+          <!-- <caption class="display-4 font-weight-bold">Remarks</caption> -->
           <thead>
             <tr>
-              <th scope="col">Months</th>
-              <th scope="col">Month Activator</th>
-              <th scope="col">North</th>
-              <th scope="col">East</th>
-              <th scope="col">West</th>
-              <th scope="col">South</th>
+              <th scope="col" class="align-middle" rowspan="2">Months</th>
+              <th scope="col" class="align-middle" rowspan="2">
+                Month Activator
+              </th>
+              <th scope="col" colspan="2">North</th>
+              <th scope="col" colspan="2">East</th>
+              <th scope="col" colspan="2">West</th>
+              <th scope="col" colspan="2">South</th>
+            </tr>
+            <tr>
+              <th scope="col">Vote</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Vote</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Vote</th>
+              <th scope="col">Remark</th>
+              <th scope="col">Vote</th>
+              <th scope="col">Remark</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">January</th>
               <td><input type="checkbox" name="activator" id="actJanBP" /></td>
-              <td id="nJanBP"></td>
-              <td id="eJanBP"></td>
-              <td id="wJanBP"></td>
-              <td id="sJanBP"></td>
+              <td id="northVoteJan"></td>
+              <td id="nJanBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteJan"></td>
+              <td id="eJanBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteJan"></td>
+              <td id="wJanBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteJan"></td>
+              <td id="sJanBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">February</th>
               <td><input type="checkbox" name="activator" id="actFebBP" /></td>
-              <td id="nFebBP"></td>
-              <td id="eFebBP"></td>
-              <td id="wFebBP"></td>
-              <td id="sFebBP"></td>
+              <td id="northVoteFeb"></td>
+              <td id="nFebBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteFeb"></td>
+              <td id="eFebBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteFeb"></td>
+              <td id="wFebBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteFeb"></td>
+              <td id="sFebBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">March</th>
               <td><input type="checkbox" name="activator" id="actMarBP" /></td>
-              <td id="nMarBP"></td>
-              <td id="eMarBP"></td>
-              <td id="wMarBP"></td>
-              <td id="sMarBP"></td>
+              <td id="northVoteMar"></td>
+              <td id="nMarBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteMar"></td>
+              <td id="eMarBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteMar"></td>
+              <td id="wMarBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteApr"></td>
+              <td id="sMarBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">April</th>
               <td><input type="checkbox" name="activator" id="actAprBP" /></td>
-              <td id="nAprBP"></td>
-              <td id="eAprBP"></td>
-              <td id="wAprBP"></td>
-              <td id="sAprBP"></td>
+              <td id="northVoteApr"></td>
+              <td id="nAprBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteApr"></td>
+              <td id="eAprBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteApr"></td>
+              <td id="wAprBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteApr"></td>
+              <td id="sAprBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">May</th>
               <td><input type="checkbox" name="activator" id="actMayBP" /></td>
-              <td id="nMayBP"></td>
-              <td id="eMayBP"></td>
-              <td id="wMayBP"></td>
-              <td id="sMayBP"></td>
+              <td id="northVoteMay"></td>
+              <td id="nMayBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteMay"></td>
+              <td id="eMayBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteMay"></td>
+              <td id="wMayBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteMay"></td>
+              <td id="sMayBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">June</th>
               <td><input type="checkbox" name="activator" id="actJunBP" /></td>
-              <td id="nJunBP"></td>
-              <td id="eJunBP"></td>
-              <td id="wJunBP"></td>
-              <td id="sJunBP"></td>
+              <td id="northVoteJun"></td>
+              <td id="nJunBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteJun"></td>
+              <td id="eJunBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteJun"></td>
+              <td id="wJunBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteJun"></td>
+              <td id="sJunBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">July</th>
               <td><input type="checkbox" name="activator" id="actJulBP" /></td>
-              <td id="nJulBP"></td>
-              <td id="eJulBP"></td>
-              <td id="wJulBP"></td>
-              <td id="sJulBP"></td>
+              <td id="northVoteJul"></td>
+              <td id="nJulBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteJul"></td>
+              <td id="eJulBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteJul"></td>
+              <td id="wJulBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteJul"></td>
+              <td id="sJulBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
+
             <tr>
               <th scope="row">August</th>
               <td><input type="checkbox" name="activator" id="actAugBP" /></td>
-              <td id="nAugBP"></td>
-              <td id="eAugBP"></td>
-              <td id="wAugBP"></td>
-              <td id="sAugBP"></td>
+              <td id="northVoteAug"></td>
+              <td id="nAugBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteAug"></td>
+              <td id="eAugBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteAug"></td>
+              <td id="wAugBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteAug"></td>
+              <td id="sAugBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">September</th>
               <td><input type="checkbox" name="activator" id="actSepBP" /></td>
-              <td id="nSepBP"></td>
-              <td id="eSepBP"></td>
-              <td id="wSepBP"></td>
-              <td id="sSepBP"></td>
+              <td id="northVoteSep"></td>
+              <td id="nSepBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteSep"></td>
+              <td id="eSepBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteSep"></td>
+              <td id="wSepBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteSep"></td>
+              <td id="sSepBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">October</th>
               <td><input type="checkbox" name="activator" id="actOctBP" /></td>
-              <td id="nOctBP"></td>
-              <td id="eOctBP"></td>
-              <td id="wOctBP"></td>
-              <td id="sOctBP"></td>
+              <td id="northVoteOct"></td>
+              <td id="nOctBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteOct"></td>
+              <td id="eOctBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteOct"></td>
+              <td id="wOctBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteOct"></td>
+              <td id="sOctBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">November</th>
               <td><input type="checkbox" name="activator" id="actNovBP" /></td>
-              <td id="nNovBP"></td>
-              <td id="eNovBP"></td>
-              <td id="wNovBP"></td>
-              <td id="sNovBP"></td>
+              <td id="northVoteNov"></td>
+              <td id="nNovBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteNov"></td>
+              <td id="eNovBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteNov"></td>
+              <td id="wNovBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteNov"></td>
+              <td id="sNovBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
             <tr>
               <th scope="row">December</th>
               <td><input type="checkbox" name="activator" id="actDecBP" /></td>
-              <td id="nDecBP"></td>
-              <td id="eDecBP"></td>
-              <td id="wDecBP"></td>
-              <td id="sDecBP"></td>
+              <td id="northVoteDec"></td>
+              <td id="nDecBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="eastVoteDec"></td>
+              <td id="eDecBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="westVoteDec"></td>
+              <td id="wDecBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
+              <td id="southVoteDec"></td>
+              <td id="sDecBP">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -366,49 +668,12 @@
       <!-- Activators -->
       <div class="even-flex my-3">
         <button class="btn btn-primary btn-lg">Activate Months</button>
-        <button class="btn btn-success btn-lg">Publish Months</button>
-      </div>
-
-      <!-- Toggle switch  -->
-      <div class="even-flex my-4">
-        <div class="northBP">
-          <span class="font-weight-bold">Bonus</span>
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-          <span class="font-weight-bold">Penalty</span>
-        </div>
-        <div class="eastBP">
-          <span class="font-weight-bold">Bonus</span>
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-          <span class="font-weight-bold">Penalty</span>
-        </div>
-        <div class="westBP">
-          <span class="font-weight-bold">Bonus</span>
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-          <span class="font-weight-bold">Penalty</span>
-        </div>
-        <div class="southBP">
-          <span class="font-weight-bold">Bonus</span>
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-          <span class="font-weight-bold">Penalty</span>
-        </div>
       </div>
 
       <!-- Bonus-Penalty Dropdown -->
       <div class="BP-dropdown">
-        <form action="" class="was-validated form-inline even-flex">
-          <div class="form-group">
+        <form action="" class="was-validated">
+          <div class="form-group even-flex">
             <h3 for="bonusValue">Bonus:</h3>
             <select
               class="custom-select h-50 text-muted text-center mx-3"
@@ -437,9 +702,11 @@
             </select>
             <!-- <div class="invalid-feedback font-weight-bold mt-n2">Invalid option</div> -->
           </div>
-          <button class="btn btn-lg btn-success" type="submit">
-            Publish Bonus (Penalty)
-          </button>
+          <div class="mx-auto text-center">
+            <button class="btn btn-lg btn-success mb-3" type="submit">
+              Add Remarks
+            </button>
+          </div>
         </form>
       </div>
     </div>
