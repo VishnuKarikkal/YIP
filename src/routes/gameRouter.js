@@ -31,12 +31,12 @@ gameRouter.post("/activate",(req,res)=>
   console.log(req.body.activateMonths);
   const activateMonths=JSON.parse(req.body.activateMonths);// array of months
   activateMonths.forEach(month=>{
-    activatedMonth({month:month,activated:true}).save();
+    //activatedMonth({month:month,activated:true}).save();
+    activatedMonth.updateOne({month:month},{$set:{activated:true}});
   })
 
-  
+  res.send({message:"months activated!"}); 
   //to activate the months selected by the admin while clicking 'activate' btn
-  
 });
 gameRouter.post("/vote", function (req, res) {
   console.log('here');
