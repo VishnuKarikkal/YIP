@@ -17,9 +17,9 @@ const game = new mongoose.Schema({
       remarks: Number,
   totalBalance: String
 });
-const Game = mongoose.model("gameHistory", game);
+const Game = mongoose.model("gamedatas", game,"gamedatas");
 module.exports = Game;
 //********
-//'gameHistorys' collection stores each team's month wise game data ( or game history data)
+//'gamedatas' collection stores each team's month wise game data ( or game history data)
 //'totalBalance' is determined using fetching 'balance' from 'teamSummary' collection and vote_results+remarks
 //*********

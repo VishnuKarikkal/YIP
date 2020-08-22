@@ -4,6 +4,8 @@ var activeGames=[];
 var activeGameCheckUrl = "http://localhost:5000/game/activeGame";
 var votePostUrl='http://localhost:5000/game/vote';
 var teamStatsUrl='http://localhost:5000/gameData/teamStats';
+//var name=localStorage.getItem('teamName');
+var name="name=SOUTH";
 
 $(document).ready(function () {
   $.each($(".opt"), function (key, value) {
@@ -49,6 +51,11 @@ function gameCheck() {
                                         document.getElementById('voteOptions').hidden=true;
                                       }
                                     }
+                                    else
+                                    {
+                                      document.getElementById('month').innerText="No Active Games!";
+                                      document.getElementById('voteOptions').hidden=true;
+                                    }
                                 }
       
     xhttp.open("GET",activeGameCheckUrl,true);
@@ -65,8 +72,8 @@ let votedValue=null;
   })
 })
 document.getElementById('vote').addEventListener('click', event => {
-  let teamName=document.getElementById('teamName').innerText;
-  let month='JAN';// change it
+  let teamName=document.getElementById('teamName').innerText.toUpperCase();
+  let month=document.getElementById('month').innerText;
   let vote=votedValue;
   if(vote){
   $.post('http://localhost:5000/game/vote' , { teamName:teamName, month:month, vote:vote } )
@@ -162,6 +169,7 @@ function teamStats()
                                                         document.getElementById('decBalance').innerText=res['history'][i].totalBalance;
                                                         document.getElementById('decVote').innerText=res['history'][i].vote;
                                           }
+                                          i++;
                                         }
                                       }
                                       else
@@ -208,7 +216,7 @@ function teamStats()
                                     }
                                 }
       
-    xhttp.open("GET",teamStatsUrl,true);
+    xhttp.open("GET",teamStatsUrl + "?" + name,true);
     xhttp.send();
 }
 

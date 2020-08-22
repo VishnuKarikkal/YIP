@@ -39,8 +39,18 @@ gameRouter.post("/activate",(req,res)=>
   //to activate the months selected by the admin while clicking 'activate' btn
 });
 gameRouter.post("/vote", function (req, res) {
-  console.log('here');
-   gameHistory(req.body).save().then(value => res.status(200).json({message:'successfully voted!'}));
+   teamSummary.findOne({teamName:req.body.teamName}).then((team)=> //fetching finalBalance of the team
+   {
+     let data=
+  {
+    teamName:req.body.teamName,
+    vote:req.body.vote,
+    month:req.body.month,
+    totalBalance:team.balance
+  };
+   gameHistory(data).save().then(value => res.status(200).json({message:'successfully voted!'}));
+  //saving
+   })
     //to save the vote of a team into the database : to 'gameHistorys' collection
 });
 gameRouter.post("/publish",(req,res)=>

@@ -12,8 +12,8 @@ const teamSummary = new mongoose.Schema({
   teamName: String,
   balance:Number
 });
-const TeamSummary = mongoose.model("teamSummary", teamSummary);
+const TeamSummary = mongoose.model("teamdata", teamSummary);
 module.exports = TeamSummary;
 //********
-//'teamSummarys' collection stores each team's game summary data ( team-name + balance-available )
+//'teamdatas' collection stores each team's game summary data ( team-name + balance-available )
 //*********
