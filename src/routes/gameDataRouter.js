@@ -8,7 +8,8 @@ const teamSummary=require("../Model/teamSummary");
 gameDataRouter.get("/teamStats", function (req, res) {
     //to get the stats of a team : from 'teamSummary' + 'gameHistory' collection
   console.log("team stats");
-  const name=req.body.name;    //team name : which team's data to be fetched
+  let name=req.query.name;
+  console.log(name);//team name : which team's data to be fetched
   let balance;   //team summary data : balance availabale
   let teamGame;  //game history data : array of objects [each month's game data]
     teamSummary.findOne({teamName:name}).then((data)=>  //getting balance
