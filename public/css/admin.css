@@ -34,8 +34,15 @@ form .nav-link:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 .controller-heading,
-.card-header {
+.card-header,
+.remark-heading {
   font-family: "Grenze Gotisch", cursive;
+  position: relative;
+}
+.instructions {
+  position: absolute;
+  right: 5%;
+  font-family: "Piedra", cursive;
 }
 .panel {
   display: flex;
