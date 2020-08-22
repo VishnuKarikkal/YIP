@@ -21,11 +21,10 @@ gameRouter.get("/activeGame", function (req, res) {
       res.status(200).json({message:activatedMonths});
     }else{
       res.status(200).json({message: null})
+      //if none is active
     }
   })
 
-
-  //if none is active
 });
 gameRouter.post("/activate",(req,res)=>
 {
