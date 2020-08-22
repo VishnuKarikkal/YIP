@@ -39,6 +39,7 @@ gameRouter.post("/activate",(req,res)=>
   
 });
 gameRouter.post("/vote", function (req, res) {
+  console.log('here');
    gameHistory(req.body).save().then(value => res.status(200).json({message:'successfully voted!'}));
     //to save the vote of a team into the database : to 'gameHistorys' collection
 });

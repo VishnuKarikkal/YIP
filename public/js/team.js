@@ -1,6 +1,6 @@
 var optionVoted = "";
 var activeGameCheckUrl = "http://localhost:5000/game/activeGame";
-
+var votePostUrl='http://localhost:5000/game/vote'
 $(document).ready(function () {
   $.each($(".opt"), function (key, value) {
     $(this).click(function (e) {
@@ -52,7 +52,32 @@ function gameCheck() {
     xhttp.open("GET",activeGameCheckUrl,true);
     xhttp.send();
 }
+/*-----------------post request for vote-----------------------*/
+let votedValue=null;
+ let voteBtns=document.getElementsByClassName('vote-btn');
+ //adding event listener's on Vote c/d button
+[...voteBtns].forEach(function(btn){
+  btn.addEventListener('click', function(btn){
+       votedValue=btn.target.innerText;
+       console.log(votedValue);
+  })
+})
+document.getElementById('vote').addEventListener('click', event => {
+  let teamName=document.getElementById('teamName').innerText;
+  let month='JAN';// change it
+  let vote=votedValue;
+  if(vote){
+  $.post('http://localhost:5000/game/vote' , { teamName:teamName, month:month, vote:vote } )
+.done(function( data ) {
+    console.log( "Data Loaded: " + data.message);
+  });
+  }
+  else{
+    alert('please choose a value');
+  }
+});
 
+/*---------------------logout---------------*/
 function logout() {
   //for logging out
 }
