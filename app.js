@@ -9,6 +9,7 @@ const app = new express();
 
 // Routing
 const gameRouter = require('./src/routes/gameRouter');
+const gameDataRouter = require('./src/routes/gameDataRouter');
 
 app.use(cors({ origin: "*" }));
 app.use(express.urlencoded({ extended: true }));
@@ -21,6 +22,7 @@ app.use(express.static("./public"));
 
 app.use('/userLogin',loginRouter);        //loginRoutes
 app.use('/game',gameRouter);          //gameRoutes
+app.use('/gameData',gameDataRouter);
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/src/views/team.html");
