@@ -22,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap"
     />
   </head>
-  <body onload="gameCheck()" onfocus="gameCheck()">
+  <body onload="gameCheck()">
     <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
@@ -147,7 +147,8 @@
 
     <div class="input-controller container mx-auto my-5 text-center">
       <h1 class="display-4" id="month">Current Month</h1>
-      <h2 class="input-heading mb-3">Vote an Option</h2>
+      <div id="voteOptions">
+        <h2 class="input-heading mb-3">Vote an Option</h2>
       <div class="input-btns">
         <button class="btn btn-lg btn-outline-info font-weight-bold mx-5 my-2">
           <a class="display-3">C</a>
@@ -159,8 +160,9 @@
         </button>
       </div>
       <button type="button" class="btn btn-primary text-center my-4">
-        <a class="display-4">VOTE!</a>
+        <a class="display-4" id="vote">VOTE!</a>
       </button>
+      </div>
     </div>
 
     <!-- <div class="card text-center mt-5"> -->
