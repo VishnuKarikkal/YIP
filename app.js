@@ -25,14 +25,14 @@ app.use('/game',gameRouter);          //gameRoutes
 app.use('/gameData',gameDataRouter);
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/src/views/team.html");
+  res.sendFile(__dirname + "/src/views/welcome.html");
 });
 app.get("/login", function (req, res) {
   res.sendFile(__dirname + "/src/views/login.html");
 });
-// app.get("/gameIndex", function (req, res) {
-//   res.sendFile(__dirname + "/src/views/index.html");
-// });
+app.get("/gameIndex", function (req, res) {
+  res.sendFile(__dirname + "/src/views/index.html");
+});
 app.get("/gameTeam", function (req, res) {
   res.sendFile(__dirname + "/src/views/team.html");
 });
