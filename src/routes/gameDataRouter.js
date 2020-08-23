@@ -36,5 +36,19 @@ gameDataRouter.get("/teamStats", function (req, res) {
     
     
   });
-
+gameDataRouter.get('/gameStats',(req,res)=>
+{
+    //fetching gamedata
+    gameHistory.find().then((data)=>
+    {console.log(data)
+        if(data!=null)
+        {
+            res.send({message:"found!",games:data});
+        }
+        else
+        {
+            res.send({message:"none"});
+        }
+    });
+})
 module.exports =gameDataRouter;
