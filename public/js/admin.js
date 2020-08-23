@@ -1,5 +1,6 @@
 var month = "";
 var checked = 0; // checks whether any month selectors checked or not
+var months=[];
 
 var gameCheckUrl='http://localhost:5000/gameData/gameStats';
 
@@ -313,7 +314,7 @@ function gameCheck()
 function activateMonths()
 {
   let boxes=$(":checkbox");   //get all checkoxes
-  let months=[];  //list of all months checked
+  months=[];  //list of all months checked
   let i=0;
   while(i<12)
   {
@@ -335,6 +336,7 @@ function activateMonths()
         default:months.push("DEC");
       }
     }
+    boxes[i].disabled=true;
     boxes[i].checked=false;
     i++;
   }
@@ -346,6 +348,7 @@ function activateMonths()
     {
     console.log( "Data Loaded: " + data.message);
     })
+    document.getElementById('activateMonthBtn').disabled=true;
   }
   else
   {

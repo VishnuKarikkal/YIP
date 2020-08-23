@@ -31,7 +31,10 @@ gameRouter.post("/activate",(req,res)=>
   console.log(req.body.activateMonths);
   let months=req.body.activateMonths;// array of months
   months.forEach(month=>{
-    activatedMonth.updateOne({month:month},{$set:{activated:"true"}});
+    activatedMonth.updateOne({month:month},{$set:{activated:true}},(err,doc)=>
+    {
+      console.log(doc);
+    });
   })
   res.send({message:"months activated!"}); 
   //to activate the months selected by the admin while clicking 'activate' btn
