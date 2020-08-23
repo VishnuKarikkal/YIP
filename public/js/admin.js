@@ -1,44 +1,24 @@
 var month = "";
-var bpTeamN = "p"; // initially set to "p" assuming they may bluff
-var bpTeamS = "p";
-var bpTeamE = "p";
-var bpTeamW = "p";
+var checked = 0; // checks whether any month selectors checked or not
+
 var gameCheckUrl='http://localhost:5000/gameData/gameStats';
 
 $(document).ready(function () {
   $(":checkbox").click(function (e) {
     if (e.target.checked == true) {
-      //checked means "bonus"
-      console.log(e.target.value); //to identify which all team's bonus switches checked
-      if (e.target.value == 1) {
-        bpTeamN = "b";
-        console.log(bpTeamN);
-      } else if (e.target.value == 2) {
-        bpTeamS = "b";
-        console.log(bpTeamS);
-      } else if (e.target.value == 3) {
-        bpTeamE = "b";
-        console.log(bpTeamE);
-      } else {
-        bpTeamW = "b";
-        console.log(bpTeamW);
-      }
-    } //unchecked means "penalty"
-    else {
-      if (e.target.value == 1) {
-        bpTeamN = "p";
-        console.log(bpTeamN);
-      } else if (e.target.value == 2) {
-        bpTeamS = "p";
-        console.log(bpTeamS);
-      } else if (e.target.value == 3) {
-        bpTeamE = "p";
-        console.log(bpTeamE);
-      } else {
-        bpTeamW = "p";
-        console.log(bpTeamW);
+      //to verify how many months checked
+     checked+=1;
+     document.getElementById('activateMonthBtn').disabled=false;
+    }
+    else
+    {
+      checked-=1;
+      if(checked==0)
+      {
+        document.getElementById('activateMonthBtn').disabled=true;
       }
     }
+    
   });
   $(".dropdown-item").click(function (e) {
     month = e.target.text;
@@ -328,4 +308,9 @@ function gameCheck()
                                 }
     xhttp.open("GET",gameCheckUrl,true);
     xhttp.send();
+}
+
+function activateMonths()
+{
+
 }
