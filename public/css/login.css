@@ -73,7 +73,7 @@ body {
   font-size: 40px;
 }
 .hd:hover {
-  color: rgb(39, 36, 204);
+  color: red;
 }
 .box select,
 .box input[type="password"] {
@@ -147,6 +147,7 @@ body {
 .b1:hover,
 .b2:hover {
   background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   color: red;
 }
 footer h6{
