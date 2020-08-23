@@ -30,7 +30,7 @@ app.get("/", function (req, res) {
 app.get("/login", function (req, res) {
   res.sendFile(__dirname + "/src/views/login.html");
 });
-app.get("/gameIndex", function (req, res) {
+app.get("/scoreboard", function (req, res) {
   res.sendFile(__dirname + "/src/views/index.html");
 });
 app.get("/gameTeam", function (req, res) {
