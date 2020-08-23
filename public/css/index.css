@@ -1,23 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap");
-/*  --------------------------------------
-font-family: 'Dancing Script', cursive;
-font-family: 'Grenze Gotisch', cursive;
-font-family: 'Just Another Hand', cursive;
-font-family: 'Lobster', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Piedra', cursive;
-font-family: 'Poppins', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Russo One', sans-serif;
-font-family: 'Rye', cursive;
------------------------------------------
- */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: beige; */
 }
 body {
   background: rgb(56, 210, 160);
@@ -38,7 +24,6 @@ body {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#38d2a0",endColorstr="#00d4ff",GradientType=1);
 }
-
 .navbar-brand {
   transform: scale(1.1);
   font-family: "Rye", cursive;
@@ -57,7 +42,7 @@ form .nav-link:hover {
   font-family: "Grenze Gotisch", cursive;
   position: relative;
 }
-a{
+a {
   color: black;
   text-decoration: none;
 }
@@ -65,14 +50,9 @@ a{
   display: flex;
   justify-content: space-evenly;
 }
-.bdr {
-  border: 1px solid blueviolet;
-  border-radius: 50px;
-  margin: 0px 10px;
-  padding: 7px;
-}
-.bdr:hover {
-  transform: scale(1.1);
+.scoreboard-box,
+.stat-box {
+  background-color: rgba(0, 255, 255, 0.7);
 }
 .table {
   border-top-right-radius: 45px;
