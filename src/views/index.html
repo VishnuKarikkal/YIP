@@ -4,6 +4,243 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scoreboard | Yamuni</title>
+
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="/scoreboard">Game</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="scoreboard-content mt-5">
+      <!-- Game Summary section -->
+      <div
+        class="container scoreboard-box"
+        style="border: 2px solid blueviolet; border-radius: 15px;"
+      >
+        <h3
+          class="card-header text-center display-4 my-2"
+          style="border-radius: 15px;"
+        >
+          Game Summary
+        </h3>
+        <div class="gameStat even-flex">
+          <div class="trophy-image">
+            <img
+              src="/img/wnr.jpg"
+              alt="winner"
+              style="width: 150px; height: 150px; border-radius: 50%;"
+            />
+          </div>
+          <div class="stat-content my-auto">
+            <h3>
+              <a class="display-4 mr-2 ml-2 text-decoration-none" id="leading"
+                >North
+              </a>
+              Leading...
+            </h3>
+            <h3>
+              with remaining amount
+              <a
+                class="ml-2 display-4 text-decoration-none"
+                id="leadAmount"
+                style="font-size: 1.5em;"
+                >150</a
+              >
+              millions
+            </h3>
+          </div>
+        </div>
+        <hr />
+        <div class="game-summary-table px-3 mx-auto mb-3">
+          <div class="row">
+            <div class="col bdr">
+              <div class="row even-flex">
+                <h3>North</h3>
+              </div>
+              <div class="row even-flex">
+                <h5>
+                  Balance:
+                  <a
+                    class="mx-auto display-4 text-decoration-none"
+                    id="northBal"
+                    style="font-size: 1.2em;"
+                    >150</a
+                  >
+                  millions
+                </h5>
+              </div>
+            </div>
+            <div class="col bdr">
+              <div class="row even-flex">
+                <h3>East</h3>
+              </div>
+              <div class="row even-flex">
+                <h5>
+                  Balance:
+                  <a
+                    class="mx-auto display-4 text-decoration-none"
+                    id="eastBal"
+                    style="font-size: 1.2em;"
+                    >140</a
+                  >
+                  millions
+                </h5>
+              </div>
+            </div>
+            <div class="col bdr">
+              <div class="row even-flex">
+                <h3>West</h3>
+              </div>
+              <div class="row even-flex">
+                <h5>
+                  Balance:
+                  <a
+                    class="mx-auto display-4 text-decoration-none"
+                    id="westBal"
+                    style="font-size: 1.2em;"
+                    >133</a
+                  >
+                  millions
+                </h5>
+              </div>
+            </div>
+            <div class="col bdr">
+              <div class="row even-flex">
+                <h3>South</h3>
+              </div>
+              <div class="row even-flex">
+                <h5>
+                  Balance:
+                  <a
+                    class="mx-auto display-4 text-decoration-none"
+                    id="southBal"
+                    style="font-size: 1.2em;"
+                    >145</a
+                  >
+                  millions
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Stats -->
+      <div class="container p-2">
+        <div class="row mx-auto my-3 mx-auto">
+          <!-- game stats table section -->
+          <div
+            class="col stat-box"
+            style="
+              border: 2px solid blueviolet;
+              padding: 10px 10px;
+              border-radius: 15px;
+            "
+          >
+            <h5
+              class="card-header display-4 text-center mb-2"
+              style="border-radius: 15px;"
+            >
+              Game Stats
+            </h5>
+            <!-- table showing Game stats so far.. -->
+            <div class="table-responsive text-center">
+              <table
+                class="table table-bordered table-hover table-striped table-sm table-dark"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col" class="align-middle" rowspan="2">Month</th>
+                    <th scope="col" colspan="3">North</th>
+                    <th scope="col" colspan="3">East</th>
+                    <th scope="col" colspan="3">West</th>
+                    <th scope="col" colspan="3">South</th>
+                  </tr>
+                  <tr>
+                    <th>Vote</th>
+                    <th>Result</th>
+                    <th>Remarks</th>
+                    <th>Vote</th>
+                    <th>Result</th>
+                    <th>Remarks</th>
+                    <th>Vote</th>
+                    <th>Result</th>
+                    <th>Remarks</th>
+                    <th>Vote</th>
+                    <th>Result</th>
+                    <th>Remarks</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="mt-3">
+      <h6 class="text-center">
+        COPYRIGHT © YIP, Kerala.
+      </h6>
+    </footer>
+
+    <!-- Scripts starts here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script>
+      var tl = gsap.timeline({ defaults: { duration: 1 } });
+
+      tl.from(".scoreboard-box", { x: -100, opacity: 0 })
+        .from("h3,img,h5", { y: -100, stagger: 0.6, opacity: 0 })
+        .from(".stat-box", { x: 100, opacity: 0 })
+        .from("footer", { x: -100, opacity: 0 });
+    </script>
+  </body>
 </html>

@@ -1,24 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grenze+Gotisch:wght@700&family=Just+Another+Hand&family=Lobster&family=Montserrat:wght@400;600;700&family=Piedra&family=Poppins:wght@400;600;700&family=Quicksand:wght@500&family=Russo+One&family=Rye&display=swap");
 
-/*  --------------------------------------
-font-family: 'Dancing Script', cursive;
-font-family: 'Grenze Gotisch', cursive;
-font-family: 'Just Another Hand', cursive;
-font-family: 'Lobster', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Piedra', cursive;
-font-family: 'Poppins', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Russo One', sans-serif;
-font-family: 'Rye', cursive;
------------------------------------------
- */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: rgb(233, 233, 199); */
 }
 body {
   background: rgb(0, 201, 162);
@@ -45,10 +30,8 @@ body {
 }
 .nav-link {
   font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
 }
-/* .login-content {
-  background-color: rgba(184, 183, 183, 0.699);
-} */
 .box {
   width: 350px;
   padding: 20px;
@@ -72,13 +55,12 @@ body {
   font-size: 40px;
 }
 .hd:hover {
-  color: rgb(39, 36, 204);
+  color: red;
 }
 .box select,
 .box input[type="password"] {
   display: block;
   margin: 20px auto;
-  /* text-align: center; */
   border: 2px solid rgb(39, 36, 204);
   padding: 14px 10px;
   width: 250px;
@@ -92,7 +74,6 @@ body {
 .box input[type="password"]:hover {
   border-color: rgba(0, 212, 255, 1);
 }
-.box select:focus,
 .box input[type="password"]:focus {
   width: 300px;
   border-color: lightseagreen;
@@ -102,11 +83,11 @@ body {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid rgb(39, 36, 204);
+  border: 2px solid red;
   padding: 14px 40px;
   width: 150px;
   outline: none;
-  color: rgb(39, 36, 204);
+  color: red;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -115,20 +96,10 @@ body {
   cursor: pointer;
 }
 .login-btn:hover {
-  background: rgb(39, 36, 204);
+  background: red;
   color: white;
   font-weight: bold;
   transform: scale(0.9);
-}
-.b1 {
-  text-decoration: none;
-  text-align: center;
-  color: black;
-  font-family: "Russo One", sans-serif;
-  font-size: 14px;
-  padding: 10px;
-  transition: 0.8s;
-  display: block;
 }
 .b2 {
   text-decoration: none;
@@ -140,8 +111,14 @@ body {
   transition: 0.8s;
   display: block;
 }
-.b1:hover,
 .b2:hover {
   background: rgba(0, 0, 0, 0.3);
-  color: white;
+  border-radius: 10px;
+  color: red;
+}
+footer h6 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }

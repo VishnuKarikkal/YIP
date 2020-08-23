@@ -12,6 +12,7 @@
 }
 .nav-link {
   font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
 }
 form .nav-link {
   color: rgba(0, 0, 0, 0.5);
@@ -25,8 +26,8 @@ form .nav-link:hover {
   position: relative;
 }
 .instructions {
-  position: absolute;
-  right: 5%;
+  /* position: absolute;
+  right: 5%; */
   font-family: "Piedra", cursive;
 }
 .modal-title {

@@ -40,7 +40,7 @@ gameDataRouter.get('/gameStats',(req,res)=>
 {
     //fetching gamedata
     gameHistory.find().then((data)=>
-    {console.log(data)
+    {   console.log(data)
         if(data!=null)
         {
             res.send({message:"found!",games:data});
