@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const database = "mongodb://localhost:27017/yip";
+const database = "mongodb+srv://yamuni:yamuni@justinj.6njuj.gcp.mongodb.net/YIP_Yamuni?retryWrites=true&w=majority";
 
 mongoose.connect(database, (err) => {
   if (err) {
@@ -8,9 +8,6 @@ mongoose.connect(database, (err) => {
     console.log("Connected to Database Successfully");
   }
 });
-// const connect = () => {
-//     return mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost:27017/yip', { useNewUrlParser: true, useUnifiedTopology: true });
-// };
 
 const user = new mongoose.Schema({
   username: String,
