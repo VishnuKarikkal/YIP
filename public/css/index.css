@@ -20,7 +20,6 @@ font-family: 'Rye', cursive;
   /* background-color: beige; */
 }
 body {
-  /* height: 100vh; */
   background: rgb(56, 210, 160);
   background: -moz-linear-gradient(
     312deg,
@@ -54,13 +53,30 @@ form .nav-link {
 form .nav-link:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-
-p {
-  font-weight: bold;
-  font-size: 1.1em;
-  font-family: 'Quicksand', sans-serif;
+.card-header {
+  font-family: "Grenze Gotisch", cursive;
+  position: relative;
 }
-footer p{
-  font-size: 0.8em;
-  font-family: 'Poppins', sans-serif;
+a{
+  color: black;
+  text-decoration: none;
+}
+.even-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.bdr {
+  border: 1px solid blueviolet;
+  border-radius: 50px;
+  margin: 0px 10px;
+  padding: 7px;
+}
+.bdr:hover {
+  transform: scale(1.1);
+}
+.table {
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  border-bottom-left-radius: 45px;
 }
