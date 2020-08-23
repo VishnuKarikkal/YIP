@@ -62,15 +62,15 @@
     <div class="scoreboard-content mt-5">
       <!-- Game Summary section -->
       <div
-        class="container"
-        style="border: 1px solid blueviolet; border-radius: 15px;"
+        class="container scoreboard-box"
+        style="border: 2px solid blueviolet; border-radius: 15px;"
       >
-        <h5
+        <h3
           class="card-header text-center display-4 my-2"
           style="border-radius: 15px;"
         >
           Game Summary
-        </h5>
+        </h3>
         <div class="gameStat even-flex">
           <div class="trophy-image">
             <img
@@ -89,7 +89,7 @@
             <h3>
               with remaining amount
               <a
-                class="ml-2 display-4"
+                class="ml-2 display-4 text-decoration-none"
                 id="leadAmount"
                 style="font-size: 1.5em;"
                 >150</a
@@ -178,22 +178,24 @@
         <div class="row mx-auto my-3 mx-auto">
           <!-- game stats table section -->
           <div
-            class="col"
+            class="col stat-box"
             style="
-              border: 1px solid blueviolet;
+              border: 2px solid blueviolet;
               padding: 10px 10px;
               border-radius: 15px;
             "
           >
             <h5
               class="card-header display-4 text-center mb-2"
-              style=" border-radius: 15px;"
+              style="border-radius: 15px;"
             >
               Game Stats
             </h5>
             <!-- table showing Game stats so far.. -->
             <div class="table-responsive text-center">
-              <table class="table table-bordered table-hover table-striped table-sm table-dark">
+              <table
+                class="table table-bordered table-hover table-striped table-sm table-dark"
+              >
                 <thead>
                   <tr>
                     <th scope="col" class="align-middle" rowspan="2">Month</th>
@@ -229,5 +231,16 @@
         COPYRIGHT © YIP, Kerala.
       </h6>
     </footer>
+
+    <!-- Scripts starts here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script>
+      var tl = gsap.timeline({ defaults: { duration: 1 } });
+
+      tl.from(".scoreboard-box", { x: -100, opacity: 0 })
+        .from("h3,img,h5", { y: -100, stagger: 0.6, opacity: 0 })
+        .from(".stat-box", { x: 100, opacity: 0 })
+        .from("footer", { x: -100, opacity: 0 });
+    </script>
   </body>
 </html>
