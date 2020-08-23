@@ -20,7 +20,6 @@ font-family: 'Rye', cursive;
   /* background-color: beige; */
 }
 body {
-  /* height: 100vh; */
   background: rgb(56, 210, 160);
   background: -moz-linear-gradient(
     312deg,
@@ -53,14 +52,4 @@ form .nav-link {
 }
 form .nav-link:hover {
   color: rgba(0, 0, 0, 0.8);
-}
-
-p {
-  font-weight: bold;
-  font-size: 1.1em;
-  font-family: 'Quicksand', sans-serif;
-}
-footer p{
-  font-size: 0.8em;
-  font-family: 'Poppins', sans-serif;
 }
