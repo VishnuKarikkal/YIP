@@ -312,5 +312,43 @@ function gameCheck()
 
 function activateMonths()
 {
+  let boxes=$(":checkbox");   //get all checkoxes
+  let months=[];  //list of all months checked
+  let i=0;
+  while(i<12)
+  {
+    if(boxes[i].checked)
+    {
+      switch(i)
+      {
+        case 0:months.push("JAN");break;
+        case 1:months.push("FEB");break;
+        case 2:months.push("MAR");break;
+        case 3:months.push("APR");break;
+        case 4:months.push("MAY");break;
+        case 5:months.push("JUN");break;
+        case 6:months.push("JUL");break;
+        case 7:months.push("AUG");break;
+        case 8:months.push("SEP");break;
+        case 9:months.push("OCT");break;
+        case 10:months.push("NOV");break;
+        default:months.push("DEC");
+      }
+    }
+    boxes[i].checked=false;
+    i++;
+  }
 
+  if(months.length>0)
+  {
+    $.post('http://localhost:5000/game/activate' , {activateMonths:months } )
+.done(function( data )
+    {
+    console.log( "Data Loaded: " + data.message);
+    })
+  }
+  else
+  {
+    console.log("selects months!");
+  }
 }

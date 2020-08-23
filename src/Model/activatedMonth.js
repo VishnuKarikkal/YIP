@@ -14,9 +14,9 @@ mongoose.connect(database, (err) => {
 
 const activemonth = new mongoose.Schema({
   month: String,
-  activated: Boolean,
+  activated: Boolean
 });
-const Activemonth = mongoose.model("activemonth", activemonth);
+const Activemonth = mongoose.model("activemonth", activemonth,'activemonths');
 
 module.exports = Activemonth;
 //********
