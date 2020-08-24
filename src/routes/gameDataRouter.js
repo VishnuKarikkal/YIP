@@ -1298,7 +1298,7 @@ if(votesD!="")
 
 });
 //to fetch all documents from 'gamedatas' that are ready for adding remarks
-gameDataRouter.get('readyForRemarks',(req,res)=>
+gameDataRouter.get('/readyForRemarks',(req,res)=>
 {
     //if remarks field not exists and amount exists: that document is ready for updating remarks
     gameHistory.find({amount:{$ne:null},remarks:null})
