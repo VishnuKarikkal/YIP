@@ -1290,7 +1290,7 @@ if(votesD!="")
             {
                 months.forEach(month=>
                     {
-                        activatedMonth.updateOne({month:month},{$set:{activated:false}}).then(console.log("months reset!"))
+                        activatedMonth.updateOne({month:month.month},{$set:{activated:false}}).then(console.log("months reset!"))
                     })
             })
         res.send({message:"game stats updated!"})
