@@ -25,7 +25,7 @@ app.use('/game',gameRouter);          //gameRoutes
 app.use('/gameData',gameDataRouter);
 
 app.get("/",checkAuth, function (req, res) {
-  res.sendFile(__dirname + "/src/views/team.html");
+  res.sendFile(__dirname + "/src/views/welcome.html");
 });
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/src/views/welcome.html");
