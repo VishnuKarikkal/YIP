@@ -24,7 +24,7 @@ app.use('/userLogin',loginRouter);        //loginRoutes
 app.use('/game',gameRouter);          //gameRoutes
 app.use('/gameData',gameDataRouter);
 
-app.get("/", function (req, res) {
+app.get("/",checkAuth, function (req, res) {
   res.sendFile(__dirname + "/src/views/team.html");
 });
 app.get("/login", function (req, res) {
