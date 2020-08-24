@@ -46,6 +46,15 @@ $(document).ready(function () {
 });
 function gameCheck()
 {
+  var monthChecks=$(":checkbox");   //to enable all months for activation
+  let i=0;
+  while(i<12){monthChecks[i].disabled=false;i++}  //making all month checks active (first 12 aims -> the 1st table)
+  if(checked>0)
+  {
+    checked=0;    //resetting checked months counter
+    months.splice(0,months.length);   //resetting months array
+  } 
+
   //to check for active games and load it to the page (on page load)
   var xhttp=new XMLHttpRequest();
   xhttp.onreadystatechange = function()
@@ -377,7 +386,6 @@ function activateMonths()
 function publishMonths()
 {
   let i=true;
-  gameCheck();
 if(months.length>0)
 {
   months.some(month=>
@@ -507,6 +515,9 @@ xhttp.onreadystatechange = function()
                                     {
                                       console.log(res['message']);
                                       remarkTableData();
+                                      gameCheck();
+                                      document.getElementById("activateMonthBtn").disabled=true;
+                                      document.getElementById("publishMonthBtn").disabled=true;
                                     }
                                   }
                                 }
