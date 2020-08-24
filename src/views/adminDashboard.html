@@ -100,13 +100,63 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body text-justify">
-              You are required to send a message C or D to the World Bank every
-              month. Depending on the following rules, the Bank will either give
-              you funds during that month or ask you to contribute a specific
-              sum from your resources. Sometimes the World Bank may have
-              additional funds and this information will be announced in
-              advance.
+            <div class="modal-body">
+              <p class="text-justify">
+                You are required to send a message C or D to the World Bank
+                every month. Depending on the following rules, the Bank will
+                either give you funds during that month or ask you to contribute
+                a specific sum from your resources. Sometimes the World Bank may
+                have additional funds and this information will be announced in
+                advance.
+              </p>
+              <hr />
+              <h5 class="text-center font-weight-bold">
+                Rules of Payoff Distribution
+              </h5>
+              <table
+                class="table-sm text-center table-bordered table-responsive"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">No. Of C Messages</th>
+                    <th scope="col">No. Of D Messages</th>
+                    <th scope="col">Payoff for C Messages</th>
+                    <th scope="col">Payoff for C Messages</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4</td>
+                    <td>-</td>
+                    <td>Will get Rs. 1 million each</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>Will contribute Rs. 1 million each</td>
+                    <td>Will get Rs. 3 million each</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>Will contribute Rs. 2 million each</td>
+                    <td>Will get Rs. 2 million each</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>Will contribute Rs. 3 million each</td>
+                    <td>Will get Rs. 1 million each</td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>4</td>
+                    <td>-</td>
+                    <td>Will contribute Rs. 1 million each</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div class="modal-footer">
               <button
@@ -1161,7 +1211,7 @@
       </h6>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -1180,5 +1230,6 @@
     ></script>
     <script src="/js/session.js"></script>
     <script src="/js/admin.js"></script>
+    <script src="/js/gameSummary-Stat.js"></script>
   </body>
 </html>

@@ -25,9 +25,9 @@ app.use('/game',gameRouter);          //gameRoutes
 app.use('/gameData',gameDataRouter);
 
 app.get("/",checkAuth, function (req, res) {
-  if(req.userData.username.toUpperCase()=="ADMIN") {
+  if (req.userData.username.toUpperCase() == "ADMIN") {
     res.sendFile(__dirname + "/src/views/adminDashboard.html");
-  }else {
+  } else {
     res.sendFile(__dirname + "/src/views/welcome.html");
   }
 });
