@@ -4,8 +4,9 @@ var activeGames=[];
 var activeGameCheckUrl = "http://localhost:5000/game/activeGame";
 var votePostUrl='http://localhost:5000/game/vote';
 var teamStatsUrl='http://localhost:5000/gameData/teamStats';
-//var name=localStorage.getItem('teamName');
-var name="name=SOUTH";
+var team=localStorage.getItem('teamName');
+var name=`name=${team}`;
+document.getElementById('teamName').innerText=team;
 
 $(document).ready(function () {
   $.each($(".opt"), function (key, value) {
@@ -72,7 +73,7 @@ let votedValue=null;
   })
 })
 document.getElementById('vote').addEventListener('click', event => {
-  let teamName=document.getElementById('teamName').innerText.toUpperCase();
+  let teamName=team.toUpperCase();  //document.getElementById('teamName').innerText
   let month=document.getElementById('month').innerText;
   let vote=votedValue;
   if(vote){

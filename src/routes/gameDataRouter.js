@@ -381,7 +381,7 @@ if(votesD!="")
      dd*=20;
 }
 
-        //updations
+        //updations to the gameHistory
      data.forEach(item=>
         {
             switch(item.month)
@@ -394,14 +394,14 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cj);
                             isCon=true;
                             if(cj>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cj}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cj}}).then(console.log("updated"));
                         }
                         else
                         {
                             northBal=Number(northBal)+Number(dj);
                             isCon=true;
                             if(dj>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dj}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dj}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="SOUTH")
@@ -411,14 +411,14 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cj);
                             isCon=true;
                             if(cj>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cj}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cj}}).then(console.log("updated"));
                         }
                         else
                         {
                             southBal=Number(southBal)+Number(dj);
                             isCon=true;
                             if(dj>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dj}})  
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dj}}).then(console.log("updated"));  
                         }
                     }
                     else if(item.teamName=="EAST")
@@ -428,14 +428,14 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cj);
                             isCon=true;
                             if(cj>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cj}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cj}}).then(console.log("updated"));
                         }
                         else
                         {
                             eastBal=Number(eastBal)+Number(dj);
                             isCon=true;
                             if(dj>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dj}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dj}}).then(console.log("updated"));
                         }
                     }
                     else
@@ -445,14 +445,14 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cj);
                             isCon=true;
                             if(cj>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cj}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cj}}).then(console.log("updated"));
                         }
                         else
                         {
                             westBal=Number(westBal)+Number(dj);
                             isCon=true;
                             if(dj>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dj}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dj}}).then(console.log("updated"));
                         }
                     }   
                     break;     
@@ -464,14 +464,14 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cf);
                             isCon=true;
                             if(cf>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cf}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cf}}).then(console.log("updated"));
                         }
                         else
                         {
                             northBal=Number(northBal)+Number(df);
                             isCon=true;
                             if(df>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:df}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:df}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="SOUTH")
@@ -481,14 +481,14 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cf);
                             isCon=true;
                             if(cf>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cf}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cf}}).then(console.log("updated"));
                         }
                         else
                         {
                             southBal=Number(southBal)+Number(df);
                             isCon=true;
                             if(df>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:df}}) 
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:df}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="EAST")
@@ -498,14 +498,14 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cf);
                             isCon=true;
                             if(cf>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cf}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cf}}).then(console.log("updated"));
                         }
                         else
                         {
                             eastBal=Number(eastBal)+Number(df);
                             isCon=true;
                             if(df>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:df}})  
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:df}}).then(console.log("updated")); 
                         }
                     }
                     else
@@ -515,14 +515,14 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cf);
                             isCon=true;
                             if(cf>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cf}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cf}}).then(console.log("updated"));
                         }
                         else
                         {
                             westBal=Number(westBal)+Number(df);
                             isCon=true;
                             if(df>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:df}})    
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:df}}).then(console.log("updated"));    
                         }
                     }   
                     break;
@@ -534,14 +534,14 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cm);
                             isCon=true;
                             if(cm>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cm}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cm}}).then(console.log("updated"));
                         }
                         else
                         {
                             northBal=Number(northBal)+Number(da);
                             isCon=true;
                             if(da>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:da}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:da}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="SOUTH")
@@ -551,14 +551,14 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cm);
                             isCon=true;
                             if(cm>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cm}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cm}}).then(console.log("updated"));
                         }
                         else
                         {
                             southBal=Number(southBal)+Number(dm);
                             isCon=true;
                             if(dm>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dm}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dm}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="EAST")
@@ -568,14 +568,14 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cm);
                             isCon=true;
                             if(cm>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cm}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cm}}).then(console.log("updated"));
                         }
                         else
                         {
                             eastBal=Number(eastBal)+Number(dm);
                             isCon=true;
                             if(dm>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dm}})  
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dm}}).then(console.log("updated")); 
                         }
                     }
                     else
@@ -585,14 +585,14 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cm);
                             isCon=true;
                             if(cm>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cm}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cm}}).then(console.log("updated"));
                         }
                         else
                         {
                             westBal=Number(westBal)+Number(dm);
                             isCon=true;
                             if(dm>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dm}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dm}}).then(console.log("updated"));
                         }
                     }   
                     break;
@@ -604,7 +604,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(ca);
                             isCon=true;
                             if(ca>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:ca}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:ca}}).then(console.log("updated"));
                         
                         }
                         else
@@ -612,7 +612,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(da);
                             isCon=true;
                             if(da>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:da}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:da}}).then(console.log("updated"));
                         
                         }
                     }
@@ -623,7 +623,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(ca);
                             isCon=true;
                             if(ca>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:ca}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:ca}}).then(console.log("updated"));
                         
                         }
                         else
@@ -631,7 +631,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(da);
                             isCon=true;
                             if(da>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:da}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:da}}).then(console.log("updated"));
                           
                         }
                     }
@@ -642,7 +642,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(ca);
                             isCon=true;
                             if(ca>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:ca}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:ca}}).then(console.log("updated"));
                         
                         }
                         else
@@ -650,7 +650,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(da);
                             isCon=true;
                             if(da>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:da}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:da}}).then(console.log("updated"));
                         
                         }
                     }
@@ -661,7 +661,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(ca);
                             isCon=true;
                             if(ca>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:ca}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:ca}}).then(console.log("updated"));
                         
                         }
                         else
@@ -669,7 +669,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(da);
                             isCon=true;
                             if(da>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:da}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:da}}).then(console.log("updated"));
                            
                         }
                     }   
@@ -682,7 +682,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cmy);
                             isCon=true;
                             if(cmy>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cmy}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cmy}}).then(console.log("updated"));
                         
                         }
                         else
@@ -690,7 +690,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(dmy);
                             isCon=true;
                             if(dmy>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dmy}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dmy}}).then(console.log("updated"));
                         
                         }
                     }
@@ -701,7 +701,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cmy);
                             isCon=true;
                             if(cmy>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cmy}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cmy}}).then(console.log("updated"));
                         
                         }
                         else
@@ -709,7 +709,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(dmy);
                             isCon=true;
                             if(dmy>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dmy}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dmy}}).then(console.log("updated"));
                         
                         }
                     }
@@ -720,7 +720,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cmy);
                             isCon=true;
                             if(cmy>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cmy}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cmy}}).then(console.log("updated"));
                         
                         }
                         else
@@ -728,7 +728,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(dmy);
                             isCon=true;
                             if(dmy>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dmy}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dmy}}).then(console.log("updated"));
                         
                         }
                     }
@@ -739,7 +739,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cmy);
                             isCon=true;
                             if(cmy>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cmy}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cmy}}).then(console.log("updated"));
                         
                         }
                         else
@@ -747,7 +747,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(dmy);
                             isCon=true;
                             if(dmy>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dmy}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dmy}}).then(console.log("updated"));
                          
                         }
                     }   
@@ -760,7 +760,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cjn);
                             isCon=true;
                             if(cjn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cjn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cjn}}).then(console.log("updated"));
                         
                         }
                         else
@@ -768,7 +768,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(djn);
                             isCon=true;
                             if(djn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:djn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:djn}}).then(console.log("updated"));
                         
                         }
                     }
@@ -779,7 +779,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cjn);
                             isCon=true;
                             if(cjn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cjn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cjn}}).then(console.log("updated"));
                         
                         }
                         else
@@ -787,7 +787,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(djn);
                             isCon=true;
                             if(djn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:djn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:djn}}).then(console.log("updated"));
                           
                         }
                     }
@@ -798,7 +798,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cjn);
                             isCon=true;
                             if(cjn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cjn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cjn}}).then(console.log("updated"));
                         
                         }
                         else
@@ -806,7 +806,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(djn);
                             isCon=true;
                             if(djn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:djn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:djn}}).then(console.log("updated"));
                         
                         }
                     }
@@ -817,7 +817,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cjn);
                             isCon=true;
                             if(cjn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cjn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cjn}}).then(console.log("updated"));
                         
                         }
                         else
@@ -825,7 +825,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(djn);
                             isCon=true;
                             if(djn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:djn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:djn}}).then(console.log("updated"));
                         
                         }
                     }   
@@ -916,7 +916,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cag);
                             isCon=true;
                             if(cag>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cag}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cag}}).then(console.log("updated"));
                         
                         }
                         else
@@ -924,7 +924,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(dag);
                             isCon=true;
                             if(dag>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dag}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dag}}).then(console.log("updated"));
                         
                         }
                     }
@@ -935,7 +935,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cag);
                             isCon=true;
                             if(cag>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cag}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cag}}).then(console.log("updated"));
                         
                         }
                         else
@@ -943,7 +943,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(dag);
                             isCon=true;
                             if(dag>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dag}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dag}}).then(console.log("updated"));
                         
                         }
                     }
@@ -954,7 +954,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cag);
                             isCon=true;
                             if(cag>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cag}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cag}}).then(console.log("updated"));
                         
                         }
                         else
@@ -962,7 +962,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(dag);
                             isCon=true;
                             if(dag>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dag}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dag}}).then(console.log("updated"));
                         
                         }
                     }
@@ -973,7 +973,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cag);
                             isCon=true;
                             if(cag>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cag}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cag}}).then(console.log("updated"));
                         
                         }
                         else
@@ -981,7 +981,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(dag);
                             isCon=true;
                             if(dag>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dag}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dag}}).then(console.log("updated"));
                         
                         }
                     }   
@@ -994,7 +994,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cs);
                             isCon=true;
                             if(cs>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cs}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cs}}).then(console.log("updated"));
                         
                         }
                         else
@@ -1002,7 +1002,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(ds);
                             isCon=true;
                             if(ds>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:ds}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:ds}}).then(console.log("updated"));
                         
                         }
                     }
@@ -1013,7 +1013,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cs);
                             isCon=true;
                             if(cs>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cs}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cs}}).then(console.log("updated"));
                         
                         }
                         else
@@ -1021,7 +1021,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(ds);
                             isCon=true;
                             if(ds>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:ds}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:ds}}).then(console.log("updated"));
                          
                         }
                     }
@@ -1032,7 +1032,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cs);
                             isCon=true;
                             if(cs>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cs}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cs}}).then(console.log("updated"));
                         
                         }
                         else
@@ -1040,7 +1040,7 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(ds);
                             isCon=true;
                             if(ds>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:ds}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:ds}}).then(console.log("updated"));
                          
                         }
                     }
@@ -1051,7 +1051,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cs);
                             isCon=true;
                             if(cs>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cs}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cs}}).then(console.log("updated"));
                         
                         }
                         else
@@ -1059,7 +1059,7 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(ds);
                             isCon=true;
                             if(ds>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:ds}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:ds}}).then(console.log("updated"));
                         
                         }
                     }   
@@ -1072,14 +1072,14 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(co);
                             isCon=true;
                             if(co>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:co}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:co}}).then(console.log("updated"));
                         }
                         else
                         {
                             northBal=Number(northBal)+Number(dot);
                             isCon=true;
                             if(dot>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dot}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dot}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="SOUTH")
@@ -1089,14 +1089,14 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(co);
                             isCon=true;
                             if(co>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:co}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:co}}).then(console.log("updated"));
                         }
                         else
                         {
                             southBal=Number(southBal)+Number(dot);
                             isCon=true;
                             if(dot>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dot}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dot}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="EAST")
@@ -1106,14 +1106,14 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(co);
                             isCon=true;
                             if(co>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:co}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:co}}).then(console.log("updated"));
                         }
                         else
                         {
                             eastBal=Number(eastBal)+Number(dot);
                             isCon=true;
                             if(dot>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dot}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dot}}).then(console.log("updated"));
                         }
                     }
                     else
@@ -1123,14 +1123,14 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(co);
                             isCon=true;
                             if(co>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:co}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:co}}).then(console.log("updated"));
                         }
                         else
                         {
                             westBal=Number(westBal)+Number(dot);
                             isCon=true;
                             if(dot>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dot}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dot}}).then(console.log("updated"));
                           
                         }
                     }   
@@ -1143,7 +1143,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cn);
                             isCon=true;
                             if(cn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cn}}).then(console.log("updated"));
                         
                         }
                         else
@@ -1151,7 +1151,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(dn);
                             isCon=true;
                             if(dn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dn}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="SOUTH")
@@ -1161,14 +1161,14 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cn);
                             isCon=true;
                             if(cn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cn}}).then(console.log("updated"));
                         }
                         else
                         {
                             southBal=Number(southBal)+Number(dn);
                             isCon=true;
                             if(dn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dn}})                           
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dn}}).then(console.log("updated"));                           
                         }
                     }
                     else if(item.teamName=="EAST")
@@ -1178,14 +1178,14 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cn);
                             isCon=true;
                             if(cn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cn}}).then(console.log("updated"));
                         }
                         else
                         {
                             eastBal=Number(eastBal)+Number(dn);
                             isCon=true;
                             if(dn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dn}}).then(console.log("updated"));
                         }
                     }
                     else
@@ -1195,14 +1195,14 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cn);
                             isCon=true;
                             if(cn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cn}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cn}}).then(console.log("updated"));
                         }
                         else
                         {
                             westBal=Number(westBal)+Number(dn);
                             isCon=true;
                             if(dn>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dn}})                           
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dn}}).then(console.log("updated"));                           
                         }
                     }   
                     break;
@@ -1214,7 +1214,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(cd);
                             isCon=true;
                             if(cd>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cd}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cd}}).then(console.log("updated"));
                         
                         }
                         else
@@ -1222,7 +1222,7 @@ if(votesD!="")
                             northBal=northBal+dd;
                             isCon=true;
                             if(dd>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dd}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dd}}).then(console.log("updated"));
                         
                         }
                     }
@@ -1233,7 +1233,7 @@ if(votesD!="")
                             southBal=Number(southBal)+Number(cd);
                             isCon=true;
                             if(cd>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cd}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cd}}).then(console.log("updated"));
                         
                         }
                         else
@@ -1241,7 +1241,7 @@ if(votesD!="")
                             southBal=southBal+dd;
                             isCon=true;
                             if(dd>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dd}})                          
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:dd}}).then(console.log("updated"));                         
                         }
                     }
                     else if(item.teamName=="EAST")
@@ -1251,14 +1251,14 @@ if(votesD!="")
                             eastBal=Number(eastBal)+Number(cd);
                             isCon=true;
                             if(cd>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cd}})                       
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cd}}).then(console.log("updated"));                    
                         }
                         else
                         {
                             eastBal=Number(eastBal)+Number(dd);
                             isCon=true;
                             if(dd>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dd}})                       
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:dd}}).then(console.log("updated"));                     
                         }
                     }
                     else
@@ -1268,18 +1268,23 @@ if(votesD!="")
                             westBal=Number(westBal)+Number(cd);
                             isCon=true;
                             if(cd>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cd}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:cd}}).then(console.log("updated"));
                         }
                         else
                         {
                             westBal=Number(westBal)+Number(dd);
                             isCon=true;
                             if(dd>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dd}})
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dd}}).then(console.log("updated"));
                         }
                     }   
             }
         });
+        //updating teamSummary
+        teamSummary.updateOne({teamName:"NORTH"},{$set:{balance:northBal}}).then(console.log("north update"));
+        teamSummary.updateOne({teamName:"SOUTH"},{$set:{balance:southBal}}).then(console.log("south update"));
+        teamSummary.updateOne({teamName:"EAST"},{$set:{balance:eastBal}}).then(console.log("east update"));
+        teamSummary.updateOne({teamName:"WEST"},{$set:{balance:westBal}}).then(console.log("west update"));
     res.send({message:"game stats updated!"})
     });
 
