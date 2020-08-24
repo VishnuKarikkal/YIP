@@ -1,12 +1,14 @@
 var month = "";
 var checked = 0; // checks whether any month selectors checked or not
 var months=[];
+var bpChecked=0;
+var bpMonths=[];
 
 var gameCheckUrl='http://localhost:5000/gameData/gameStats';
 var calculateBalanceUrl='http://localhost:5000/gameData/calculateBalance';
 
 $(document).ready(function () {
-  $(":checkbox").slice(0,11).click(function (e) {
+  $(":checkbox").slice(0,12).click(function (e) {
     if (e.target.checked == true) {
       //to verify how many months checked
      checked+=1;
@@ -22,11 +24,24 @@ $(document).ready(function () {
     }
     
   });
-  $(".dropdown-item").click(function (e) {
-    month = e.target.text;
-    console.log(month);
-    $("#month").text(month);
+  
+  $(".bpChecks").click(function(e)
+  {
+    if(e.target.checked)
+    {
+      bpChecked++;
+      document.getElementById('bpMonthBtn').disabled=false;
+    }
+    else
+    {
+      bpChecked--;
+      if(bpChecked==0)
+      {
+        document.getElementById('bpMonthBtn').disabled=true;
+      }
+    }
   });
+
 });
 function gameCheck()
 {
