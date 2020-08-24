@@ -47,14 +47,13 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link font-weight-bold" href="/scoreboard">Scoreboard</a>
+            <a class="nav-link font-weight-bold" href="/scoreboard"
+              >Scoreboard</a
+            >
           </li>
         </ul>
         <form class="form-inline my-lg-0">
-          <a
-            class="nav-link font-weight-bold ml-n3"
-            href="/"
-            onclick="logout()"
+          <a class="nav-link font-weight-bold ml-n3" href="/" onclick="logout()"
             >Log Out</a
           >
           <!-- <button class="btn btn-success my-2 my-sm-0 font-weight-bold" type="submit">Login</button> -->
@@ -292,8 +291,22 @@
 
       <!-- Activators -->
       <div class="even-flex my-3">
-        <button class="btn btn-primary btn-lg" disabled id="activateMonthBtn" onclick="activateMonths()">Activate Months</button>
-        <button class="btn btn-success btn-lg" disabled id="publishMonthBtn" onclick="publishMonths()">Publish Months</button>
+        <button
+          class="btn btn-primary btn-lg"
+          disabled
+          id="activateMonthBtn"
+          onclick="activateMonths()"
+        >
+          Activate Months
+        </button>
+        <button
+          class="btn btn-success btn-lg"
+          disabled
+          id="publishMonthBtn"
+          onclick="publishMonths()"
+        >
+          Publish Months
+        </button>
       </div>
 
       <!-- Bonus-Penalty table  -->
@@ -732,10 +745,10 @@
             >
               <option value="">Select a Value</option>
               <option value="0">0</option>
-              <option value="20000">20,000</option>
-              <option value="30000">30,000</option>
-              <option value="40000">40,000</option>
-              <option value="50000">50,000</option>
+              <option value="0.2">2 lakhs</option>
+              <option value="0.3">3 lakhs</option>
+              <option value="0.4">4 lakhs</option>
+              <option value="0.5">5 lakhs</option>
             </select>
             <h3 for="penaltyValue">Penalty:</h3>
             <select
@@ -745,10 +758,10 @@
             >
               <option value="">Select a Value</option>
               <option value="0">0</option>
-              <option value="20000">20,000</option>
-              <option value="30000">30,000</option>
-              <option value="40000">40,000</option>
-              <option value="50000">50,000</option>
+              <option value="0.2">2 lakhs</option>
+              <option value="0.3">3 lakhs</option>
+              <option value="0.4">4 lakhs</option>
+              <option value="0.5">5 lakhs</option>
             </select>
             <!-- <div class="invalid-feedback font-weight-bold mt-n2">Invalid option</div> -->
           </div>
