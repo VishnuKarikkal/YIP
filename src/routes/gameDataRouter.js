@@ -1285,9 +1285,31 @@ if(votesD!="")
         teamSummary.updateOne({teamName:"SOUTH"},{$set:{balance:southBal}}).then(console.log("south update"));
         teamSummary.updateOne({teamName:"EAST"},{$set:{balance:eastBal}}).then(console.log("east update"));
         teamSummary.updateOne({teamName:"WEST"},{$set:{balance:westBal}}).then(console.log("west update"));
-    res.send({message:"game stats updated!"})
+        //updating activatedMonths
+        activatedMonth.find({activated:true}).then(months=>
+            {
+                months.forEach(month=>
+                    {
+                        activatedMonth.updateOne({month:month},{$set:{activated:false}}).then(console.log("months reset!"))
+                    })
+            })
+        res.send({message:"game stats updated!"})
     });
 
+});
+//to fetch all documents from 'gamedatas' that are ready for adding remarks
+gameDataRouter.get('readyForRemarks',(req,res)=>
+{
+    //if remarks field not exists and amount exists: that document is ready for updating remarks
+    gameHistory.find({amount:{$ne:null},remarks:null})
+    .then((data)=>
+    {
+        if(!data)
+        {
+            res.send({message:"none"})
+        }
+        res.send({message:"found",games:data});
+    })
 });
 
 module.exports =gameDataRouter;

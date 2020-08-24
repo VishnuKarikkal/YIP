@@ -6,6 +6,7 @@ var bpMonths=[];
 
 var gameCheckUrl='http://localhost:5000/gameData/gameStats';
 var calculateBalanceUrl='http://localhost:5000/gameData/calculateBalance';
+var readyForRemarksUrl='http://localhost:5000/gameData/readyForRemarks';
 
 $(document).ready(function () {
   $(":checkbox").slice(0,12).click(function (e) {
@@ -505,6 +506,7 @@ xhttp.onreadystatechange = function()
                                     if(res['message']!="none")
                                     {
                                       console.log(res['message']);
+                                      remarkTableData();
                                     }
                                   }
                                 }
@@ -512,8 +514,41 @@ xhttp.onreadystatechange = function()
  xhttp.send();
 }
 
-function remarkTableData()
+function remarksMonths()
 {
+  let boxes=$(".bpChecks");   //get all checkoxes
+  bpMonths=[];  //list of all months checked in remarks table
+  let i=0;
+  while(i<12)
+  {
+    if(boxes[i].checked)
+    {
+      switch(i)
+      {
+        case 0:bpMonths.push("JAN");break;
+        case 1:bpMonths.push("FEB");break;
+        case 2:bpMonths.push("MAR");break;
+        case 3:bpMonths.push("APR");break;
+        case 4:bpMonths.push("MAY");break;
+        case 5:bpMonths.push("JUN");break;
+        case 6:bpMonths.push("JUL");break;
+        case 7:bpMonths.push("AUG");break;
+        case 8:bpMonths.push("SEP");break;
+        case 9:bpMonths.push("OCT");break;
+        case 10:bpMonths.push("NOV");break;
+        default:bpMonths.push("DEC");
+      }
+    }
+    boxes[i].disabled=true;
+    boxes[i].checked=false;
+    i++;
+  }
+  document.getElementById("#bpMonthBtn").disabled=true;
+  document.getElementById("#bpAddBtn").disabled=false;
+}
+
+function remarkTableData()
+{//to load all documents that ready for "adding-remarks" to the remarks table
   var xhttp=new XMLHttpRequest();
   xhttp.onreadystatechange = function()
                                 {
@@ -531,217 +566,217 @@ function remarkTableData()
                                             case "JAN": 
                                             if(res['games'][i].teamName == "NORTH")
                                             {
-                                              document.getElementById('nJan').innerText=res['games'][i].vote;
+                                              document.getElementById('northVoteJan').innerText=res['games'][i].vote;
                                             }
                                             else if(res['games'][i].teamName == "SOUTH")
                                             {
-                                              document.getElementById('sJan').innerText=res['games'][i].vote;
+                                              document.getElementById('southVoteJan').innerText=res['games'][i].vote;
                                             }
                                             else if(res['games'][i].teamName == "EAST")
                                             {
-                                              document.getElementById('eJan').innerText=res['games'][i].vote;
+                                              document.getElementById('eastVoteJan').innerText=res['games'][i].vote;
                                             }
                                             else
                                             {
-                                              document.getElementById('wJan').innerText=res['games'][i].vote;
+                                              document.getElementById('westVoteJan').innerText=res['games'][i].vote;
                                             }
                                             break;
                                 case "FEB":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nFeb').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteFeb').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sFeb').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteFeb').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eFeb').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteFeb').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wFeb').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteFeb').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "MAR":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nMar').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteMar').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sMar').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteMar').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eMar').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteMar').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wMar').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteMar').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "APR":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nApr').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteApr').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sApr').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteApr').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eApr').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteApr').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wApr').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteApr').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "MAY":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nMay').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteMay').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sMay').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteMay').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eMay').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteMay').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wMay').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteMay').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "JUN":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nJun').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteJun').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sJun').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteJun').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eJun').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteJun').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wJun').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteJun').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "JUL":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nJul').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteJul').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sJul').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteJul').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eJul').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteJul').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wJul').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteJul').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "AUG":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nAug').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteAug').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sAug').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteAug').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eAug').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteAug').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wAug').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteAug').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "SEP":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nSep').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteSep').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sSep').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteSep').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eSep').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteSep').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wSep').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteSep').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "OCT":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nOct').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteOct').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sOct').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteOct').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eOct').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteOct').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wOct').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteOct').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 case "NOV":
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nNov').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteNov').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sNov').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteNov').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eNov').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteNov').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wNov').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteNov').innerText=res['games'][i].vote;
                                   }
                                   break;
                                 default:
                                   if(res['games'][i].teamName == "NORTH")
                                   {
-                                    document.getElementById('nDec').innerText=res['games'][i].vote;
+                                    document.getElementById('northVoteDec').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "SOUTH")
                                   {
-                                    document.getElementById('sDec').innerText=res['games'][i].vote;
+                                    document.getElementById('southVoteDec').innerText=res['games'][i].vote;
                                   }
                                   else if(res['games'][i].teamName == "EAST")
                                   {
-                                    document.getElementById('eDec').innerText=res['games'][i].vote;
+                                    document.getElementById('eastVoteDec').innerText=res['games'][i].vote;
                                   }
                                   else
                                   {
-                                    document.getElementById('wDec').innerText=res['games'][i].vote;
+                                    document.getElementById('westVoteDec').innerText=res['games'][i].vote;
                                   }
                                           }
                                           i++;
@@ -749,6 +784,6 @@ function remarkTableData()
                                       }
                                     }
                                 }
-   xhttp.open("GET",gameCheckUrl,true);
+   xhttp.open("GET",readyForRemarksUrl,true);
    xhttp.send();
 }

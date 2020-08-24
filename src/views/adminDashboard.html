@@ -427,7 +427,7 @@
                   <span class="slider round"></span>
                 </label>
               </td>
-              <td id="southVoteApr"></td>
+              <td id="southVoteMar"></td>
               <td id="sMarBP">
                 <label class="switch">
                   <input type="checkbox" />
@@ -730,7 +730,7 @@
 
       <!-- Activators -->
       <div class="even-flex my-3">
-        <button class="btn btn-primary btn-lg" id="bpMonthBtn" disabled>Activate Months</button>
+        <button class="btn btn-primary btn-lg" id="bpMonthBtn" disabled onclick="remarksMonths()">Activate Months</button>
       </div>
 
       <!-- Bonus-Penalty Dropdown -->
@@ -766,7 +766,7 @@
             <!-- <div class="invalid-feedback font-weight-bold mt-n2">Invalid option</div> -->
           </div>
           <div class="mx-auto text-center">
-            <button class="btn btn-lg btn-success mb-3" disabled type="submit">
+            <button class="btn btn-lg btn-success mb-3" id="bpAddBtn" disabled type="submit">
               Add Remarks
             </button>
           </div>
