@@ -27,20 +27,24 @@ app.use('/gameData',gameDataRouter);
 app.get("/",checkAuth, function (req, res) {
   res.sendFile(__dirname + "/src/views/welcome.html");
 });
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/src/views/welcome.html");
-});
+
 app.get("/login", function (req, res) {
   res.sendFile(__dirname + "/src/views/login.html");
 });
 app.get("/scoreboard", function (req, res) {
   res.sendFile(__dirname + "/src/views/index.html");
 });
-app.get("/gameTeam", function (req, res) {
+app.get("/gameTeam",checkAuth, function (req, res) {
   res.sendFile(__dirname + "/src/views/team.html");
 });
-app.get("/gameAdmin", function (req, res) {
-  res.sendFile(__dirname + "/src/views/adminDashboard.html");
+app.get("/gameAdmin",checkAuth, function (req, res) {
+  console.log(req.userData);
+  if(req.userData.username.toUpperCase()=="ADMIN") {
+    res.sendFile(__dirname + "/src/views/adminDashboard.html");
+  }
+  else{
+    res.send({message:"you are not allowed to view this page"});
+  }
 });
 
 app.listen(port, () => {
