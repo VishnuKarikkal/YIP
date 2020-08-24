@@ -46,7 +46,9 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link font-weight-bold" href="/scoreboard">Scoreboard</a>
+            <a class="nav-link font-weight-bold" href="/scoreboard"
+              >Scoreboard</a
+            >
           </li>
         </ul>
         <form class="form-inline my-2">
@@ -54,8 +56,6 @@
             class="nav-link font-weight-bold ml-n3"
             href="/login"
             onclick="logout()"
-            >Log Out</a
-          >
         </form>
       </div>
     </nav>
@@ -96,13 +96,63 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body text-justify">
-              You are required to send a message C or D to the World Bank every
-              month. Depending on the following rules, the Bank will either give
-              you funds during that month or ask you to contribute a specific
-              sum from your resources. Sometimes the World Bank may have
-              additional funds and this information will be announced in
-              advance.
+            <div class="modal-body">
+              <p class="text-justify">
+                You are required to send a message C or D to the World Bank
+                every month. Depending on the following rules, the Bank will
+                either give you funds during that month or ask you to contribute
+                a specific sum from your resources. Sometimes the World Bank may
+                have additional funds and this information will be announced in
+                advance.
+              </p>
+              <hr />
+              <h5 class="text-center font-weight-bold">
+                Rules of Payoff Distribution
+              </h5>
+              <table
+                class="table-sm text-center table-bordered table-responsive"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">No. Of C Messages</th>
+                    <th scope="col">No. Of D Messages</th>
+                    <th scope="col">Payoff for C Messages</th>
+                    <th scope="col">Payoff for C Messages</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4</td>
+                    <td>-</td>
+                    <td>Will get Rs. 1 million each</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>Will contribute Rs. 1 million each</td>
+                    <td>Will get Rs. 3 million each</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>Will contribute Rs. 2 million each</td>
+                    <td>Will get Rs. 2 million each</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>Will contribute Rs. 3 million each</td>
+                    <td>Will get Rs. 1 million each</td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>4</td>
+                    <td>-</td>
+                    <td>Will contribute Rs. 1 million each</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div class="modal-footer">
               <button
@@ -119,157 +169,59 @@
           </div>
         </div>
       </div>
-      <!-- <button type="button" class="btn btn-primary alert alert-primary" data-toggle="modal" data-target="#staticBackdrop" style="font-family: 'Baloo 2', cursive;">
-  Instructions!
-</button>
-
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel" style="color:royalblue;">Maximize Your Resources!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p style="text-indent: 70px;font-family: 'Baloo 2', cursive;color: chocolate;">
-          You are required to send a message C or D to the World Bank every month. Depending on the following rules, the Bank will either give you funds during that month or ask you to contribute a specific sum from your resources. Sometimes the World Bank may have additional funds and this information will be announced in advance.
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-family: 'Baloo 2', cursive;background-color: blueviolet;">Ready For Fun?!</button>
-      </div>
-    </div>
-  </div>
-</div> -->
     </div>
 
     <div class="input-controller container mx-auto my-5 text-center">
       <h1 class="display-4" id="month">Current Month</h1>
       <div id="voteOptions">
-        <h2 class="input-heading mb-3">Vote an Option</h2>
-      <div class="input-btns">
-        <button class="btn btn-lg btn-outline-info font-weight-bold mx-5 my-2">
-          <a class="display-3 vote-btn">C</a>
+        <h1 class="input-heading mb-3">Vote an Option</h1>
+        <div class="input-btns">
+          <button
+            class="btn btn-lg btn-outline-info font-weight-bold mx-5 my-2"
+          >
+            <a class="display-4 vote-btn">C</a>
+          </button>
+          <button
+            class="btn btn-lg btn-outline-warning font-weight-bold mx-5 my-2"
+          >
+            <a class="display-4 vote-btn">D</a>
+          </button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm text-center my-4">
+          <a class="display-4" id="vote">VOTE!</a>
         </button>
-        <button
-          class="btn btn-lg btn-outline-warning font-weight-bold mx-5 my-2"
-        >
-          <a class="display-3 vote-btn">D</a>
-        </button>
-      </div>
-      <button type="button" class="btn btn-primary text-center my-4">
-        <a class="display-4" id="vote">VOTE!</a>
-      </button>
       </div>
     </div>
 
-    <!-- <div class="card text-center mt-5"> -->
-    <!--Active Games Vote Section-->
-    <!-- <h5
-          class="card-header"
-          style="font-family: 'Baloo 2', cursive; color: darkmagenta;"
-        >
-          Active Game
-        </h5>
-        <div class="card-body">
-          <h5
-            class="card-title"
-            id="active"
-            style="font-family: 'Titan One', cursive; color: crimson;"
-          >
-            Current Game-Play Month
-          </h5>
-          <div> -->
-    <!--Voting Options-->
-    <!-- <div
-              class="row"
-              id="voteOptions"
-              style="width: fit-content; margin: 10px auto;"
-            >
-              <div class="col-md-5" style="margin-left: 5px;">
-                <button
-                  id="bt1"
-                  class="opt radio-btn"
-                  type="button"
-                  style="
-                    border: 1px solid rebeccapurple;
-                    border-radius: 50%;
-                    width: 70px;
-                    height: 70px;
-                    margin: auto auto;
-                  "
-                >
-                  <h1 style="color: White;">C</h1>
-                </button>
-              </div>
-              <div class="col-md-5" style="margin-left: 5px;">
-                <button
-                  id="bt2"
-                  class="opt radio-btn"
-                  type="button"
-                  style="
-                    border: 1px solid rebeccapurple;
-                    border-radius: 50%;
-                    width: 70px;
-                    height: 70px;
-                    margin: auto auto;
-                  "
-                >
-                  <h1 style="color: White;">D</h1>
-                </button>
-              </div>
-            </div>
-          </div>
-          <a
-            href="#"
-            class="btn btn-primary"
-            id="voteBtn"
-            style="font-family: 'Baloo 2', cursive;"
-            >Vote!</a
-          >
-        </div>
-      </div> -->
-
     <!-- Game History section -->
     <div
-      class="container text-center"
+      class="container game-stats text-center"
       style="
         border: 2px solid red;
         border-radius: 15px;
         margin: 20px auto 10px auto;
       "
     >
-      <h2 style="font-family: 'Baloo 2', cursive; color: darkmagenta;">
-        TEAM Stats
-      </h2>
-      <h4
-        id="balance"
-        style="font-family: 'Titan One', cursive; color: chartreuse;"
-      >
+      <h1 class="display-4">
+        Team Stats
+      </h1>
+      <h3 class="text-success" id="balance">
         Balance Available:
-      </h4>
+      </h3>
 
       <!-- game history grid -->
       <!-- 3 rows conataining 4 months each -->
       <div
-        class="container"
+        class="container game-history-box"
         style="
-          border: 2px solid violet;
+          border: 2px solid black;
           margin: 15px 0 10px 0;
           border-radius: 15px;
         "
       >
-        <h6
-          style="
-            margin-top: 15px;
-            font-family: 'Baloo 2', cursive;
-            color: darkmagenta;
-          "
-        >
+        <h3 class="m-3 game-history" style="color: darkmagenta;">
           Game History
-        </h6>
+        </h3>
         <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
           <!-- row1 -->
           <div class="col-md-3">
@@ -423,7 +375,7 @@
         COPYRIGHT © YIP, Kerala.
       </h6>
     </footer>
-
+    <!-- Scripts Starts Here  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script
@@ -441,7 +393,31 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+<<<<<<< HEAD
     <script src="/js/session.js"></script>
+=======
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script>
+      var tl = gsap.timeline({ defaults: { duration: 0.5 } });
+
+      tl.from(".display-3", { y: -100, opacity: 0 })
+        .from(".instructions", { x: 50, opacity: 0 })
+        .from(".input-controller", { x: -50, opacity: 0 })
+        .from(".input-controller button, .input-controller h1", {
+          y: -100,
+          stagger: 0.6,
+          opacity: 0,
+        })
+        .from(".game-stats", { x: 50, opacity: 0 })
+        .from(
+          ".game-stats h1, .game-stats h3, .game-history-box, .game-history, .card",
+          { y: -100, stagger: 0.6, opacity: 0 }
+        )
+        .from("footer", { x: 30, opacity: 0 });
+    </script>
+
+>>>>>>> 4d519096822d05de724100d771b3b9c55834e847
     <script src="/js/team.js"></script>
   </body>
 </html>

@@ -26,9 +26,8 @@ form .nav-link:hover {
   position: relative;
 }
 .instructions {
-  /* position: absolute;
-  right: 5%; */
   font-family: "Piedra", cursive;
+  outline: none;
 }
 .modal-title {
   font-family: "Piedra", cursive;
@@ -37,6 +36,9 @@ form .nav-link:hover {
 .modal-body {
   font-family: "Quicksand", sans-serif;
 }
+.modal-body p {
+  text-indent: 70px;
+}
 .input-heading {
   font-family: "Russo One", sans-serif;
 }
@@ -44,6 +46,13 @@ form .nav-link:hover {
   padding: 5px;
   border: 2px solid red;
   border-radius: 10px;
+}
+.display-4,
+.game-history {
+  font-family: "Quicksand", sans-serif;
+}
+#balance {
+  font-family: "Poppins", sans-serif;
 }
 .radio-btn {
   background-color: royalblue;
@@ -54,10 +63,8 @@ form .nav-link:hover {
   line-height: 26px;
   outline: none;
 }
-
 .radio-btn-selected {
   background-color: darkgreen;
-  /* border: 1px solid #55BC7E; */
   color: #55bc7e;
   font-family: "Titan One", cursive;
   font-size: 14px;
@@ -78,4 +85,8 @@ form .nav-link:hover {
 }
 .row .card-header {
   color: darkorchid;
+}
+#historyMonth {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
