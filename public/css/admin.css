@@ -64,7 +64,11 @@ form .nav-link:hover {
   margin: 5px auto;
   margin-right: 5px;
 }
-
+.bpChecks
+{
+  width: 20px;
+  height: 20px;
+}
 .switch {
   position: relative;
   display: inline-block;

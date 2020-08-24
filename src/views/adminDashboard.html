@@ -341,7 +341,7 @@
           <tbody>
             <tr>
               <th scope="row">January</th>
-              <td><input type="checkbox" name="activator" id="actJanBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actJanBP" /></td>
               <td id="northVoteJan"></td>
               <td id="nJanBP">
                 <label class="switch">
@@ -373,7 +373,7 @@
             </tr>
             <tr>
               <th scope="row">February</th>
-              <td><input type="checkbox" name="activator" id="actFebBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actFebBP" /></td>
               <td id="northVoteFeb"></td>
               <td id="nFebBP">
                 <label class="switch">
@@ -405,7 +405,7 @@
             </tr>
             <tr>
               <th scope="row">March</th>
-              <td><input type="checkbox" name="activator" id="actMarBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actMarBP" /></td>
               <td id="northVoteMar"></td>
               <td id="nMarBP">
                 <label class="switch">
@@ -437,7 +437,7 @@
             </tr>
             <tr>
               <th scope="row">April</th>
-              <td><input type="checkbox" name="activator" id="actAprBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actAprBP" /></td>
               <td id="northVoteApr"></td>
               <td id="nAprBP">
                 <label class="switch">
@@ -469,7 +469,7 @@
             </tr>
             <tr>
               <th scope="row">May</th>
-              <td><input type="checkbox" name="activator" id="actMayBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actMayBP" /></td>
               <td id="northVoteMay"></td>
               <td id="nMayBP">
                 <label class="switch">
@@ -501,7 +501,7 @@
             </tr>
             <tr>
               <th scope="row">June</th>
-              <td><input type="checkbox" name="activator" id="actJunBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actJunBP" /></td>
               <td id="northVoteJun"></td>
               <td id="nJunBP">
                 <label class="switch">
@@ -533,7 +533,7 @@
             </tr>
             <tr>
               <th scope="row">July</th>
-              <td><input type="checkbox" name="activator" id="actJulBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actJulBP" /></td>
               <td id="northVoteJul"></td>
               <td id="nJulBP">
                 <label class="switch">
@@ -566,7 +566,7 @@
 
             <tr>
               <th scope="row">August</th>
-              <td><input type="checkbox" name="activator" id="actAugBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actAugBP" /></td>
               <td id="northVoteAug"></td>
               <td id="nAugBP">
                 <label class="switch">
@@ -598,7 +598,7 @@
             </tr>
             <tr>
               <th scope="row">September</th>
-              <td><input type="checkbox" name="activator" id="actSepBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actSepBP" /></td>
               <td id="northVoteSep"></td>
               <td id="nSepBP">
                 <label class="switch">
@@ -630,7 +630,7 @@
             </tr>
             <tr>
               <th scope="row">October</th>
-              <td><input type="checkbox" name="activator" id="actOctBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actOctBP" /></td>
               <td id="northVoteOct"></td>
               <td id="nOctBP">
                 <label class="switch">
@@ -662,7 +662,7 @@
             </tr>
             <tr>
               <th scope="row">November</th>
-              <td><input type="checkbox" name="activator" id="actNovBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actNovBP" /></td>
               <td id="northVoteNov"></td>
               <td id="nNovBP">
                 <label class="switch">
@@ -694,7 +694,7 @@
             </tr>
             <tr>
               <th scope="row">December</th>
-              <td><input type="checkbox" name="activator" id="actDecBP" /></td>
+              <td><input type="checkbox" class="bpChecks" name="activator" id="actDecBP" /></td>
               <td id="northVoteDec"></td>
               <td id="nDecBP">
                 <label class="switch">
@@ -730,7 +730,7 @@
 
       <!-- Activators -->
       <div class="even-flex my-3">
-        <button class="btn btn-primary btn-lg">Activate Months</button>
+        <button class="btn btn-primary btn-lg" id="bpMonthBtn" disabled>Activate Months</button>
       </div>
 
       <!-- Bonus-Penalty Dropdown -->
@@ -766,7 +766,7 @@
             <!-- <div class="invalid-feedback font-weight-bold mt-n2">Invalid option</div> -->
           </div>
           <div class="mx-auto text-center">
-            <button class="btn btn-lg btn-success mb-3" type="submit">
+            <button class="btn btn-lg btn-success mb-3" disabled type="submit">
               Add Remarks
             </button>
           </div>
