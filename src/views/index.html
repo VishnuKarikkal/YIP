@@ -235,10 +235,10 @@
     <!-- Scripts starts here -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script>
-      var tl = gsap.timeline({ defaults: { duration: 1 } });
+      var tl = gsap.timeline({ defaults: { duration: 0.5 } });
 
       tl.from(".scoreboard-box", { x: -100, opacity: 0 })
-        .from("h3,img,h5", { y: -100, stagger: 0.6, opacity: 0 })
+        .from("h3,img,h5", { y: -100, stagger: 0.3, opacity: 0 })
         .from(".stat-box", { x: 100, opacity: 0 })
         .from("footer", { x: -100, opacity: 0 });
     </script>
