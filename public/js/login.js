@@ -38,7 +38,6 @@ function signIn(){
     $.post(url,data) .done(function( data ) {
         setCookie('token',data.token,1)
    window.localStorage.setItem('teamName',data.teamName);
-        alert(data.teamName);
         if(data.teamName=="ADMIN"){
             window.location.href='/';
         }
