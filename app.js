@@ -24,13 +24,11 @@ app.use('/userLogin',loginRouter);        //loginRoutes
 app.use('/game',gameRouter);          //gameRoutes
 app.use('/gameData',gameDataRouter);
 
-<<<<<<< HEAD
 app.get("/",checkAuth, function (req, res) {
   res.sendFile(__dirname + "/src/views/team.html");
-=======
+});
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/src/views/welcome.html");
->>>>>>> 4d519096822d05de724100d771b3b9c55834e847
 });
 app.get("/login", function (req, res) {
   res.sendFile(__dirname + "/src/views/login.html");
