@@ -38,7 +38,7 @@ function signIn(){
     $.post(url,data) .done(function( data ) {
         setCookie('token',data.token,1)
    window.localStorage.setItem('teamName',data.teamName);
-   window.location.href='/';
+   window.location.href='/gameTeam';
 });
 
 
