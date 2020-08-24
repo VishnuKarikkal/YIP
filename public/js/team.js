@@ -221,7 +221,4 @@ function teamStats()
     xhttp.send();
 }
 
-/*---------------------logout---------------*/
-function logout() {
-  //for logging out
-}
+
