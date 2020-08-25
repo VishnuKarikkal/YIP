@@ -55,7 +55,7 @@ function gameCheck()
     months.splice(0,months.length);   //resetting months array
   } 
 
-  //to check for active games and load it to the page (on page load)
+  //to check for active games and load it to the page
   var xhttp=new XMLHttpRequest();
   xhttp.onreadystatechange = function()
                                 {
@@ -287,7 +287,7 @@ function gameCheck()
                                               }
                                           }
                                           if(res['games'][i].amount)
-                                            {
+                                            { //disables checkboxes of published games
                                               switch(res['games'][i].month)
                                               {
                                                 case "JAN":
@@ -379,7 +379,8 @@ function activateMonths()
   }
   else
   {
-    console.log("selects months!");
+    console.log("select months!");
+    alert("no months activated!")
   }
 }
 
