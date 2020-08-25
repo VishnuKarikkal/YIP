@@ -1,9 +1,13 @@
 var optionVoted = "";
 var noOfActiveGames=0;
 var activeGames=[];
+var historyMonths=[];
+
 var activeGameCheckUrl = "http://localhost:5000/game/activeGame";
 var votePostUrl='http://localhost:5000/game/vote';
 var teamStatsUrl='http://localhost:5000/gameData/teamStats';
+var teamHistoryUrl="http://localhost:5000/game/teamGameHistory";
+
 var team=localStorage.getItem('teamName');
 var name=`name=${team}`;
 document.getElementById('teamName').innerText=team;
@@ -27,7 +31,8 @@ $(document).ready(function () {
 });
 
 function gameCheck() {
-  //to check for active games and load it to the page (on page load)
+  //to check for active games and load it to the page
+  teamStats();  //loading game-history to the page
   var xhttp=new XMLHttpRequest();
     xhttp.onreadystatechange = function()
                                 {
@@ -39,12 +44,7 @@ function gameCheck() {
                                       if(res['message']!="none")  //if any active
                                       {
                                         activeGames=res['games'];
-                                        noOfActiveGames=activeGames.length-1;
-                                        
-                                        document.getElementById('month').innerText=activeGames[0].month;
-                                        activeGames.shift();
-                                        //console.log(activeGames)
-                                        document.getElementById('voteOptions').hidden=false;
+                                        console.log("1")
                                       }
                                       else      //no active game
                                       {
@@ -59,7 +59,62 @@ function gameCheck() {
                                     }
                                 }
       
-    xhttp.open("GET",activeGameCheckUrl,true);
+    xhttp.open("GET",activeGameCheckUrl + "?" + name,false);
+    xhttp.send();
+                      console.log("2");console.log(activeGames)
+    if(activeGames.length>0)    //if active games exist
+    {
+      let gamesNotPlayed=[];  //active months in which games aren't played yet
+      teamGameHistory();
+      console.log(gamesNotPlayed)
+      activeGames.forEach(game=>
+        {
+          if(historyMonths.includes(game)){console.log("already played:"+game);}
+          else{gamesNotPlayed.push(game);}
+        })
+
+        if(gamesNotPlayed.length>0)   //checking for games that are active and not played by the team
+        {
+          noOfActiveGames=gamesNotPlayed.length-1;
+                                          
+          document.getElementById('month').innerText=gamesNotPlayed[0];
+          gamesNotPlayed.shift();
+          console.log(gamesNotPlayed)
+          document.getElementById('voteOptions').hidden=false;
+        }
+        else      //if every active games are played and team is waiting for results
+        {
+          document.getElementById('month').innerText="No Active Games!";
+          document.getElementById('voteOptions').hidden=true;
+        }
+     
+    }
+    
+}
+function teamGameHistory()
+{
+  var xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange = function()
+                                {
+                                    if((this.readyState==4)&&(this.status==200))
+                                    {
+                                      var res=JSON.parse(this.responseText);
+                                      
+                                        //returns gameHistory of team or "none"
+                                      if(res['message']!="none")  //if any history is available
+                                      {
+                                        let history=res['history']; //game history of the team
+                                        //let gamesNotPlayed=[];
+                                        historyMonths=[];
+
+                                        history.forEach(item=>
+                                          {
+                                            historyMonths.push(item.month);
+                                          })
+                                      }
+                                    }
+                                }  
+  xhttp.open("GET",teamHistoryUrl + "?" + name,false);
     xhttp.send();
 }
 /*-----------------post request for vote-----------------------*/
@@ -85,8 +140,8 @@ document.getElementById('vote').addEventListener('click', event => {
   //check if any more active games avilable in the current time
                                      if(noOfActiveGames>0)   //if games exits
                                      {
-                                        noOfActiveGames=activeGames.length-1;
-                                        document.getElementById('month').innerText=activeGames[0].month;
+                                        noOfActiveGames=gamesNotPlayed.length-1;
+                                        document.getElementById('month').innerText=gamesNotPlayed[0].month;
                                         activeGames.shift();
                                         //console.log(activeGames)
                                         document.getElementById('voteOptions').hidden=false;

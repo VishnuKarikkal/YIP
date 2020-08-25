@@ -46,6 +46,7 @@ $(document).ready(function () {
 });
 function gameCheck()
 {
+  remarkTableData();
   var monthChecks=$(":checkbox");   //to enable all months for activation
   let i=0;
   while(i<12){monthChecks[i].disabled=false;i++}  //making all month checks active (first 12 aims -> the 1st table)

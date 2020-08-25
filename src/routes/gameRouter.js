@@ -7,25 +7,44 @@ const teamSummary=require("../Model/teamSummary");
 
 gameRouter.get("/activeGame", function (req, res) {
     //to get all months that admin set to 'active' : from 'activemonths' collection
-  console.log("active games")
-  const activatedMonths=[];
+  const activatedMonths=[]; //to hold all months activated
+
   activatedMonth.find().then((months)=>{
     months.forEach(month=>{
-      if(month.activated){
-        activatedMonths.push(month);
+      if(month.activated){          //getting all 'activated' months
+        activatedMonths.push(month.month);
       }
     })
     return activatedMonths;
   }).then(activatedMonths => {
-    if(activatedMonths.length>0) {
+    if(activatedMonths.length>0) {    //if any months activated
       res.status(200).json({message:"active",games:activatedMonths});
-    }else{
+    }
+    else
+    {
       res.status(200).json({message: "none"})
       //if none is active
     }
   })
-
+   
 });
+gameRouter.get("/teamGameHistory",(req,res)=>
+{
+  let name=req.query.name; //team name
+
+  gameHistory.find({teamName:name}).then(data=>
+    {
+      if(data)
+      {
+        res.status(200).json({message:"found",history:data});
+      }
+      else
+      {
+        res.status(200).json({message:"none"});
+      }
+    })
+})
+
 gameRouter.post("/activate",(req,res)=>
 {
   console.log(req.body.activateMonths);
