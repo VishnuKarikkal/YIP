@@ -556,8 +556,8 @@ function remarksMonths()
     boxes[i].checked=false;
     i++;
   }
-  document.getElementById("#bpMonthBtn").disabled=true;
-  document.getElementById("#bpAddBtn").disabled=false;
+  document.getElementById("bpMonthBtn").disabled=true;
+  document.getElementById("bpAddBtn").disabled=false;
 }
 
 function remarkTableData()
