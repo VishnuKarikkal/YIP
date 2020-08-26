@@ -17,9 +17,16 @@ font-family: 'Rye', cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: beige; */
 }
-
+body {
+  background: linear-gradient(
+    -30deg,
+    #03a9f4 0%,
+    #3a78b7 50%,
+    #262626 50%,
+    #607d8b 100%
+  );
+}
 .navbar-brand {
   transform: scale(1.1);
   font-family: "Rye", cursive;
@@ -39,6 +46,17 @@ form .nav-link:hover {
 .remark-heading {
   font-family: "Grenze Gotisch", cursive;
   position: relative;
+  color: #0e0591;
+  filter: hue-rotate(120deg);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(100deg);
+  }
 }
 .instructions {
   font-family: "Piedra", cursive;
@@ -64,8 +82,7 @@ form .nav-link:hover {
   margin: 5px auto;
   margin-right: 5px;
 }
-.bpChecks
-{
+.bpChecks {
   width: 20px;
   height: 20px;
 }
@@ -131,37 +148,21 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-/* .bonus label, .penalty label{
-  font-size: 175%;
-}
-.bonus input, .penalty input{
-    text-align: center;
-    border: 2px solid white;
-    padding: 10px 10px;
-    width: 250px;
-    outline: none;
-    color: black;
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
-    border-radius: 10px;
-    transition: 0.25s;
-}
-.bonus input:hover, .penalty input:hover{
-  border-color: orange;
-}
-.bonus input:focus, .penalty input:focus{
-  border-color: black;
-} */
-.bdr {
-  border: 1px solid blueviolet;
-  border-radius: 50px;
-  margin: 0px 10px;
-  padding: 7px;
-}
-.bdr:hover {
-  transform: scale(1.1);
-  /* border: none; */
-}
-footer{
+footer {
   position: relative;
+}
+#actJan,
+#actFeb,
+#actMar,
+#actApr,
+#actMay,
+#actJun,
+#actJul,
+#actAug,
+#actSep,
+#actOct,
+#actNov,
+#actDec {
+  width: 20px;
+  height: 20px;
 }
