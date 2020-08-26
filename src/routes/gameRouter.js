@@ -87,4 +87,48 @@ gameRouter.post("/addRemarks",(req,res)=>
   //changes 'gameHistorys' collection(ramarks) + 'teamSummary' collection(balance)
 
 })
+
+gameRouter.get('/endGame',(req,res)=>
+{
+  //ends all games
+  //clears gamedatas (removes all documents) , 
+  //activatemonths gets resetted (activated is set to false) , 
+  //teamsummary gets updated(balance is set to 200)
+gameHistory.deleteMany({teamName:{$ne:null}},(err,data)=>  //clearing gamedatas
+{
+  if(err)   //if error - aborting 
+  {
+    res.json({message:"none"});
+  }
+  else
+  {
+    console.log(data);
+    console.log("gamedatas cleared!");
+  }
+});
+activatedMonth.updateMany({activated:true},{$set:{activated:false}} ,(err,data)=>
+{   // resetting activatedmonths
+  if(err)
+  {
+    res.json({message:"none"});
+  }
+  else
+  {
+    console.log(data);
+    console.log("activated months resetted!");
+  }
+})
+teamSummary.updateMany({teamName:{$ne:null}},{$set:{balance:200}},(err,data)=>
+{   //resetting teamsummary
+  if(err)
+  {
+    res.json({message:"none"})
+  }
+  else
+  {
+    console.log(data);
+    console.log("teamsummary resetted!");
+  }
+})
+})
 module.exports = gameRouter;
