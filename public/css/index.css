@@ -54,3 +54,6 @@ a {
 .stat-box {
   background-color: rgba(0, 255, 255, 0.7);
 }
+.stats-tbody td {
+  font-weight: bold;
+}
