@@ -5,7 +5,9 @@ const jwt = require("jsonwebtoken");
 const jwtKey = "secret" || process.env.JWT_KEY;
 
 loginRouter.get("/", function (req, res) {
-  res.send('hi');
+    user.find({}).then((val)=>{
+        res.json(val);
+    })
 });
 loginRouter.post("/", function (req, res) {
   console.log(req.body);

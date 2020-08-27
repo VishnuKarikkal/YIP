@@ -7,7 +7,7 @@ var bpMonths=[];
 var gameCheckUrl='http://localhost:5000/gameData/gameStats';
 var calculateBalanceUrl='http://localhost:5000/gameData/calculateBalance';
 var readyForRemarksUrl='http://localhost:5000/gameData/readyForRemarks';
-
+var postRemarksUrl='http://localhost:5000/game/addRemarks';
 $(document).ready(function () {
   $(":checkbox").slice(0,12).click(function (e) {
     if (e.target.checked == true) {
@@ -568,7 +568,7 @@ function remarkTableData()
                                     if((this.readyState==4)&&(this.status==200))
                                     {
                                       var res=JSON.parse(this.responseText);
-                                      
+                                      console.log(res);
                                       if(res['message']!="none")
                                       {
                                         let i=0;
@@ -799,4 +799,77 @@ function remarkTableData()
                                 }
    xhttp.open("GET",readyForRemarksUrl,true);
    xhttp.send();
+}
+
+document.getElementById('bpAddBtn').addEventListener('click',function(){
+if(isAllRowsFilled()){
+  postRemarks();
+}
+else{
+  alert('All the rows are not filled');
+}
+})
+//adding capitalize function so String
+String.prototype.capitalize = function() {
+  return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();
+}
+function isAllRowsFilled(){
+  let flags=[];
+  bpMonths.forEach(function(month) {
+
+    let northVoteId = `northVote${month.capitalize()}`;
+    let southVoteId = `southVote${month.capitalize()}`;
+    let westVoteId = `westVote${month.capitalize()}`;
+    let eastVoteId = `eastVote${month.capitalize()}`;
+    let northVote = document.getElementById(northVoteId).innerText.trim();
+    let southVote = document.getElementById(southVoteId).innerText.trim();
+    let westVote = document.getElementById(westVoteId).innerText.trim();
+    let eastVote = document.getElementById(eastVoteId).innerText.trim();
+    if (!(eastVote.length > 0 && southVote.length > 0 && westVote.length > 0 && northVote.length > 0)) {
+      flags.push(false);
+    }
+  });
+   if(flags.length>0){
+     return false;
+   }
+   return true;
+}
+
+function postRemarks(){
+  var remarks=[];
+ bpMonths.forEach(function(month){
+   let remark;
+   let northId=`n${month.capitalize()}BP`;
+   let southId=`s${month.capitalize()}BP`;
+   let westId=`w${month.capitalize()}BP`;
+   let eastId=`e${month.capitalize()}BP`;
+    remark={
+     month:month.toUpperCase(),
+      north:isSliderGreen(northId),
+      south:isSliderGreen(southId),
+      west:isSliderGreen(westId),
+      east:isSliderGreen(eastId)
+   }
+   remarks.push(remark);
+ })
+  let bonus=document.getElementById('selectedBonusValue').value;
+  let penalty=document.getElementById('selectedPenaltyValue').value;
+
+  fetch(postRemarksUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({remarks:remarks,bonus:bonus,penalty:penalty}),
+  })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+}
+function isSliderGreen(Id){
+  return !document.querySelector(`#${Id} input[type='checkbox']`).checked;
 }

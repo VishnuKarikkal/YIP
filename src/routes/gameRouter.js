@@ -4,7 +4,6 @@ const activatedMonth=require('../Model/activatedMonth')
 const gameHistory = require("../Model/gameHistory");
 const teamSummary=require("../Model/teamSummary");
 
-
 gameRouter.get("/activeGame", function (req, res) {
     //to get all months that admin set to 'active' : from 'activemonths' collection
   const activatedMonths=[]; //to hold all months activated
@@ -82,9 +81,65 @@ gameRouter.post("/publish",(req,res)=>
 });
 gameRouter.post("/addRemarks",(req,res)=>
 {
-  gameHistory.findOneAndUpdate({month:req.body.month},req.body).then(value => res.status(200).json({message:'successfully added remark!'}));
+
+   console.log('reached here');
+  console.log(req.body);
+  const remarksArray=req.body.remarks;
+  const bonus=req.body.bonus;
+  const penalty=-(req.body.penalty);
+  remarksArray.forEach(
+      (month) => {
+        let northRemark = (month.north) ? bonus : penalty;
+        let southRemark = (month.south) ? bonus : penalty;
+        let eastRemark = (month.east) ? bonus : penalty;
+        let westRemark = (month.west) ? bonus : penalty;
+        gameHistory.findOneAndUpdate({month: month.month, teamName: 'NORTH'}, {
+          remarks: northRemark
+        }).then(value => console.log(value));
+          teamSummary.findOne({teamName: 'NORTH'}).then(value => {
+              let northBalance = Number(value.balance);
+                  northBalance += Number(northRemark);
+              teamSummary.findOneAndUpdate({teamName: 'NORTH'}, {balance: northBalance})
+                  .then(value => console.log('updated'));
+          })
+        gameHistory.findOneAndUpdate({month: month.month, teamName: 'SOUTH'}, {
+          remarks: southRemark
+        }).then(value => console.log(value));
+              teamSummary.findOne({teamName: 'SOUTH'}).then(value => {
+              let southBalance = Number(value.balance);
+                  southBalance += Number(southRemark);
+              teamSummary.findOneAndUpdate({teamName: 'SOUTH'}, {balance: southBalance})
+                  .then(value => console.log('updated'));
+          })
+        gameHistory.findOneAndUpdate({month: month.month, teamName: 'WEST'}, {
+          remarks: westRemark
+        }).then(value => console.log(value));
+          teamSummary.findOne({teamName: 'WEST'}).then(value => {
+              let westBalance = Number(value.balance);
+                  westBalance += Number(westRemark);
+              teamSummary.findOneAndUpdate({teamName: 'WEST'}, {balance: westBalance})
+                  .then(value => console.log(value));
+          })
+        gameHistory.findOneAndUpdate({month: month.month, teamName: 'EAST'}, {
+          remarks: eastRemark
+        }).then(value => console.log(value));
+          teamSummary.findOne({teamName: 'EAST'}).then(value => {
+              let eastBalance = Number(value.balance);
+                  eastBalance += Number(eastRemark);
+              teamSummary.findOneAndUpdate({teamName: 'EAST'}, {balance: eastBalance})
+                  .then(value => console.log(value));
+          })
+
+
+
+      }
+  );
+
+
+
   //to add bonus/penalty to the balances of each team whose votes are published
   //changes 'gameHistorys' collection(ramarks) + 'teamSummary' collection(balance)
 
 })
+
 module.exports = gameRouter;
