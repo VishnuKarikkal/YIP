@@ -7,7 +7,10 @@ var bpMonths=[];
 var gameCheckUrl='http://localhost:5000/gameData/gameStats';
 var calculateBalanceUrl='http://localhost:5000/gameData/calculateBalance';
 var readyForRemarksUrl='http://localhost:5000/gameData/readyForRemarks';
+
 var postRemarksUrl='http://localhost:5000/game/addRemarks';
+var endGameUrl='http://localhost:5000/game/endGame';
+
 $(document).ready(function () {
   $(":checkbox").slice(0,12).click(function (e) {
     if (e.target.checked == true) {
@@ -287,8 +290,9 @@ function gameCheck()
                                                 document.getElementById('wDec').innerText=res['games'][i].vote;
                                               }
                                           }
-                                          if(res['games'][i].amount)
-                                            { //disables checkboxes of published games
+                                          if(res['games'][i].amount)                                         
+                                            { //if amount exists, the game is already published
+                                              //disables checkboxes of published games
                                               switch(res['games'][i].month)
                                               {
                                                 case "JAN":
@@ -873,3 +877,34 @@ function postRemarks(){
 function isSliderGreen(Id){
   return !document.querySelector(`#${Id} input[type='checkbox']`).checked;
 }
+
+function endGame()
+{   //to end current games and reset all data in the database
+  month = "";
+  checked = 0; // resetting global variables
+  months=[];
+  bpChecked=0;
+  bpMonths=[];
+
+  var xhttp=new XMLHttpRequest();
+  xhttp.onreadystatechange = function()
+                                {
+                                    if((this.readyState==4)&&(this.status==200))
+                                    {
+                                      var res=JSON.parse(this.responseText);
+                                      
+                                      if(res['message']!="none")
+                                      {
+                                        alert("Games Ended!");
+                                      }
+                                      else
+                                      {
+                                        console.log("error occurred, action aborted!");
+                                        alert("error occured, please try again!");
+                                      }
+                                    }
+                                  }
+    xhttp.open("GET",endGameUrl,true);
+    xhttp.send();                                 
+}
+

@@ -8,8 +8,8 @@ const port = process.env.PORT || 5000;
 const app = new express();
 
 // Routing
-const gameRouter = require('./src/routes/gameRouter');
-const gameDataRouter = require('./src/routes/gameDataRouter');
+const gameRouter = require("./src/routes/gameRouter");
+const gameDataRouter = require("./src/routes/gameDataRouter");
 
 app.use(cors({ origin: "*" }));
 app.use(express.urlencoded({ extended: true }));
@@ -20,11 +20,11 @@ app.set("views", "./src/views");
 app.use(cors());
 app.use(express.static("./public"));
 
-app.use('/userLogin',loginRouter);        //loginRoutes
-app.use('/game',gameRouter);          //gameRoutes
-app.use('/gameData',gameDataRouter);
+app.use("/userLogin", loginRouter); //loginRoutes
+app.use("/game", gameRouter); //gameRoutes
+app.use("/gameData", gameDataRouter);
 
-app.get("/",checkAuth, function (req, res) {
+app.get("/", checkAuth, function (req, res) {
   if (req.userData.username.toUpperCase() == "ADMIN") {
     res.sendFile(__dirname + "/src/views/adminDashboard.html");
   } else {
@@ -33,26 +33,24 @@ app.get("/",checkAuth, function (req, res) {
 });
 
 app.get("/login", function (req, res) {
-
-    res.sendFile(__dirname + "/src/views/login.html");
+  res.sendFile(__dirname + "/src/views/login.html");
 });
-app.get("/scoreboard",function (req, res) {
-    res.sendFile(__dirname + "/src/views/index.html");
+app.get("/scoreboard", function (req, res) {
+  res.sendFile(__dirname + "/src/views/index.html");
 });
-app.get("/gameTeam",checkAuth, function (req, res) {
-  if(req.userData.username.toUpperCase()=="ADMIN") {
+app.get("/gameTeam", checkAuth, function (req, res) {
+  if (req.userData.username.toUpperCase() == "ADMIN") {
     res.sendFile(__dirname + "/src/views/adminDashboard.html");
-  }else {
+  } else {
     res.sendFile(__dirname + "/src/views/team.html");
   }
 });
-app.get("/gameAdmin",checkAuth, function (req, res) {
+app.get("/gameAdmin", checkAuth, function (req, res) {
   console.log(req.userData);
-  if(req.userData.username.toUpperCase()=="ADMIN") {
+  if (req.userData.username.toUpperCase() == "ADMIN") {
     res.sendFile(__dirname + "/src/views/adminDashboard.html");
-  }
-  else{
-    res.send({message:"you are not allowed to view this page"});
+  } else {
+    res.send({ message: "you are not allowed to view this page" });
   }
 });
 

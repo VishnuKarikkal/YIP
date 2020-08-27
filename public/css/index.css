@@ -54,9 +54,6 @@ a {
 .stat-box {
   background-color: rgba(0, 255, 255, 0.7);
 }
-.table {
-  border-top-right-radius: 45px;
-  border-top-left-radius: 45px;
-  border-bottom-right-radius: 45px;
-  border-bottom-left-radius: 45px;
+.stats-tbody td {
+  font-weight: bold;
 }

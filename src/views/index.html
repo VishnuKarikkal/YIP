@@ -30,7 +30,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body onload="teamStats()">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
@@ -51,8 +51,10 @@
           <li class="nav-item">
             <a class="nav-link font-weight-bold" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link font-weight-bold" href="/scoreboard">Game</a>
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bold" href="/scoreboard"
+              >Scoreboard</a
+            >
           </li>
         </ul>
       </div>
@@ -63,37 +65,29 @@
       <!-- Game Summary section -->
       <div
         class="container scoreboard-box"
-        style="border: 2px solid blueviolet; border-radius: 15px;"
+        style="border: 1px solid blueviolet; border-radius: 15px"
       >
-        <h3
+        <h5
           class="card-header text-center display-4 my-2"
-          style="border-radius: 15px;"
+          style="border-radius: 15px"
         >
           Game Summary
-        </h3>
+        </h5>
         <div class="gameStat even-flex">
           <div class="trophy-image">
             <img
               src="/img/wnr.jpg"
               alt="winner"
-              style="width: 150px; height: 150px; border-radius: 50%;"
+              style="width: 150px; height: 150px; border-radius: 50%"
             />
           </div>
           <div class="stat-content my-auto">
-            <h3>
-              <a class="display-4 mr-2 ml-2 text-decoration-none" id="leading"
-                >North
-              </a>
-              Leading...
+            <h3 class="mr-2 ml-2">
+              <a class="display-4 text-decoration-none" id="leading"></a> Leading...
             </h3>
-            <h3>
+            <h3 class="mr-2 ml-2">
               with remaining amount
-              <a
-                class="ml-2 display-4 text-decoration-none"
-                id="leadAmount"
-                style="font-size: 1.5em;"
-                >150</a
-              >
+              <a class="display-4 text-decoration-none" id="leadAmount" style="font-size: 1.5em"></a>
               millions
             </h3>
           </div>
@@ -111,9 +105,8 @@
                   <a
                     class="mx-auto display-4 text-decoration-none"
                     id="northBal"
-                    style="font-size: 1.2em;"
-                    >150</a
-                  >
+                    style="font-size: 1.2em"
+                  ></a>
                   millions
                 </h5>
               </div>
@@ -128,9 +121,8 @@
                   <a
                     class="mx-auto display-4 text-decoration-none"
                     id="eastBal"
-                    style="font-size: 1.2em;"
-                    >140</a
-                  >
+                    style="font-size: 1.2em"
+                  ></a>
                   millions
                 </h5>
               </div>
@@ -145,9 +137,8 @@
                   <a
                     class="mx-auto display-4 text-decoration-none"
                     id="westBal"
-                    style="font-size: 1.2em;"
-                    >133</a
-                  >
+                    style="font-size: 1.2em"
+                  ></a>
                   millions
                 </h5>
               </div>
@@ -162,9 +153,8 @@
                   <a
                     class="mx-auto display-4 text-decoration-none"
                     id="southBal"
-                    style="font-size: 1.2em;"
-                    >145</a
-                  >
+                    style="font-size: 1.2em"
+                  ></a>
                   millions
                 </h5>
               </div>
@@ -174,20 +164,20 @@
       </div>
 
       <!-- Game Stats -->
-      <div class="container p-2">
-        <div class="row mx-auto my-3 mx-auto">
+      <div class="container">
+        <div class="row mx-auto my-3">
           <!-- game stats table section -->
           <div
             class="col stat-box"
             style="
-              border: 2px solid blueviolet;
+              border: 1px solid blueviolet;
               padding: 10px 10px;
               border-radius: 15px;
             "
           >
             <h5
               class="card-header display-4 text-center mb-2"
-              style="border-radius: 15px;"
+              style="border-radius: 15px"
             >
               Game Stats
             </h5>
@@ -206,33 +196,216 @@
                   </tr>
                   <tr>
                     <th>Vote</th>
-                    <th>Result</th>
+                    <th>Amount</th>
                     <th>Remarks</th>
                     <th>Vote</th>
-                    <th>Result</th>
+                    <th>Amount</th>
                     <th>Remarks</th>
                     <th>Vote</th>
-                    <th>Result</th>
+                    <th>Amount</th>
                     <th>Remarks</th>
                     <th>Vote</th>
-                    <th>Result</th>
+                    <th>Amount</th>
                     <th>Remarks</th>
                   </tr>
                 </thead>
+                <tbody class="stats-tbody">
+                  <tr>
+                    <th>January</th>
+                    <td id="VNJan"></td>
+                    <td id="ANJan"></td>
+                    <td id="RNJan"></td>
+                    <td id="VEJan"></td>
+                    <td id="AEJan"></td>
+                    <td id="REJan"></td>
+                    <td id="VWJan"></td>
+                    <td id="AWJan"></td>
+                    <td id="RWJan"></td>
+                    <td id="VSJan"></td>
+                    <td id="ASJan"></td>
+                    <td id="RSJan"></td>
+                  </tr>
+                  <tr>
+                    <th>February</th>
+                    <td id="VNFeb"></td>
+                    <td id="ANFeb"></td>
+                    <td id="RNFeb"></td>
+                    <td id="VEFeb"></td>
+                    <td id="AEFeb"></td>
+                    <td id="REFeb"></td>
+                    <td id="VWFeb"></td>
+                    <td id="AWFeb"></td>
+                    <td id="RWFeb"></td>
+                    <td id="VSFeb"></td>
+                    <td id="ASFeb"></td>
+                    <td id="RSFeb"></td>
+                  </tr>
+                  <tr>
+                    <th>March</th>
+                    <td id="VNMAr"></td>
+                    <td id="ANMAr"></td>
+                    <td id="RNMAr"></td>
+                    <td id="VEMAr"></td>
+                    <td id="AEMAr"></td>
+                    <td id="REMAr"></td>
+                    <td id="VWMAr"></td>
+                    <td id="AWMAr"></td>
+                    <td id="RWMAr"></td>
+                    <td id="VSMAr"></td>
+                    <td id="ASMAr"></td>
+                    <td id="RSMAr"></td>
+                  </tr>
+                  <tr>
+                    <th>April</th>
+                    <td id="VNApr"></td>
+                    <td id="ANApr"></td>
+                    <td id="RNApr"></td>
+                    <td id="VEApr"></td>
+                    <td id="AEApr"></td>
+                    <td id="REApr"></td>
+                    <td id="VWApr"></td>
+                    <td id="AWApr"></td>
+                    <td id="RWApr"></td>
+                    <td id="VSApr"></td>
+                    <td id="ASApr"></td>
+                    <td id="RSApr"></td>
+                  </tr>
+                  <tr>
+                    <th>May</th>
+                    <td id="VNMay"></td>
+                    <td id="ANMay"></td>
+                    <td id="RNMay"></td>
+                    <td id="VEMay"></td>
+                    <td id="AEMay"></td>
+                    <td id="REMay"></td>
+                    <td id="VWMay"></td>
+                    <td id="AWMay"></td>
+                    <td id="RWMay"></td>
+                    <td id="VSMay"></td>
+                    <td id="ASMay"></td>
+                    <td id="RSMay"></td>
+                  </tr>
+                  <tr>
+                    <th>June</th>
+                    <td id="VNJun"></td>
+                    <td id="ANJun"></td>
+                    <td id="RNJun"></td>
+                    <td id="VEJun"></td>
+                    <td id="AEJun"></td>
+                    <td id="REJun"></td>
+                    <td id="VWJun"></td>
+                    <td id="AWJun"></td>
+                    <td id="RWJun"></td>
+                    <td id="VSJun"></td>
+                    <td id="ASJun"></td>
+                    <td id="RSJun"></td>
+                  </tr>
+                  <tr>
+                    <th>July</th>
+                    <td id="VNJul"></td>
+                    <td id="ANJul"></td>
+                    <td id="RNJul"></td>
+                    <td id="VEJul"></td>
+                    <td id="AEJul"></td>
+                    <td id="REJul"></td>
+                    <td id="VWJul"></td>
+                    <td id="AWJul"></td>
+                    <td id="RWJul"></td>
+                    <td id="VSJul"></td>
+                    <td id="ASJul"></td>
+                    <td id="RSJul"></td>
+                  </tr>
+                  <tr>
+                    <th>August</th>
+                    <td id="VNAug"></td>
+                    <td id="ANAug"></td>
+                    <td id="RNAug"></td>
+                    <td id="VEAug"></td>
+                    <td id="AEAug"></td>
+                    <td id="REAug"></td>
+                    <td id="VWAug"></td>
+                    <td id="AWAug"></td>
+                    <td id="RWAug"></td>
+                    <td id="VSAug"></td>
+                    <td id="ASAug"></td>
+                    <td id="RSAug"></td>
+                  </tr>
+                  <tr>
+                    <th>September</th>
+                    <td id="VNSep"></td>
+                    <td id="ANSep"></td>
+                    <td id="RNSep"></td>
+                    <td id="VESep"></td>
+                    <td id="AESep"></td>
+                    <td id="RESep"></td>
+                    <td id="VWSep"></td>
+                    <td id="AWSep"></td>
+                    <td id="RWSep"></td>
+                    <td id="VSSep"></td>
+                    <td id="ASSep"></td>
+                    <td id="RSSep"></td>
+                  </tr>
+                  <tr>
+                    <th>October</th>
+                    <td id="VNOct"></td>
+                    <td id="ANOct"></td>
+                    <td id="RNOct"></td>
+                    <td id="VEOct"></td>
+                    <td id="AEOct"></td>
+                    <td id="REOct"></td>
+                    <td id="VWOct"></td>
+                    <td id="AWOct"></td>
+                    <td id="RWOct"></td>
+                    <td id="VSOct"></td>
+                    <td id="ASOct"></td>
+                    <td id="RSOct"></td>
+                  </tr>
+                  <tr>
+                    <th>November</th>
+                    <td id="VNNov"></td>
+                    <td id="ANNov"></td>
+                    <td id="RNNov"></td>
+                    <td id="VENov"></td>
+                    <td id="AENov"></td>
+                    <td id="RENov"></td>
+                    <td id="VWNov"></td>
+                    <td id="AWNov"></td>
+                    <td id="RWNov"></td>
+                    <td id="VSNov"></td>
+                    <td id="ASNov"></td>
+                    <td id="RSNov"></td>
+                  </tr>
+                  <tr>
+                    <th>December</th>
+                    <td id="VNDec"></td>
+                    <td id="ANDec"></td>
+                    <td id="RNDec"></td>
+                    <td id="VEDec"></td>
+                    <td id="AEDec"></td>
+                    <td id="REDec"></td>
+                    <td id="VWDec"></td>
+                    <td id="AWDec"></td>
+                    <td id="RWDec"></td>
+                    <td id="VSDec"></td>
+                    <td id="ASDec"></td>
+                    <td id="RSDec"></td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- <button onclick="test()">TEST</button> -->
     <!-- Footer -->
     <footer class="mt-3">
-      <h6 class="text-center">
-        COPYRIGHT © YIP, Kerala.
-      </h6>
+      <h6 class="text-center">COPYRIGHT © YIP, Kerala.</h6>
     </footer>
 
     <!-- Scripts starts here -->
+    <script src="/js/gameSummaryStats.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script>
       var tl = gsap.timeline({ defaults: { duration: 0.5 } });
