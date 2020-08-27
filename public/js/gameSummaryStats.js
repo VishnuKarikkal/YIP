@@ -831,5 +831,30 @@ function statsSouth() {
 }
 
 setInterval(() => {
-  console.log(NCB, ECB, WCB, SCB);
-}, 5000);
+  // console.log(NCB, ECB, WCB, SCB);
+  let arr = [NCB, ECB, ECB, SCB];
+  var largest = arr[0];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (largest < arr[i]) {
+      largest = arr[i];
+    }
+  }
+  // console.log(largest);
+  document.getElementById("leadAmount").innerText = largest;
+  var leading = "";
+  if (largest == NCB) {
+    leading += "North ";
+  }
+  if (largest == ECB) {
+    leading += "East ";
+  }
+  if (largest == WCB) {
+    leading += "West ";
+  }
+  if (largest == SCB) {
+    leading += "South";
+  }
+  // console.log(leading);
+  document.getElementById("leading").innerText = leading;
+}, 3000);
