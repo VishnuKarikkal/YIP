@@ -20,7 +20,7 @@ function teamStats() {
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
             case "JAN":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANJan = res["history"][i].amount;
                 if (ANJan < 0) {
                   ANJan = -ANJan;
@@ -33,19 +33,22 @@ function teamStats() {
               }
               document.getElementById("VNJan").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  var RNJan = res["history"][i].remarks
-                  if (RNJan < 0) {
-                    RNJan = -RNJan;
-                    document.getElementById("RNJan").style.color = "red";
-                  } else {
-                    document.getElementById("RNJan").style.color = "green";
-                  }
-                  document.getElementById("RNJan").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNJan").innerText = "";}
+              if (res["history"][i].remarks) {
+                var RNJan = res["history"][i].remarks;
+                if (RNJan < 0) {
+                  RNJan = -RNJan;
+                  document.getElementById("RNJan").style.color = "red";
+                } else {
+                  document.getElementById("RNJan").style.color = "green";
+                }
+                document.getElementById("RNJan").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNJan").innerText = "";
+              }
               break;
             case "FEB":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANFeb = res["history"][i].amount;
                 if (ANFeb < 0) {
                   ANFeb = -ANFeb;
@@ -58,19 +61,22 @@ function teamStats() {
               }
               document.getElementById("VNFeb").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  var RNFeb = res["history"][i].remarks
-                  if (RNFeb < 0) {
-                    RNFeb = -RNFeb;
-                    document.getElementById("RNFeb").style.color = "red";
-                  } else {
-                    document.getElementById("RNFeb").style.color = "green";
-                  }
-                  document.getElementById("RNFeb").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNFeb").innerText = "";}
+              if (res["history"][i].remarks) {
+                var RNFeb = res["history"][i].remarks;
+                if (RNFeb < 0) {
+                  RNFeb = -RNFeb;
+                  document.getElementById("RNFeb").style.color = "red";
+                } else {
+                  document.getElementById("RNFeb").style.color = "green";
+                }
+                document.getElementById("RNFeb").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNFeb").innerText = "";
+              }
               break;
             case "MAR":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANMar = res["history"][i].amount;
                 if (ANMar < 0) {
                   ANMar = -ANMar;
@@ -83,18 +89,21 @@ function teamStats() {
               }
               document.getElementById("VNMar").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNMar < 0) {
-                    RNMar = -RNMar;
-                    document.getElementById("RNMar").style.color = "red";
-                  } else {
-                    document.getElementById("RNMar").style.color = "green";
-                  }
-                  document.getElementById("RNMar").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNMar").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNMar < 0) {
+                  RNMar = -RNMar;
+                  document.getElementById("RNMar").style.color = "red";
+                } else {
+                  document.getElementById("RNMar").style.color = "green";
+                }
+                document.getElementById("RNMar").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNMar").innerText = "";
+              }
               break;
             case "APR":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANApr = res["history"][i].amount;
                 if (ANApr < 0) {
                   ANApr = -ANApr;
@@ -107,18 +116,21 @@ function teamStats() {
               }
               document.getElementById("VNApr").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNApr < 0) {
-                    RNApr = -RNApr;
-                    document.getElementById("RNApr").style.color = "red";
-                  } else {
-                    document.getElementById("RNApr").style.color = "green";
-                  }
-                  document.getElementById("RNApr").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNApr").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNApr < 0) {
+                  RNApr = -RNApr;
+                  document.getElementById("RNApr").style.color = "red";
+                } else {
+                  document.getElementById("RNApr").style.color = "green";
+                }
+                document.getElementById("RNApr").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNApr").innerText = "";
+              }
               break;
             case "MAY":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANMay = res["history"][i].amount;
                 if (ANMay < 0) {
                   ANMay = -ANMay;
@@ -131,18 +143,21 @@ function teamStats() {
               }
               document.getElementById("VNMay").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNMay < 0) {
-                    RNMay = -RNMay;
-                    document.getElementById("RNMay").style.color = "red";
-                  } else {
-                    document.getElementById("RNMay").style.color = "green";
-                  }
-                  document.getElementById("RNMay").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNMay").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNMay < 0) {
+                  RNMay = -RNMay;
+                  document.getElementById("RNMay").style.color = "red";
+                } else {
+                  document.getElementById("RNMay").style.color = "green";
+                }
+                document.getElementById("RNMay").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNMay").innerText = "";
+              }
               break;
             case "JUN":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANJun = res["history"][i].amount;
                 if (ANJun < 0) {
                   ANJun = -ANJun;
@@ -155,18 +170,21 @@ function teamStats() {
               }
               document.getElementById("VNJun").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNJun < 0) {
-                    RNJun = -RNJun;
-                    document.getElementById("RNJun").style.color = "red";
-                  } else {
-                    document.getElementById("RNJun").style.color = "green";
-                  }
-                  document.getElementById("RNJun").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNJun").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNJun < 0) {
+                  RNJun = -RNJun;
+                  document.getElementById("RNJun").style.color = "red";
+                } else {
+                  document.getElementById("RNJun").style.color = "green";
+                }
+                document.getElementById("RNJun").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNJun").innerText = "";
+              }
               break;
             case "JUL":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANJul = res["history"][i].amount;
                 if (ANJul < 0) {
                   ANJul = -ANJul;
@@ -179,18 +197,21 @@ function teamStats() {
               }
               document.getElementById("VNJul").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNJul < 0) {
-                    RNJul = -RNJul;
-                    document.getElementById("RNJul").style.color = "red";
-                  } else {
-                    document.getElementById("RNJul").style.color = "green";
-                  }
-                  document.getElementById("RNJul").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNJul").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNJul < 0) {
+                  RNJul = -RNJul;
+                  document.getElementById("RNJul").style.color = "red";
+                } else {
+                  document.getElementById("RNJul").style.color = "green";
+                }
+                document.getElementById("RNJul").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNJul").innerText = "";
+              }
               break;
             case "AUG":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANAug = res["history"][i].amount;
                 if (ANAug < 0) {
                   ANAug = -ANAug;
@@ -203,18 +224,21 @@ function teamStats() {
               }
               document.getElementById("VNAug").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNAug < 0) {
-                    RNAug = -RNAug;
-                    document.getElementById("RNAug").style.color = "red";
-                  } else {
-                    document.getElementById("RNAug").style.color = "green";
-                  }
-                  document.getElementById("RNAug").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNAug").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNAug < 0) {
+                  RNAug = -RNAug;
+                  document.getElementById("RNAug").style.color = "red";
+                } else {
+                  document.getElementById("RNAug").style.color = "green";
+                }
+                document.getElementById("RNAug").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNAug").innerText = "";
+              }
               break;
             case "SEP":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANSep = res["history"][i].amount;
                 if (ANSep < 0) {
                   ANSep = -ANSep;
@@ -227,18 +251,21 @@ function teamStats() {
               }
               document.getElementById("VNSep").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNSep < 0) {
-                    RNSep = -RNSep;
-                    document.getElementById("RNSep").style.color = "red";
-                  } else {
-                    document.getElementById("RNSep").style.color = "green";
-                  }
-                  document.getElementById("RNSep").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNSep").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNSep < 0) {
+                  RNSep = -RNSep;
+                  document.getElementById("RNSep").style.color = "red";
+                } else {
+                  document.getElementById("RNSep").style.color = "green";
+                }
+                document.getElementById("RNSep").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNSep").innerText = "";
+              }
               break;
             case "OCT":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANOct = res["history"][i].amount;
                 if (ANOct < 0) {
                   ANOct = -ANOct;
@@ -251,18 +278,21 @@ function teamStats() {
               }
               document.getElementById("VNOct").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNOct < 0) {
-                    RNOct = -RNOct;
-                    document.getElementById("RNOct").style.color = "red";
-                  } else {
-                    document.getElementById("RNOct").style.color = "green";
-                  }
-                  document.getElementById("RNOct").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNOct").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNOct < 0) {
+                  RNOct = -RNOct;
+                  document.getElementById("RNOct").style.color = "red";
+                } else {
+                  document.getElementById("RNOct").style.color = "green";
+                }
+                document.getElementById("RNOct").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNOct").innerText = "";
+              }
               break;
             case "NOV":
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANNov = res["history"][i].amount;
                 if (ANNov < 0) {
                   ANNov = -ANNov;
@@ -275,18 +305,21 @@ function teamStats() {
               }
               document.getElementById("VNNov").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNNov < 0) {
-                    RNNov = -RNNov;
-                    document.getElementById("RNNov").style.color = "red";
-                  } else {
-                    document.getElementById("RNNov").style.color = "green";
-                  }
-                  document.getElementById("RNNov").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNNov").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNNov < 0) {
+                  RNNov = -RNNov;
+                  document.getElementById("RNNov").style.color = "red";
+                } else {
+                  document.getElementById("RNNov").style.color = "green";
+                }
+                document.getElementById("RNNov").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNNov").innerText = "";
+              }
               break;
             default:
-              if(res["history"][i].amount){
+              if (res["history"][i].amount) {
                 var ANDec = res["history"][i].amount;
                 if (ANDec < 0) {
                   ANDec = -ANDec;
@@ -299,15 +332,18 @@ function teamStats() {
               }
               document.getElementById("VNDec").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RNDec < 0) {
-                    RNDec = -RNDec;
-                    document.getElementById("RNDec").style.color = "red";
-                  } else {
-                    document.getElementById("RNDec").style.color = "green";
-                  }
-                  document.getElementById("RNDec").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RNDec").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RNDec < 0) {
+                  RNDec = -RNDec;
+                  document.getElementById("RNDec").style.color = "red";
+                } else {
+                  document.getElementById("RNDec").style.color = "green";
+                }
+                document.getElementById("RNDec").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RNDec").innerText = "";
+              }
           }
           i++;
         }
@@ -375,255 +411,328 @@ function statsEast() {
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
             case "JAN":
-              var AEJan = res["history"][i].amount;
-              if (AEJan < 0) {
-                AEJan = -AEJan;
-                document.getElementById("AEJan").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEJan = res["history"][i].amount;
+                if (AEJan < 0) {
+                  AEJan = -AEJan;
+                  document.getElementById("AEJan").style.color = "red";
+                } else {
+                  document.getElementById("AEJan").style.color = "green";
+                }
               } else {
-                document.getElementById("AEJan").style.color = "green";
+                document.getElementById("AEJan").innerText = "";
               }
-              document.getElementById("AEJan").innerText = AEJan;
               document.getElementById("VEJan").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REJan < 0) {
-                    REJan = -REJan;
-                    document.getElementById("REJan").style.color = "red";
-                  } else {
-                    document.getElementById("REJan").style.color = "green";
-                  }
-                  document.getElementById("REJan").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REJan").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REJan < 0) {
+                  REJan = -REJan;
+                  document.getElementById("REJan").style.color = "red";
+                } else {
+                  document.getElementById("REJan").style.color = "green";
+                }
+                document.getElementById("REJan").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REJan").innerText = "";
+              }
               break;
             case "FEB":
-              var AEFeb = res["history"][i].amount;
-              if (AEFeb < 0) {
-                AEFeb = -AEFeb;
-                document.getElementById("AEFeb").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEFeb = res["history"][i].amount;
+                if (AEFeb < 0) {
+                  AEFeb = -AEFeb;
+                  document.getElementById("AEFeb").style.color = "red";
+                } else {
+                  document.getElementById("AEFeb").style.color = "green";
+                }
               } else {
-                document.getElementById("AEFeb").style.color = "green";
+                document.getElementById("AEFeb").innerText = "";
               }
-              document.getElementById("AEFeb").innerText = AEFeb;
               document.getElementById("VEFeb").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REFeb < 0) {
-                    REFeb = -REFeb;
-                    document.getElementById("REFeb").style.color = "red";
-                  } else {
-                    document.getElementById("REFeb").style.color = "green";
-                  }
-                  document.getElementById("REFeb").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REFeb").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REFeb < 0) {
+                  REFeb = -REFeb;
+                  document.getElementById("REFeb").style.color = "red";
+                } else {
+                  document.getElementById("REFeb").style.color = "green";
+                }
+                document.getElementById("REFeb").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REFeb").innerText = "";
+              }
               break;
             case "MAR":
-              var AEMar = res["history"][i].amount;
-              if (AEMar < 0) {
-                AEMar = -AEMar;
-                document.getElementById("AEMar").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEMar = res["history"][i].amount;
+                if (AEMar < 0) {
+                  AEMar = -AEMar;
+                  document.getElementById("AEMar").style.color = "red";
+                } else {
+                  document.getElementById("AEMar").style.color = "green";
+                }
               } else {
-                document.getElementById("AEMar").style.color = "green";
+                document.getElementById("AEMar").innerText = "";
               }
-              document.getElementById("AEMar").innerText = AEMar;
               document.getElementById("VEMar").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REMar < 0) {
-                    REMar = -REMar;
-                    document.getElementById("REMar").style.color = "red";
-                  } else {
-                    document.getElementById("REMar").style.color = "green";
-                  }
-                  document.getElementById("REMar").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REMar").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REMar < 0) {
+                  REMar = -REMar;
+                  document.getElementById("REMar").style.color = "red";
+                } else {
+                  document.getElementById("REMar").style.color = "green";
+                }
+                document.getElementById("REMar").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REMar").innerText = "";
+              }
               break;
             case "APR":
-              var AEApr = res["history"][i].amount;
-              if (AEApr < 0) {
-                AEApr = -AEApr;
-                document.getElementById("AEApr").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEApr = res["history"][i].amount;
+                if (AEApr < 0) {
+                  AEApr = -AEApr;
+                  document.getElementById("AEApr").style.color = "red";
+                } else {
+                  document.getElementById("AEApr").style.color = "green";
+                }
               } else {
-                document.getElementById("AEApr").style.color = "green";
+                document.getElementById("AEApr").innerText = "";
               }
-              document.getElementById("AEApr").innerText = AEApr;
               document.getElementById("VEApr").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REApr < 0) {
-                    REApr = -REApr;
-                    document.getElementById("REApr").style.color = "red";
-                  } else {
-                    document.getElementById("REApr").style.color = "green";
-                  }
-                  document.getElementById("REApr").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REApr").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REApr < 0) {
+                  REApr = -REApr;
+                  document.getElementById("REApr").style.color = "red";
+                } else {
+                  document.getElementById("REApr").style.color = "green";
+                }
+                document.getElementById("REApr").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REApr").innerText = "";
+              }
               break;
             case "MAY":
-              var AEMAy = res["history"][i].amount;
-              if (AEMAy < 0) {
-                AEMAy = -AEMAy;
-                document.getElementById("AEMAy").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEMay = res["history"][i].amount;
+                if (AEMay < 0) {
+                  AEMay = -AEMay;
+                  document.getElementById("AEMay").style.color = "red";
+                } else {
+                  document.getElementById("AEMay").style.color = "green";
+                }
               } else {
-                document.getElementById("AEMAy").style.color = "green";
+                document.getElementById("AEMay").innerText = "";
               }
-              document.getElementById("AEMAy").innerText = AEMAy;
               document.getElementById("VEMay").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REMay < 0) {
-                    REMay = -REMay;
-                    document.getElementById("REMay").style.color = "red";
-                  } else {
-                    document.getElementById("REMay").style.color = "green";
-                  }
-                  document.getElementById("REMay").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REMay").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REMay < 0) {
+                  REMay = -REMay;
+                  document.getElementById("REMay").style.color = "red";
+                } else {
+                  document.getElementById("REMay").style.color = "green";
+                }
+                document.getElementById("REMay").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REMay").innerText = "";
+              }
               break;
             case "JUN":
-              var AEJun = res["history"][i].amount;
-              if (AEJun < 0) {
-                AEJun = -AEJun;
-                document.getElementById("AEJun").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEJun = res["history"][i].amount;
+                if (AEJun < 0) {
+                  AEJun = -AEJun;
+                  document.getElementById("AEJun").style.color = "red";
+                } else {
+                  document.getElementById("AEJun").style.color = "green";
+                }
               } else {
-                document.getElementById("AEJun").style.color = "green";
+                document.getElementById("AEJun").innerText = "";
               }
-              document.getElementById("AEJun").innerText = AEJun;
               document.getElementById("VEJun").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REJun < 0) {
-                    REJun = -REJun;
-                    document.getElementById("REJun").style.color = "red";
-                  } else {
-                    document.getElementById("REJun").style.color = "green";
-                  }
-                  document.getElementById("REJun").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REJun").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REJun < 0) {
+                  REJun = -REJun;
+                  document.getElementById("REJun").style.color = "red";
+                } else {
+                  document.getElementById("REJun").style.color = "green";
+                }
+                document.getElementById("REJun").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REJun").innerText = "";
+              }
               break;
             case "JUL":
-              var AEJul = res["history"][i].amount;
-              if (AEJul < 0) {
-                AEJul = -AEJul;
-                document.getElementById("AEJul").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEJul = res["history"][i].amount;
+                if (AEJul < 0) {
+                  AEJul = -AEJul;
+                  document.getElementById("AEJul").style.color = "red";
+                } else {
+                  document.getElementById("AEJul").style.color = "green";
+                }
               } else {
-                document.getElementById("AEJul").style.color = "green";
+                document.getElementById("AEJul").innerText = "";
               }
-              document.getElementById("AEJul").innerText = AEJul;
               document.getElementById("VEJul").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REJul < 0) {
-                    REJul = -REJul;
-                    document.getElementById("REJul").style.color = "red";
-                  } else {
-                    document.getElementById("REJul").style.color = "green";
-                  }
-                  document.getElementById("REJul").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REJul").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REJul < 0) {
+                  REJul = -REJul;
+                  document.getElementById("REJul").style.color = "red";
+                } else {
+                  document.getElementById("REJul").style.color = "green";
+                }
+                document.getElementById("REJul").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REJul").innerText = "";
+              }
               break;
             case "AUG":
-              var AEAug = res["history"][i].amount;
-              if (AEAug < 0) {
-                AEAug = -AEAug;
-                document.getElementById("AEAug").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEAug = res["history"][i].amount;
+                if (AEAug < 0) {
+                  AEAug = -AEAug;
+                  document.getElementById("AEAug").style.color = "red";
+                } else {
+                  document.getElementById("AEAug").style.color = "green";
+                }
               } else {
-                document.getElementById("AEAug").style.color = "green";
+                document.getElementById("AEAug").innerText = "";
               }
-              document.getElementById("AEAug").innerText = AEAug;
               document.getElementById("VEAug").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REAug < 0) {
-                    REAug = -REAug;
-                    document.getElementById("REAug").style.color = "red";
-                  } else {
-                    document.getElementById("REAug").style.color = "green";
-                  }
-                  document.getElementById("REAug").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REAug").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REAug < 0) {
+                  REAug = -REAug;
+                  document.getElementById("REAug").style.color = "red";
+                } else {
+                  document.getElementById("REAug").style.color = "green";
+                }
+                document.getElementById("REAug").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REAug").innerText = "";
+              }
               break;
             case "SEP":
-              var AESep = res["history"][i].amount;
-              if (AESep < 0) {
-                AESep = -AESep;
-                document.getElementById("AESep").style.color = "red";
+              if (res["history"][i].amount) {
+                var AESep = res["history"][i].amount;
+                if (AESep < 0) {
+                  AESep = -AESep;
+                  document.getElementById("AESep").style.color = "red";
+                } else {
+                  document.getElementById("AESep").style.color = "green";
+                }
               } else {
-                document.getElementById("AESep").style.color = "green";
+                document.getElementById("AESep").innerText = "";
               }
-              document.getElementById("AESep").innerText = AESep;
               document.getElementById("VESep").innerText =
-                res["history"][i].vote;if(res["history"][i].remarks){
-                  if (RESep < 0) {
-                    RESep = -RESep;
-                    document.getElementById("RESep").style.color = "red";
-                  } else {
-                    document.getElementById("RESep").style.color = "green";
-                  }
-                  document.getElementById("RESep").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RESep").innerText = "";}
+                res["history"][i].vote;
+              if (res["history"][i].remarks) {
+                if (RESep < 0) {
+                  RESep = -RESep;
+                  document.getElementById("RESep").style.color = "red";
+                } else {
+                  document.getElementById("RESep").style.color = "green";
+                }
+                document.getElementById("RESep").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RESep").innerText = "";
+              }
               break;
             case "OCT":
-              var AEOct = res["history"][i].amount;
-              if (AEOct < 0) {
-                AEOct = -AEOct;
-                document.getElementById("AEOct").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEOct = res["history"][i].amount;
+                if (AEOct < 0) {
+                  AEOct = -AEOct;
+                  document.getElementById("AEOct").style.color = "red";
+                } else {
+                  document.getElementById("AEOct").style.color = "green";
+                }
               } else {
-                document.getElementById("AEOct").style.color = "green";
+                document.getElementById("AEOct").innerText = "";
               }
-              document.getElementById("AEOct").innerText = AEOct;
               document.getElementById("VEOct").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REOct < 0) {
-                    REOct = -REOct;
-                    document.getElementById("REOct").style.color = "red";
-                  } else {
-                    document.getElementById("REOct").style.color = "green";
-                  }
-                  document.getElementById("REOct").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REOct").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REOct < 0) {
+                  REOct = -REOct;
+                  document.getElementById("REOct").style.color = "red";
+                } else {
+                  document.getElementById("REOct").style.color = "green";
+                }
+                document.getElementById("REOct").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REOct").innerText = "";
+              }
               break;
             case "NOV":
-              var AENov = res["history"][i].amount;
-              if (AENov < 0) {
-                AENov = -AENov;
-                document.getElementById("AENov").style.color = "red";
+              if (res["history"][i].amount) {
+                var AENov = res["history"][i].amount;
+                if (AENov < 0) {
+                  AENov = -AENov;
+                  document.getElementById("AENov").style.color = "red";
+                } else {
+                  document.getElementById("AENov").style.color = "green";
+                }
               } else {
-                document.getElementById("AENov").style.color = "green";
+                document.getElementById("AENov").innerText = "";
               }
-              document.getElementById("AENov").innerText = AENov;
               document.getElementById("VENov").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RENov < 0) {
-                    RENov = -RENov;
-                    document.getElementById("RENov").style.color = "red";
-                  } else {
-                    document.getElementById("RENov").style.color = "green";
-                  }
-                  document.getElementById("RENov").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RENov").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RENov < 0) {
+                  RENov = -RENov;
+                  document.getElementById("RENov").style.color = "red";
+                } else {
+                  document.getElementById("RENov").style.color = "green";
+                }
+                document.getElementById("RENov").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RENov").innerText = "";
+              }
               break;
             default:
-              var AEDec = res["history"][i].amount;
-              if (AEDec < 0) {
-                AEDec = -AEDec;
-                document.getElementById("AEDec").style.color = "red";
+              if (res["history"][i].amount) {
+                var AEDec = res["history"][i].amount;
+                if (AEDec < 0) {
+                  AEDec = -AEDec;
+                  document.getElementById("AEDec").style.color = "red";
+                } else {
+                  document.getElementById("AEDec").style.color = "green";
+                }
               } else {
-                document.getElementById("AEDec").style.color = "green";
+                document.getElementById("AEDec").innerText = "";
               }
-              document.getElementById("AEDec").innerText = AEDec;
               document.getElementById("VEDec").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (REDec < 0) {
-                    REDec = -REDec;
-                    document.getElementById("REDec").style.color = "red";
-                  } else {
-                    document.getElementById("REDec").style.color = "green";
-                  }
-                  document.getElementById("REDec").innerText = res["history"][i].remarks;
-                } else{document.getElementById("REDec").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (REDec < 0) {
+                  REDec = -REDec;
+                  document.getElementById("REDec").style.color = "red";
+                } else {
+                  document.getElementById("REDec").style.color = "green";
+                }
+                document.getElementById("REDec").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("REDec").innerText = "";
+              }
           }
           i++;
         }
@@ -687,256 +796,328 @@ function statsWest() {
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
             case "JAN":
-              var AWJan = res["history"][i].amount;
-              if (AWJan < 0) {
-                AWJan = -AWJan;
-                document.getElementById("AWJan").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWJan = res["history"][i].amount;
+                if (AWJan < 0) {
+                  AWJan = -AWJan;
+                  document.getElementById("AWJan").style.color = "red";
+                } else {
+                  document.getElementById("AWJan").style.color = "green";
+                }
               } else {
-                document.getElementById("AWJan").style.color = "green";
+                document.getElementById("AWJan").innerText = "";
               }
-              document.getElementById("AWJan").innerText = AWJan;
               document.getElementById("VWJan").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWJan < 0) {
-                    RWJan = -RWJan;
-                    document.getElementById("RWJan").style.color = "red";
-                  } else {
-                    document.getElementById("RWJan").style.color = "green";
-                  }
-                  document.getElementById("RWJan").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWJan").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWJan < 0) {
+                  RWJan = -RWJan;
+                  document.getElementById("RWJan").style.color = "red";
+                } else {
+                  document.getElementById("RWJan").style.color = "green";
+                }
+                document.getElementById("RWJan").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWJan").innerText = "";
+              }
               break;
             case "FEB":
-              var AWFeb = res["history"][i].amount;
-              if (AWFeb < 0) {
-                AWFeb = -AWFeb;
-                document.getElementById("AWFeb").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWFeb = res["history"][i].amount;
+                if (AWFeb < 0) {
+                  AWFeb = -AEFeb;
+                  document.getElementById("AWFeb").style.color = "red";
+                } else {
+                  document.getElementById("AWFeb").style.color = "green";
+                }
               } else {
-                document.getElementById("AWFeb").style.color = "green";
+                document.getElementById("AWFeb").innerText = "";
               }
-              document.getElementById("AWFeb").innerText = AWFeb;
               document.getElementById("VWFeb").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWFeb < 0) {
-                    RWFeb = -RWFeb;
-                    document.getElementById("RWFeb").style.color = "red";
-                  } else {
-                    document.getElementById("RWFeb").style.color = "green";
-                  }
-                  document.getElementById("RWFeb").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWFeb").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWFeb < 0) {
+                  RWFeb = -RWFeb;
+                  document.getElementById("RWFeb").style.color = "red";
+                } else {
+                  document.getElementById("RWFeb").style.color = "green";
+                }
+                document.getElementById("RWFeb").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWFeb").innerText = "";
+              }
               break;
             case "MAR":
-              var AWMar = res["history"][i].amount;
-              if (AWMar < 0) {
-                AWMar = -AWMar;
-                document.getElementById("AWMar").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWMar = res["history"][i].amount;
+                if (AWMar < 0) {
+                  AWMar = -AEMar;
+                  document.getElementById("AWMar").style.color = "red";
+                } else {
+                  document.getElementById("AWMar").style.color = "green";
+                }
               } else {
-                document.getElementById("AWMar").style.color = "green";
+                document.getElementById("AWMar").innerText = "";
               }
-              document.getElementById("AWMar").innerText = AWMar;
               document.getElementById("VWMar").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWMar < 0) {
-                    RWMar = -RWMar;
-                    document.getElementById("RWMar").style.color = "red";
-                  } else {
-                    document.getElementById("RWMar").style.color = "green";
-                  }
-                  document.getElementById("RWMar").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWMar").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWMar < 0) {
+                  RWMar = -RWMar;
+                  document.getElementById("RWMar").style.color = "red";
+                } else {
+                  document.getElementById("RWMar").style.color = "green";
+                }
+                document.getElementById("RWMar").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWMar").innerText = "";
+              }
               break;
             case "APR":
-              var AWApr = res["history"][i].amount;
-              if (AWApr < 0) {
-                AWApr = -AWApr;
-                document.getElementById("AWApr").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWApr = res["history"][i].amount;
+                if (AWApr < 0) {
+                  AWApr = -AEApr;
+                  document.getElementById("AWApr").style.color = "red";
+                } else {
+                  document.getElementById("AWApr").style.color = "green";
+                }
               } else {
-                document.getElementById("AWApr").style.color = "green";
+                document.getElementById("AWApr").innerText = "";
               }
-              document.getElementById("AWApr").innerText = AWApr;
               document.getElementById("VWApr").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWApr < 0) {
-                    RWApr = -RWApr;
-                    document.getElementById("RWApr").style.color = "red";
-                  } else {
-                    document.getElementById("RWApr").style.color = "green";
-                  }
-                  document.getElementById("RWApr").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWApr").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWApr < 0) {
+                  RWApr = -RWApr;
+                  document.getElementById("RWApr").style.color = "red";
+                } else {
+                  document.getElementById("RWApr").style.color = "green";
+                }
+                document.getElementById("RWApr").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWApr").innerText = "";
+              }
               break;
             case "MAY":
-              var AWMay = res["history"][i].amount;
-              if (AWMay < 0) {
-                AWMay = -AWMay;
-                document.getElementById("AWMay").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWMay = res["history"][i].amount;
+                if (AWMay < 0) {
+                  AWMay = -AEMay;
+                  document.getElementById("AWMay").style.color = "red";
+                } else {
+                  document.getElementById("AWMay").style.color = "green";
+                }
               } else {
-                document.getElementById("AWMay").style.color = "green";
+                document.getElementById("AWMay").innerText = "";
               }
-              document.getElementById("AWMay").innerText = AWMay;
               document.getElementById("VWMay").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWMay < 0) {
-                    RWMay = -RWMay;
-                    document.getElementById("RWMay").style.color = "red";
-                  } else {
-                    document.getElementById("RWMay").style.color = "green";
-                  }
-                  document.getElementById("RWMay").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWMay").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWMay < 0) {
+                  RWMay = -RWMay;
+                  document.getElementById("RWMay").style.color = "red";
+                } else {
+                  document.getElementById("RWMay").style.color = "green";
+                }
+                document.getElementById("RWMay").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWMay").innerText = "";
+              }
               break;
             case "JUN":
-              var AWJun = res["history"][i].amount;
-              if (AWJun < 0) {
-                AWJun = -AWJun;
-                document.getElementById("AWJun").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWJun = res["history"][i].amount;
+                if (AWJun < 0) {
+                  AWJun = -AEJun;
+                  document.getElementById("AWJun").style.color = "red";
+                } else {
+                  document.getElementById("AWJun").style.color = "green";
+                }
               } else {
-                document.getElementById("AWJun").style.color = "green";
+                document.getElementById("AWJun").innerText = "";
               }
-              document.getElementById("AWJun").innerText = AWJun;
               document.getElementById("VWJun").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWJun < 0) {
-                    RWJun = -RWJun;
-                    document.getElementById("RWJun").style.color = "red";
-                  } else {
-                    document.getElementById("RWJun").style.color = "green";
-                  }
-                  document.getElementById("RWJun").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWJun").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWJun < 0) {
+                  RWJun = -RWJun;
+                  document.getElementById("RWJun").style.color = "red";
+                } else {
+                  document.getElementById("RWJun").style.color = "green";
+                }
+                document.getElementById("RWJun").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWJun").innerText = "";
+              }
               break;
             case "JUL":
-              var AWJul = res["history"][i].amount;
-              if (AWJul < 0) {
-                AWJul = -AWJul;
-                document.getElementById("AWJul").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWJul = res["history"][i].amount;
+                if (AWJul < 0) {
+                  AWJul = -AEJul;
+                  document.getElementById("AWJul").style.color = "red";
+                } else {
+                  document.getElementById("AWJul").style.color = "green";
+                }
               } else {
-                document.getElementById("AWJul").style.color = "green";
+                document.getElementById("AWJul").innerText = "";
               }
-              document.getElementById("AWJul").innerText = AWJul;
               document.getElementById("VWJul").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWJul < 0) {
-                    RWJul = -RWJul;
-                    document.getElementById("RWJul").style.color = "red";
-                  } else {
-                    document.getElementById("RWJul").style.color = "green";
-                  }
-                  document.getElementById("RWJul").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWJul").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWJul < 0) {
+                  RWJul = -RWJul;
+                  document.getElementById("RWJul").style.color = "red";
+                } else {
+                  document.getElementById("RWJul").style.color = "green";
+                }
+                document.getElementById("RWJul").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWJul").innerText = "";
+              }
               break;
             case "AUG":
-              var AWAug = res["history"][i].amount;
-              if (AWAug < 0) {
-                AWAug = -AWAug;
-                document.getElementById("AWAug").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWAug = res["history"][i].amount;
+                if (AWAug < 0) {
+                  AWAug = -AEAug;
+                  document.getElementById("AWAug").style.color = "red";
+                } else {
+                  document.getElementById("AWAug").style.color = "green";
+                }
               } else {
-                document.getElementById("AWAug").style.color = "green";
+                document.getElementById("AWAug").innerText = "";
               }
-              document.getElementById("AWAug").innerText = AWAug;
               document.getElementById("VWAug").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWAug < 0) {
-                    RWAug = -RWAug;
-                    document.getElementById("RWAug").style.color = "red";
-                  } else {
-                    document.getElementById("RWAug").style.color = "green";
-                  }
-                  document.getElementById("RWAug").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWAug").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWAug < 0) {
+                  RWAug = -RWAug;
+                  document.getElementById("RWAug").style.color = "red";
+                } else {
+                  document.getElementById("RWAug").style.color = "green";
+                }
+                document.getElementById("RWAug").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWAug").innerText = "";
+              }
               break;
             case "SEP":
-              var AWSep = res["history"][i].amount;
-              if (AWSep < 0) {
-                AWSep = -AWSep;
-                document.getElementById("AWSep").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWSep = res["history"][i].amount;
+                if (AWSep < 0) {
+                  AWSep = -AESep;
+                  document.getElementById("AWSep").style.color = "red";
+                } else {
+                  document.getElementById("AWSep").style.color = "green";
+                }
               } else {
-                document.getElementById("AWSep").style.color = "green";
+                document.getElementById("AWSep").innerText = "";
               }
-              document.getElementById("AWSep").innerText = AWSep;
               document.getElementById("VWSep").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWSep < 0) {
-                    RWSep = -RWSep;
-                    document.getElementById("RWSep").style.color = "red";
-                  } else {
-                    document.getElementById("RWSep").style.color = "green";
-                  }
-                  document.getElementById("RWSep").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWSep").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWSep < 0) {
+                  RWSep = -RWSep;
+                  document.getElementById("RWSep").style.color = "red";
+                } else {
+                  document.getElementById("RWSep").style.color = "green";
+                }
+                document.getElementById("RWSep").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWSep").innerText = "";
+              }
               break;
             case "OCT":
-              var AWOct = res["history"][i].amount;
-              if (AWOct < 0) {
-                AWOct = -AWOct;
-                document.getElementById("AWOct").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWOct = res["history"][i].amount;
+                if (AWOct < 0) {
+                  AWOct = -AEOct;
+                  document.getElementById("AWOct").style.color = "red";
+                } else {
+                  document.getElementById("AWOct").style.color = "green";
+                }
               } else {
-                document.getElementById("AWOct").style.color = "green";
+                document.getElementById("AWOct").innerText = "";
               }
-              document.getElementById("AWOct").innerText = AWOct;
               document.getElementById("VWOct").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWOct < 0) {
-                    RWOct = -RWOct;
-                    document.getElementById("RWOct").style.color = "red";
-                  } else {
-                    document.getElementById("RWOct").style.color = "green";
-                  }
-                  document.getElementById("RWOct").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWOct").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWOct < 0) {
+                  RWOct = -RWOct;
+                  document.getElementById("RWOct").style.color = "red";
+                } else {
+                  document.getElementById("RWOct").style.color = "green";
+                }
+                document.getElementById("RWOct").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWOct").innerText = "";
+              }
               break;
             case "NOV":
-              var AWNov = res["history"][i].amount;
-              if (AWNov < 0) {
-                AWNov = -AWNov;
-                document.getElementById("AWNov").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWNov = res["history"][i].amount;
+                if (AWNov < 0) {
+                  AWNov = -AENov;
+                  document.getElementById("AWNov").style.color = "red";
+                } else {
+                  document.getElementById("AWNov").style.color = "green";
+                }
               } else {
-                document.getElementById("AWNov").style.color = "green";
+                document.getElementById("AWNov").innerText = "";
               }
-              document.getElementById("AWNov").innerText = AWNov;
               document.getElementById("VWNov").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWNov < 0) {
-                    RWNov = -RWNov;
-                    document.getElementById("RWNov").style.color = "red";
-                  } else {
-                    document.getElementById("RWNov").style.color = "green";
-                  }
-                  document.getElementById("RWNov").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWNov").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWNov < 0) {
+                  RWNov = -RWNov;
+                  document.getElementById("RWNov").style.color = "red";
+                } else {
+                  document.getElementById("RWNov").style.color = "green";
+                }
+                document.getElementById("RWNov").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWNov").innerText = "";
+              }
               break;
             default:
-              var AWDec = res["history"][i].amount;
-              if (AWDec < 0) {
-                AWDec = -AWDec;
-                document.getElementById("AWDec").style.color = "red";
+              if (res["history"][i].amount) {
+                var AWDec = res["history"][i].amount;
+                if (AWDec < 0) {
+                  AWDec = -AEDec;
+                  document.getElementById("AWDec").style.color = "red";
+                } else {
+                  document.getElementById("AWDec").style.color = "green";
+                }
               } else {
-                document.getElementById("AWDec").style.color = "green";
+                document.getElementById("AWDec").innerText = "";
               }
-              document.getElementById("AWDec").innerText = AWDec;
               document.getElementById("VWDec").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RWDec < 0) {
-                    RWDec = -RWDec;
-                    document.getElementById("RWDec").style.color = "red";
-                  } else {
-                    document.getElementById("RWDec").style.color = "green";
-                  }
-                  document.getElementById("RWDec").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RWDec").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RWDec < 0) {
+                  RWDec = -RWDec;
+                  document.getElementById("RWDec").style.color = "red";
+                } else {
+                  document.getElementById("RWDec").style.color = "green";
+                }
+                document.getElementById("RWDec").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RWDec").innerText = "";
+              }
           }
           i++;
         }
@@ -1010,15 +1191,18 @@ function statsSouth() {
               document.getElementById("ASJan").innerText = ASJan;
               document.getElementById("VSJan").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSJan < 0) {
-                    RSJan = -RSJan;
-                    document.getElementById("RSJan").style.color = "red";
-                  } else {
-                    document.getElementById("RSJan").style.color = "green";
-                  }
-                  document.getElementById("RSJan").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSJan").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSJan < 0) {
+                  RSJan = -RSJan;
+                  document.getElementById("RSJan").style.color = "red";
+                } else {
+                  document.getElementById("RSJan").style.color = "green";
+                }
+                document.getElementById("RSJan").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSJan").innerText = "";
+              }
               break;
             case "FEB":
               var ASFeb = res["history"][i].amount;
@@ -1031,15 +1215,18 @@ function statsSouth() {
               document.getElementById("ASFeb").innerText = ASFeb;
               document.getElementById("VSFeb").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSFeb < 0) {
-                    RSFeb = -RSFeb;
-                    document.getElementById("RSFeb").style.color = "red";
-                  } else {
-                    document.getElementById("RSFeb").style.color = "green";
-                  }
-                  document.getElementById("RSFeb").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSFeb").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSFeb < 0) {
+                  RSFeb = -RSFeb;
+                  document.getElementById("RSFeb").style.color = "red";
+                } else {
+                  document.getElementById("RSFeb").style.color = "green";
+                }
+                document.getElementById("RSFeb").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSFeb").innerText = "";
+              }
               break;
             case "MAR":
               var ASMar = res["history"][i].amount;
@@ -1052,15 +1239,18 @@ function statsSouth() {
               document.getElementById("ASMar").innerText = ASMar;
               document.getElementById("VSMar").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSMar < 0) {
-                    RSMar = -RSMar;
-                    document.getElementById("RSMar").style.color = "red";
-                  } else {
-                    document.getElementById("RSMar").style.color = "green";
-                  }
-                  document.getElementById("RSMar").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSMar").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSMar < 0) {
+                  RSMar = -RSMar;
+                  document.getElementById("RSMar").style.color = "red";
+                } else {
+                  document.getElementById("RSMar").style.color = "green";
+                }
+                document.getElementById("RSMar").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSMar").innerText = "";
+              }
               break;
             case "APR":
               var ASApr = res["history"][i].amount;
@@ -1073,15 +1263,18 @@ function statsSouth() {
               document.getElementById("ASApr").innerText = ASApr;
               document.getElementById("VSApr").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSApr < 0) {
-                    RSApr = -RSApr;
-                    document.getElementById("RSApr").style.color = "red";
-                  } else {
-                    document.getElementById("RSApr").style.color = "green";
-                  }
-                  document.getElementById("RSApr").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSApr").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSApr < 0) {
+                  RSApr = -RSApr;
+                  document.getElementById("RSApr").style.color = "red";
+                } else {
+                  document.getElementById("RSApr").style.color = "green";
+                }
+                document.getElementById("RSApr").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSApr").innerText = "";
+              }
               break;
             case "MAY":
               var ASMay = res["history"][i].amount;
@@ -1094,15 +1287,18 @@ function statsSouth() {
               document.getElementById("ASMay").innerText = ASMay;
               document.getElementById("VSMay").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSMay < 0) {
-                    RSMay = -RSMay;
-                    document.getElementById("RSMay").style.color = "red";
-                  } else {
-                    document.getElementById("RSMay").style.color = "green";
-                  }
-                  document.getElementById("RSMay").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSMay").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSMay < 0) {
+                  RSMay = -RSMay;
+                  document.getElementById("RSMay").style.color = "red";
+                } else {
+                  document.getElementById("RSMay").style.color = "green";
+                }
+                document.getElementById("RSMay").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSMay").innerText = "";
+              }
               break;
             case "JUN":
               var ASJun = res["history"][i].amount;
@@ -1115,15 +1311,18 @@ function statsSouth() {
               document.getElementById("ASJun").innerText = ASJun;
               document.getElementById("VSJun").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSJun < 0) {
-                    RSJun = -RSJun;
-                    document.getElementById("RSJun").style.color = "red";
-                  } else {
-                    document.getElementById("RSJun").style.color = "green";
-                  }
-                  document.getElementById("RSJun").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSJun").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSJun < 0) {
+                  RSJun = -RSJun;
+                  document.getElementById("RSJun").style.color = "red";
+                } else {
+                  document.getElementById("RSJun").style.color = "green";
+                }
+                document.getElementById("RSJun").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSJun").innerText = "";
+              }
               break;
             case "JUL":
               var ASJul = res["history"][i].amount;
@@ -1136,15 +1335,18 @@ function statsSouth() {
               document.getElementById("ASJul").innerText = ASJul;
               document.getElementById("VSJul").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSJul < 0) {
-                    RSJul = -RSJul;
-                    document.getElementById("RSJul").style.color = "red";
-                  } else {
-                    document.getElementById("RSJul").style.color = "green";
-                  }
-                  document.getElementById("RSJul").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSJul").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSJul < 0) {
+                  RSJul = -RSJul;
+                  document.getElementById("RSJul").style.color = "red";
+                } else {
+                  document.getElementById("RSJul").style.color = "green";
+                }
+                document.getElementById("RSJul").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSJul").innerText = "";
+              }
               break;
             case "AUG":
               var ASAug = res["history"][i].amount;
@@ -1157,15 +1359,18 @@ function statsSouth() {
               document.getElementById("ASAug").innerText = ASAug;
               document.getElementById("VSAug").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSAug < 0) {
-                    RSAug = -RSAug;
-                    document.getElementById("RSAug").style.color = "red";
-                  } else {
-                    document.getElementById("RSAug").style.color = "green";
-                  }
-                  document.getElementById("RSAug").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSAug").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSAug < 0) {
+                  RSAug = -RSAug;
+                  document.getElementById("RSAug").style.color = "red";
+                } else {
+                  document.getElementById("RSAug").style.color = "green";
+                }
+                document.getElementById("RSAug").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSAug").innerText = "";
+              }
               break;
             case "SEP":
               var ASSep = res["history"][i].amount;
@@ -1178,15 +1383,18 @@ function statsSouth() {
               document.getElementById("ASSep").innerText = ASSep;
               document.getElementById("VSSep").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSSep < 0) {
-                    RSSep = -RSSep;
-                    document.getElementById("RSSep").style.color = "red";
-                  } else {
-                    document.getElementById("RSSep").style.color = "green";
-                  }
-                  document.getElementById("RSSep").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSSep").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSSep < 0) {
+                  RSSep = -RSSep;
+                  document.getElementById("RSSep").style.color = "red";
+                } else {
+                  document.getElementById("RSSep").style.color = "green";
+                }
+                document.getElementById("RSSep").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSSep").innerText = "";
+              }
               break;
             case "OCT":
               var ASOct = res["history"][i].amount;
@@ -1199,15 +1407,18 @@ function statsSouth() {
               document.getElementById("ASOct").innerText = ASOct;
               document.getElementById("VSOct").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSOct < 0) {
-                    RSOct = -RSOct;
-                    document.getElementById("RSOct").style.color = "red";
-                  } else {
-                    document.getElementById("RSOct").style.color = "green";
-                  }
-                  document.getElementById("RSOct").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSOct").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSOct < 0) {
+                  RSOct = -RSOct;
+                  document.getElementById("RSOct").style.color = "red";
+                } else {
+                  document.getElementById("RSOct").style.color = "green";
+                }
+                document.getElementById("RSOct").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSOct").innerText = "";
+              }
               break;
             case "NOV":
               var ASNov = res["history"][i].amount;
@@ -1220,15 +1431,18 @@ function statsSouth() {
               document.getElementById("ASNov").innerText = ASNov;
               document.getElementById("VSNov").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSNov < 0) {
-                    RSNov = -RSNov;
-                    document.getElementById("RSNov").style.color = "red";
-                  } else {
-                    document.getElementById("RSNov").style.color = "green";
-                  }
-                  document.getElementById("RSNov").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSNov").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSNov < 0) {
+                  RSNov = -RSNov;
+                  document.getElementById("RSNov").style.color = "red";
+                } else {
+                  document.getElementById("RSNov").style.color = "green";
+                }
+                document.getElementById("RSNov").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSNov").innerText = "";
+              }
               break;
             default:
               var ASDec = res["history"][i].amount;
@@ -1241,15 +1455,18 @@ function statsSouth() {
               document.getElementById("ASDec").innerText = ASDec;
               document.getElementById("VSDec").innerText =
                 res["history"][i].vote;
-                if(res["history"][i].remarks){
-                  if (RSDec < 0) {
-                    RSDec = -RSDec;
-                    document.getElementById("RSDec").style.color = "red";
-                  } else {
-                    document.getElementById("RSDec").style.color = "green";
-                  }
-                  document.getElementById("RSDec").innerText = res["history"][i].remarks;
-                } else{document.getElementById("RSDec").innerText = "";}
+              if (res["history"][i].remarks) {
+                if (RSDec < 0) {
+                  RSDec = -RSDec;
+                  document.getElementById("RSDec").style.color = "red";
+                } else {
+                  document.getElementById("RSDec").style.color = "green";
+                }
+                document.getElementById("RSDec").innerText =
+                  res["history"][i].remarks;
+              } else {
+                document.getElementById("RSDec").innerText = "";
+              }
           }
           i++;
         }
