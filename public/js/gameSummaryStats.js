@@ -14,74 +14,146 @@ function teamStats() {
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
             case "JAN":
-              document.getElementById("ANJan").innerText =
-                res["history"][i].amount;
+              var ANJan = res["history"][i].amount;
+              if (ANJan < 0) {
+                ANJan = -ANJan;
+                document.getElementById("ANJan").style.color = "red";
+              } else {
+                document.getElementById("ANJan").style.color = "green";
+              }
+              document.getElementById("ANJan").innerText = ANJan;
               document.getElementById("VNJan").innerText =
                 res["history"][i].vote;
               break;
             case "FEB":
-              document.getElementById("ANFeb").innerText =
-                res["history"][i].amount;
+              var ANFeb = res["history"][i].amount;
+              if (ANFeb < 0) {
+                ANFeb = -ANFeb;
+                document.getElementById("ANFeb").style.color = "red";
+              } else {
+                document.getElementById("ANFeb").style.color = "green";
+              }
+              document.getElementById("ANFeb").innerText = ANFeb;
               document.getElementById("VNFeb").innerText =
                 res["history"][i].vote;
               break;
             case "MAR":
-              document.getElementById("ANMar").innerText =
-                res["history"][i].amount;
+              var ANMar = res["history"][i].amount;
+              if (ANMar < 0) {
+                ANMar = -ANMar;
+                document.getElementById("ANMar").style.color = "red";
+              } else {
+                document.getElementById("ANMar").style.color = "green";
+              }
+              document.getElementById("ANMar").innerText = ANMar;
               document.getElementById("VNMar").innerText =
                 res["history"][i].vote;
               break;
             case "APR":
-              document.getElementById("ANApr").innerText =
-                res["history"][i].amount;
+              var ANApr = res["history"][i].amount;
+              if (ANApr < 0) {
+                ANApr = -ANApr;
+                document.getElementById("ANApr").style.color = "red";
+              } else {
+                document.getElementById("ANApr").style.color = "green";
+              }
+              document.getElementById("ANApr").innerText = ANApr;
               document.getElementById("VNApr").innerText =
                 res["history"][i].vote;
               break;
             case "MAY":
-              document.getElementById("ANMay").innerText =
-                res["history"][i].amount;
+              var ANMay = res["history"][i].amount;
+              if (ANMay < 0) {
+                ANMay = -ANMay;
+                document.getElementById("ANMay").style.color = "red";
+              } else {
+                document.getElementById("ANMay").style.color = "green";
+              }
+              document.getElementById("ANMay").innerText = ANMay;
               document.getElementById("VNMay").innerText =
                 res["history"][i].vote;
               break;
             case "JUN":
-              document.getElementById("ANJun").innerText =
-                res["history"][i].amount;
+              var ANJun = res["history"][i].amount;
+              if (ANJun < 0) {
+                ANJun = -ANJun;
+                document.getElementById("ANJun").style.color = "red";
+              } else {
+                document.getElementById("ANJun").style.color = "green";
+              }
+              document.getElementById("ANJun").innerText = ANJun;
               document.getElementById("VNJun").innerText =
                 res["history"][i].vote;
               break;
             case "JUL":
-              document.getElementById("ANJul").innerText =
-                res["history"][i].amount;
+              var ANJul = res["history"][i].amount;
+              if (ANJul < 0) {
+                ANJul = -ANJul;
+                document.getElementById("ANJul").style.color = "red";
+              } else {
+                document.getElementById("ANJul").style.color = "green";
+              }
+              document.getElementById("ANJul").innerText = ANJul;
               document.getElementById("VNJul").innerText =
                 res["history"][i].vote;
               break;
             case "AUG":
-              document.getElementById("ANAug").innerText =
-                res["history"][i].amount;
+              var ANAug = res["history"][i].amount;
+              if (ANAug < 0) {
+                ANAug = -ANAug;
+                document.getElementById("ANAug").style.color = "red";
+              } else {
+                document.getElementById("ANAug").style.color = "green";
+              }
+              document.getElementById("ANAug").innerText = ANAug;
               document.getElementById("VNAug").innerText =
                 res["history"][i].vote;
               break;
             case "SEP":
-              document.getElementById("ANSep").innerText =
-                res["history"][i].amount;
+              var ANSep = res["history"][i].amount;
+              if (ANSep < 0) {
+                ANSep = -ANSep;
+                document.getElementById("ANSep").style.color = "red";
+              } else {
+                document.getElementById("ANSep").style.color = "green";
+              }
+              document.getElementById("ANSep").innerText = ANSep;
               document.getElementById("VNSep").innerText =
                 res["history"][i].vote;
               break;
             case "OCT":
-              document.getElementById("ANOct").innerText =
-                res["history"][i].amount;
+              var ANOct = res["history"][i].amount;
+              if (ANOct < 0) {
+                ANOct = -ANOct;
+                document.getElementById("ANOct").style.color = "red";
+              } else {
+                document.getElementById("ANOct").style.color = "green";
+              }
+              document.getElementById("ANOct").innerText = ANOct;
               document.getElementById("VNOct").innerText =
                 res["history"][i].vote;
               break;
             case "NOV":
-              document.getElementById("ANNov").innerText =
-                res["history"][i].amount;
+              var ANNov = res["history"][i].amount;
+              if (ANNov < 0) {
+                ANNov = -ANNov;
+                document.getElementById("ANNov").style.color = "red";
+              } else {
+                document.getElementById("ANNov").style.color = "green";
+              }
+              document.getElementById("ANNov").innerText = ANNov;
               document.getElementById("VNNov").innerText =
                 res["history"][i].vote;
               break;
             default:
-              document.getElementById("ANDec").innerText =
-                res["history"][i].amount;
+              var ANDec = res["history"][i].amount;
+              if (ANDec < 0) {
+                ANDec = -ANDec;
+                document.getElementById("ANDec").style.color = "red";
+              } else {
+                document.getElementById("ANDec").style.color = "green";
+              }
+              document.getElementById("ANDec").innerText = ANDec;
               document.getElementById("VNDec").innerText =
                 res["history"][i].vote;
           }
@@ -150,74 +222,146 @@ function statsEast() {
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
             case "JAN":
-              document.getElementById("AEJan").innerText =
-                res["history"][i].amount;
+              var AEJan = res["history"][i].amount;
+              if (AEJan < 0) {
+                AEJan = -AEJan;
+                document.getElementById("AEJan").style.color = "red";
+              } else {
+                document.getElementById("AEJan").style.color = "green";
+              }
+              document.getElementById("AEJan").innerText = AEJan;
               document.getElementById("VEJan").innerText =
                 res["history"][i].vote;
               break;
             case "FEB":
-              document.getElementById("AEFeb").innerText =
-                res["history"][i].amount;
+              var AEFeb = res["history"][i].amount;
+              if (AEFeb < 0) {
+                AEFeb = -AEFeb;
+                document.getElementById("AEFeb").style.color = "red";
+              } else {
+                document.getElementById("AEFeb").style.color = "green";
+              }
+              document.getElementById("AEFeb").innerText = AEFeb;
               document.getElementById("VEFeb").innerText =
                 res["history"][i].vote;
               break;
             case "MAR":
-              document.getElementById("AEMar").innerText =
-                res["history"][i].amount;
+              var AEMar = res["history"][i].amount;
+              if (AEMar < 0) {
+                AEMar = -AEMar;
+                document.getElementById("AEMar").style.color = "red";
+              } else {
+                document.getElementById("AEMar").style.color = "green";
+              }
+              document.getElementById("AEMar").innerText = AEMar;
               document.getElementById("VEMar").innerText =
                 res["history"][i].vote;
               break;
             case "APR":
-              document.getElementById("AEApr").innerText =
-                res["history"][i].amount;
+              var AEApr = res["history"][i].amount;
+              if (AEApr < 0) {
+                AEApr = -AEApr;
+                document.getElementById("AEApr").style.color = "red";
+              } else {
+                document.getElementById("AEApr").style.color = "green";
+              }
+              document.getElementById("AEApr").innerText = AEApr;
               document.getElementById("VEApr").innerText =
                 res["history"][i].vote;
               break;
             case "MAY":
-              document.getElementById("AEMay").innerText =
-                res["history"][i].amount;
+              var AEMAy = res["history"][i].amount;
+              if (AEMAy < 0) {
+                AEMAy = -AEMAy;
+                document.getElementById("AEMAy").style.color = "red";
+              } else {
+                document.getElementById("AEMAy").style.color = "green";
+              }
+              document.getElementById("AEMAy").innerText = AEMAy;
               document.getElementById("VEMay").innerText =
                 res["history"][i].vote;
               break;
             case "JUN":
-              document.getElementById("AEJun").innerText =
-                res["history"][i].amount;
+              var AEJUn = res["history"][i].amount;
+              if (AEJUn < 0) {
+                AEJUn = -AEJUn;
+                document.getElementById("AEJUn").style.color = "red";
+              } else {
+                document.getElementById("AEJUn").style.color = "green";
+              }
+              document.getElementById("AEJUn").innerText = AEJUn;
               document.getElementById("VEJun").innerText =
                 res["history"][i].vote;
               break;
             case "JUL":
-              document.getElementById("AEJul").innerText =
-                res["history"][i].amount;
+              var AEJul = res["history"][i].amount;
+              if (AEJul < 0) {
+                AEJul = -AEJul;
+                document.getElementById("AEJul").style.color = "red";
+              } else {
+                document.getElementById("AEJul").style.color = "green";
+              }
+              document.getElementById("AEJul").innerText = AEJul;
               document.getElementById("VEJul").innerText =
                 res["history"][i].vote;
               break;
             case "AUG":
-              document.getElementById("AEAug").innerText =
-                res["history"][i].amount;
+              var AEAug = res["history"][i].amount;
+              if (AEAug < 0) {
+                AEAug = -AEAug;
+                document.getElementById("AEAug").style.color = "red";
+              } else {
+                document.getElementById("AEAug").style.color = "green";
+              }
+              document.getElementById("AEAug").innerText = AEAug;
               document.getElementById("VEAug").innerText =
                 res["history"][i].vote;
               break;
             case "SEP":
-              document.getElementById("AESep").innerText =
-                res["history"][i].amount;
+              var AESep = res["history"][i].amount;
+              if (AESep < 0) {
+                AESep = -AESep;
+                document.getElementById("AESep").style.color = "red";
+              } else {
+                document.getElementById("AESep").style.color = "green";
+              }
+              document.getElementById("AESep").innerText = AESep;
               document.getElementById("VESep").innerText =
                 res["history"][i].vote;
               break;
             case "OCT":
-              document.getElementById("AEOct").innerText =
-                res["history"][i].amount;
+              var AEOct = res["history"][i].amount;
+              if (AEOct < 0) {
+                AEOct = -AEOct;
+                document.getElementById("AEOct").style.color = "red";
+              } else {
+                document.getElementById("AEOct").style.color = "green";
+              }
+              document.getElementById("AEOct").innerText = AEOct;
               document.getElementById("VEOct").innerText =
                 res["history"][i].vote;
               break;
             case "NOV":
-              document.getElementById("AENov").innerText =
-                res["history"][i].amount;
+              var AENov = res["history"][i].amount;
+              if (AENov < 0) {
+                AENov = -AENov;
+                document.getElementById("AENov").style.color = "red";
+              } else {
+                document.getElementById("AENov").style.color = "green";
+              }
+              document.getElementById("AENov").innerText = AENov;
               document.getElementById("VENov").innerText =
                 res["history"][i].vote;
               break;
             default:
-              document.getElementById("AEDec").innerText =
-                res["history"][i].amount;
+              var AEDec = res["history"][i].amount;
+              if (AEDec < 0) {
+                AEDec = -AEDec;
+                document.getElementById("AEDec").style.color = "red";
+              } else {
+                document.getElementById("AEDec").style.color = "green";
+              }
+              document.getElementById("AEDec").innerText = AEDec;
               document.getElementById("VEDec").innerText =
                 res["history"][i].vote;
           }
@@ -282,74 +426,146 @@ function statsWest() {
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
             case "JAN":
-              document.getElementById("AWJan").innerText =
-                res["history"][i].amount;
+              var AWJan = res["history"][i].amount;
+              if (AWJan < 0) {
+                AWJan = -AWJan;
+                document.getElementById("AWJan").style.color = "red";
+              } else {
+                document.getElementById("AWJan").style.color = "green";
+              }
+              document.getElementById("AWJan").innerText = AWJan;
               document.getElementById("VWJan").innerText =
                 res["history"][i].vote;
               break;
             case "FEB":
-              document.getElementById("AWFeb").innerText =
-                res["history"][i].amount;
+              var AWFeb = res["history"][i].amount;
+              if (AWFeb < 0) {
+                AWFeb = -AWFeb;
+                document.getElementById("AWFeb").style.color = "red";
+              } else {
+                document.getElementById("AWFeb").style.color = "green";
+              }
+              document.getElementById("AWFeb").innerText = AWFeb;
               document.getElementById("VWFeb").innerText =
                 res["history"][i].vote;
               break;
             case "MAR":
-              document.getElementById("AWMar").innerText =
-                res["history"][i].amount;
+              var AWMar = res["history"][i].amount;
+              if (AWMar < 0) {
+                AWMar = -AWMar;
+                document.getElementById("AWMar").style.color = "red";
+              } else {
+                document.getElementById("AWMar").style.color = "green";
+              }
+              document.getElementById("AWMar").innerText = AWMar;
               document.getElementById("VWMar").innerText =
                 res["history"][i].vote;
               break;
             case "APR":
-              document.getElementById("AWApr").innerText =
-                res["history"][i].amount;
+              var AWApr = res["history"][i].amount;
+              if (AWApr < 0) {
+                AWApr = -AWApr;
+                document.getElementById("AWApr").style.color = "red";
+              } else {
+                document.getElementById("AWApr").style.color = "green";
+              }
+              document.getElementById("AWApr").innerText = AWApr;
               document.getElementById("VWApr").innerText =
                 res["history"][i].vote;
               break;
             case "MAY":
-              document.getElementById("AWMay").innerText =
-                res["history"][i].amount;
+              var AWMay = res["history"][i].amount;
+              if (AWMay < 0) {
+                AWMay = -AWMay;
+                document.getElementById("AWMay").style.color = "red";
+              } else {
+                document.getElementById("AWMay").style.color = "green";
+              }
+              document.getElementById("AWMay").innerText = AWMay;
               document.getElementById("VWMay").innerText =
                 res["history"][i].vote;
               break;
             case "JUN":
-              document.getElementById("AWJun").innerText =
-                res["history"][i].amount;
+              var AWJun = res["history"][i].amount;
+              if (AWJun < 0) {
+                AWJun = -AWJun;
+                document.getElementById("AWJun").style.color = "red";
+              } else {
+                document.getElementById("AWJun").style.color = "green";
+              }
+              document.getElementById("AWJun").innerText = AWJun;
               document.getElementById("VWJun").innerText =
                 res["history"][i].vote;
               break;
             case "JUL":
-              document.getElementById("AWJul").innerText =
-                res["history"][i].amount;
+              var AWJul = res["history"][i].amount;
+              if (AWJul < 0) {
+                AWJul = -AWJul;
+                document.getElementById("AWJul").style.color = "red";
+              } else {
+                document.getElementById("AWJul").style.color = "green";
+              }
+              document.getElementById("AWJul").innerText = AWJul;
               document.getElementById("VWJul").innerText =
                 res["history"][i].vote;
               break;
             case "AUG":
-              document.getElementById("AWAug").innerText =
-                res["history"][i].amount;
+              var AWAug = res["history"][i].amount;
+              if (AWAug < 0) {
+                AWAug = -AWAug;
+                document.getElementById("AWAug").style.color = "red";
+              } else {
+                document.getElementById("AWAug").style.color = "green";
+              }
+              document.getElementById("AWAug").innerText = AWAug;
               document.getElementById("VWAug").innerText =
                 res["history"][i].vote;
               break;
             case "SEP":
-              document.getElementById("AWSep").innerText =
-                res["history"][i].amount;
+              var AWSep = res["history"][i].amount;
+              if (AWSep < 0) {
+                AWSep = -AWSep;
+                document.getElementById("AWSep").style.color = "red";
+              } else {
+                document.getElementById("AWSep").style.color = "green";
+              }
+              document.getElementById("AWSep").innerText = AWSep;
               document.getElementById("VWSep").innerText =
                 res["history"][i].vote;
               break;
             case "OCT":
-              document.getElementById("AWOct").innerText =
-                res["history"][i].amount;
+              var AWOct = res["history"][i].amount;
+              if (AWOct < 0) {
+                AWOct = -AWOct;
+                document.getElementById("AWOct").style.color = "red";
+              } else {
+                document.getElementById("AWOct").style.color = "green";
+              }
+              document.getElementById("AWOct").innerText = AWOct;
               document.getElementById("VWOct").innerText =
                 res["history"][i].vote;
               break;
             case "NOV":
-              document.getElementById("AWNov").innerText =
-                res["history"][i].amount;
+              var AWNov = res["history"][i].amount;
+              if (AWNov < 0) {
+                AWNov = -AWNov;
+                document.getElementById("AWNov").style.color = "red";
+              } else {
+                document.getElementById("AWNov").style.color = "green";
+              }
+              document.getElementById("AWNov").innerText = AWNov;
               document.getElementById("VWNov").innerText =
                 res["history"][i].vote;
               break;
             default:
-              document.getElementById("AWDec").innerText =
-                res["history"][i].amount;
+              var AWDec = res["history"][i].amount;
+              if (AWDec < 0) {
+                AWDec = -AWDec;
+                document.getElementById("AWDec").style.color = "red";
+              } else {
+                document.getElementById("AWDec").style.color = "green";
+              }
+              document.getElementById("AWDec").innerText = AWDec;
               document.getElementById("VWDec").innerText =
                 res["history"][i].vote;
           }
@@ -414,74 +630,146 @@ function statsSouth() {
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
             case "JAN":
-              document.getElementById("ASJan").innerText =
-                res["history"][i].amount;
+              var ASJan = res["history"][i].amount;
+              if (ASJan < 0) {
+                ASJan = -ASJan;
+                document.getElementById("ASJan").style.color = "red";
+              } else {
+                document.getElementById("ASJan").style.color = "green";
+              }
+              document.getElementById("ASJan").innerText = ASJan;
               document.getElementById("VSJan").innerText =
                 res["history"][i].vote;
               break;
             case "FEB":
-              document.getElementById("ASFeb").innerText =
-                res["history"][i].amount;
+              var ASFeb = res["history"][i].amount;
+              if (ASFeb < 0) {
+                ASFeb = -ASFeb;
+                document.getElementById("ASFeb").style.color = "red";
+              } else {
+                document.getElementById("ASFeb").style.color = "green";
+              }
+              document.getElementById("ASFeb").innerText = ASFeb;
               document.getElementById("VSFeb").innerText =
                 res["history"][i].vote;
               break;
             case "MAR":
-              document.getElementById("ASMar").innerText =
-                res["history"][i].amount;
+              var ASMar = res["history"][i].amount;
+              if (ASMar < 0) {
+                ASMar = -ASMar;
+                document.getElementById("ASMar").style.color = "red";
+              } else {
+                document.getElementById("ASMar").style.color = "green";
+              }
+              document.getElementById("ASMar").innerText = ASMar;
               document.getElementById("VSMar").innerText =
                 res["history"][i].vote;
               break;
             case "APR":
-              document.getElementById("ASApr").innerText =
-                res["history"][i].amount;
+              var ASApr = res["history"][i].amount;
+              if (ASApr < 0) {
+                ASApr = -ASApr;
+                document.getElementById("ASApr").style.color = "red";
+              } else {
+                document.getElementById("ASApr").style.color = "green";
+              }
+              document.getElementById("ASApr").innerText = ASApr;
               document.getElementById("VSApr").innerText =
                 res["history"][i].vote;
               break;
             case "MAY":
-              document.getElementById("ASMay").innerText =
-                res["history"][i].amount;
+              var ASMay = res["history"][i].amount;
+              if (ASMay < 0) {
+                ASMay = -ASMay;
+                document.getElementById("ASMay").style.color = "red";
+              } else {
+                document.getElementById("ASMay").style.color = "green";
+              }
+              document.getElementById("ASMay").innerText = ASMay;
               document.getElementById("VSMay").innerText =
                 res["history"][i].vote;
               break;
             case "JUN":
-              document.getElementById("ASJun").innerText =
-                res["history"][i].amount;
+              var ASJun = res["history"][i].amount;
+              if (ASJun < 0) {
+                ASJun = -ASJun;
+                document.getElementById("ASJun").style.color = "red";
+              } else {
+                document.getElementById("ASJun").style.color = "green";
+              }
+              document.getElementById("ASJun").innerText = ASJun;
               document.getElementById("VSJun").innerText =
                 res["history"][i].vote;
               break;
             case "JUL":
-              document.getElementById("ASJul").innerText =
-                res["history"][i].amount;
+              var ASJul = res["history"][i].amount;
+              if (ASJul < 0) {
+                ASJul = -ASJul;
+                document.getElementById("ASJul").style.color = "red";
+              } else {
+                document.getElementById("ASJul").style.color = "green";
+              }
+              document.getElementById("ASJul").innerText = ASJul;
               document.getElementById("VSJul").innerText =
                 res["history"][i].vote;
               break;
             case "AUG":
-              document.getElementById("ASAug").innerText =
-                res["history"][i].amount;
+              var ASAug = res["history"][i].amount;
+              if (ASAug < 0) {
+                ASAug = -ASAug;
+                document.getElementById("ASAug").style.color = "red";
+              } else {
+                document.getElementById("ASAug").style.color = "green";
+              }
+              document.getElementById("ASAug").innerText = ASAug;
               document.getElementById("VSAug").innerText =
                 res["history"][i].vote;
               break;
             case "SEP":
-              document.getElementById("ASSep").innerText =
-                res["history"][i].amount;
+              var ASSep = res["history"][i].amount;
+              if (ASSep < 0) {
+                ASSep = -ASSep;
+                document.getElementById("ASSep").style.color = "red";
+              } else {
+                document.getElementById("ASSep").style.color = "green";
+              }
+              document.getElementById("ASSep").innerText = ASSep;
               document.getElementById("VSSep").innerText =
                 res["history"][i].vote;
               break;
             case "OCT":
-              document.getElementById("ASOct").innerText =
-                res["history"][i].amount;
+              var ASOct = res["history"][i].amount;
+              if (ASOct < 0) {
+                ASOct = -ASOct;
+                document.getElementById("ASOct").style.color = "red";
+              } else {
+                document.getElementById("ASOct").style.color = "green";
+              }
+              document.getElementById("ASOct").innerText = ASOct;
               document.getElementById("VSOct").innerText =
                 res["history"][i].vote;
               break;
             case "NOV":
-              document.getElementById("ASNov").innerText =
-                res["history"][i].amount;
+              var ASNov = res["history"][i].amount;
+              if (ASNov < 0) {
+                ASNov = -ASNov;
+                document.getElementById("ASNov").style.color = "red";
+              } else {
+                document.getElementById("ASNov").style.color = "green";
+              }
+              document.getElementById("ASNov").innerText = ASNov;
               document.getElementById("VSNov").innerText =
                 res["history"][i].vote;
               break;
             default:
-              document.getElementById("ASDec").innerText =
-                res["history"][i].amount;
+              var ASDec = res["history"][i].amount;
+              if (ASDec < 0) {
+                ASDec = -ASDec;
+                document.getElementById("ASDec").style.color = "red";
+              } else {
+                document.getElementById("ASDec").style.color = "green";
+              }
+              document.getElementById("ASDec").innerText = ASDec;
               document.getElementById("VSDec").innerText =
                 res["history"][i].vote;
           }
