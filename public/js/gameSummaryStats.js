@@ -1,5 +1,10 @@
 var teamStatsUrl = "http://localhost:5000/gameData/teamStats";
 
+var NCB = "";
+var ECB = "";
+var WCB = "";
+var SCB = "";
+
 function teamStats() {
   //to update teamStats data
   var xhttp = new XMLHttpRequest();
@@ -9,6 +14,7 @@ function teamStats() {
 
       if (res["message"] != "none") {
         document.getElementById("northBal").innerText = res["balance"];
+        NCB = res["balance"];
 
         let i = 0;
         while (i < res["history"].length) {
@@ -217,6 +223,7 @@ function statsEast() {
 
       if (res["message"] != "none") {
         document.getElementById("eastBal").innerText = res["balance"];
+        ECB = res["balance"];
 
         let i = 0;
         while (i < res["history"].length) {
@@ -282,14 +289,14 @@ function statsEast() {
                 res["history"][i].vote;
               break;
             case "JUN":
-              var AEJUn = res["history"][i].amount;
-              if (AEJUn < 0) {
-                AEJUn = -AEJUn;
-                document.getElementById("AEJUn").style.color = "red";
+              var AEJun = res["history"][i].amount;
+              if (AEJun < 0) {
+                AEJun = -AEJun;
+                document.getElementById("AEJun").style.color = "red";
               } else {
-                document.getElementById("AEJUn").style.color = "green";
+                document.getElementById("AEJun").style.color = "green";
               }
-              document.getElementById("AEJUn").innerText = AEJUn;
+              document.getElementById("AEJun").innerText = AEJun;
               document.getElementById("VEJun").innerText =
                 res["history"][i].vote;
               break;
@@ -421,6 +428,7 @@ function statsWest() {
 
       if (res["message"] != "none") {
         document.getElementById("westBal").innerText = res["balance"];
+        WCB = res["balance"];
 
         let i = 0;
         while (i < res["history"].length) {
@@ -625,6 +633,7 @@ function statsSouth() {
 
       if (res["message"] != "none") {
         document.getElementById("southBal").innerText = res["balance"];
+        SCB = res["balance"];
 
         let i = 0;
         while (i < res["history"].length) {
@@ -820,3 +829,7 @@ function statsSouth() {
   xhttp.open("GET", teamStatsUrl + "?name=SOUTH", true);
   xhttp.send();
 }
+
+setInterval(() => {
+  console.log(NCB, ECB, WCB, SCB);
+}, 5000);
