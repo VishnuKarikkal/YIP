@@ -4,7 +4,7 @@ var NCB = "";
 var ECB = "";
 var WCB = "";
 var SCB = "";
-
+    //to load data each team to the corresponding rows in the stats table
 function teamStats() {
   //to update teamStats data
   var xhttp = new XMLHttpRequest();
@@ -15,7 +15,7 @@ function teamStats() {
       if (res["message"] != "none") {
         document.getElementById("northBal").innerText = res["balance"];
         NCB = res["balance"];
-
+    console.log(res['history']);
         let i = 0;
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
@@ -28,6 +28,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANJan").style.color = "green";
                 }
+                document.getElementById("ANJan").innerText =ANJan;
               } else {
                 document.getElementById("ANJan").innerText = "";
               }
@@ -56,6 +57,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANFeb").style.color = "green";
                 }
+                document.getElementById("ANFeb").innerText =ANFeb;
               } else {
                 document.getElementById("ANFeb").innerText = "";
               }
@@ -84,6 +86,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANMar").style.color = "green";
                 }
+                document.getElementById("ANMar").innerText =ANMar;
               } else {
                 document.getElementById("ANMar").innerText = "";
               }
@@ -111,6 +114,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANApr").style.color = "green";
                 }
+                document.getElementById("ANApr").innerText =ANApr;
               } else {
                 document.getElementById("ANApr").innerText = "";
               }
@@ -138,6 +142,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANMay").style.color = "green";
                 }
+                document.getElementById("ANMay").innerText =ANMay;
               } else {
                 document.getElementById("ANMay").innerText = "";
               }
@@ -165,6 +170,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANJun").style.color = "green";
                 }
+                document.getElementById("ANJun").innerText =ANJun;
               } else {
                 document.getElementById("ANJun").innerText = "";
               }
@@ -192,6 +198,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANJul").style.color = "green";
                 }
+                document.getElementById("ANJul").innerText =ANJul;
               } else {
                 document.getElementById("ANJul").innerText = "";
               }
@@ -219,6 +226,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANAug").style.color = "green";
                 }
+                document.getElementById("ANAug").innerText =ANAug;
               } else {
                 document.getElementById("ANAug").innerText = "";
               }
@@ -246,6 +254,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANSep").style.color = "green";
                 }
+                document.getElementById("ANSep").innerText =ANSep;
               } else {
                 document.getElementById("ANSep").innerText = "";
               }
@@ -273,6 +282,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANOct").style.color = "green";
                 }
+                document.getElementById("ANOct").innerText =ANOct;
               } else {
                 document.getElementById("ANOct").innerText = "";
               }
@@ -300,6 +310,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANNov").style.color = "green";
                 }
+                document.getElementById("ANNov").innerText =ANNov;
               } else {
                 document.getElementById("ANNov").innerText = "";
               }
@@ -327,6 +338,7 @@ function teamStats() {
                 } else {
                   document.getElementById("ANDec").style.color = "green";
                 }
+                document.getElementById("ANDec").innerText =ANDec;
               } else {
                 document.getElementById("ANDec").innerText = "";
               }
@@ -419,6 +431,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEJan").style.color = "green";
                 }
+                document.getElementById("AEJan").innerText =AEJan;
               } else {
                 document.getElementById("AEJan").innerText = "";
               }
@@ -446,6 +459,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEFeb").style.color = "green";
                 }
+                document.getElementById("AEFeb").innerText =AEFeb;
               } else {
                 document.getElementById("AEFeb").innerText = "";
               }
@@ -473,6 +487,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEMar").style.color = "green";
                 }
+                document.getElementById("AEMar").innerText = AEMar;
               } else {
                 document.getElementById("AEMar").innerText = "";
               }
@@ -500,6 +515,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEApr").style.color = "green";
                 }
+                document.getElementById("AEApr").innerText =AEApr;
               } else {
                 document.getElementById("AEApr").innerText = "";
               }
@@ -527,6 +543,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEMay").style.color = "green";
                 }
+                document.getElementById("AEMay").innerText =AEMay;
               } else {
                 document.getElementById("AEMay").innerText = "";
               }
@@ -554,6 +571,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEJun").style.color = "green";
                 }
+                document.getElementById("AEJun").innerText =AEJun;b
               } else {
                 document.getElementById("AEJun").innerText = "";
               }
@@ -581,6 +599,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEJul").style.color = "green";
                 }
+                document.getElementById("AEJul").innerText =AEJul;
               } else {
                 document.getElementById("AEJul").innerText = "";
               }
@@ -608,6 +627,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEAug").style.color = "green";
                 }
+                document.getElementById("AEAug").innerText =AEAug;
               } else {
                 document.getElementById("AEAug").innerText = "";
               }
@@ -635,6 +655,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AESep").style.color = "green";
                 }
+                document.getElementById("AESep").innerText =AESep;
               } else {
                 document.getElementById("AESep").innerText = "";
               }
@@ -662,6 +683,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEOct").style.color = "green";
                 }
+                document.getElementById("AEOct").innerText =AEOct;
               } else {
                 document.getElementById("AEOct").innerText = "";
               }
@@ -689,6 +711,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AENov").style.color = "green";
                 }
+                document.getElementById("AENov").innerText = AENov;
               } else {
                 document.getElementById("AENov").innerText = "";
               }
@@ -716,6 +739,7 @@ function statsEast() {
                 } else {
                   document.getElementById("AEDec").style.color = "green";
                 }
+                document.getElementById("AEDec").innerText =AEDec;
               } else {
                 document.getElementById("AEDec").innerText = "";
               }
@@ -804,6 +828,7 @@ function statsWest() {
                 } else {
                   document.getElementById("AWJan").style.color = "green";
                 }
+                document.getElementById("AWJan").innerText = AWJan;
               } else {
                 document.getElementById("AWJan").innerText = "";
               }
@@ -826,11 +851,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWFeb = res["history"][i].amount;
                 if (AWFeb < 0) {
-                  AWFeb = -AEFeb;
+                  AWFeb = -AWFeb;
                   document.getElementById("AWFeb").style.color = "red";
                 } else {
                   document.getElementById("AWFeb").style.color = "green";
                 }
+                document.getElementById("AWFeb").innerText = AWFeb;
               } else {
                 document.getElementById("AWFeb").innerText = "";
               }
@@ -853,11 +879,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWMar = res["history"][i].amount;
                 if (AWMar < 0) {
-                  AWMar = -AEMar;
+                  AWMar = -AWMar;
                   document.getElementById("AWMar").style.color = "red";
                 } else {
                   document.getElementById("AWMar").style.color = "green";
                 }
+                document.getElementById("AWMar").innerText = AWMar;
               } else {
                 document.getElementById("AWMar").innerText = "";
               }
@@ -880,11 +907,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWApr = res["history"][i].amount;
                 if (AWApr < 0) {
-                  AWApr = -AEApr;
+                  AWApr = -AWApr;
                   document.getElementById("AWApr").style.color = "red";
                 } else {
                   document.getElementById("AWApr").style.color = "green";
                 }
+                document.getElementById("AWApr").innerText =AWApr;
               } else {
                 document.getElementById("AWApr").innerText = "";
               }
@@ -907,11 +935,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWMay = res["history"][i].amount;
                 if (AWMay < 0) {
-                  AWMay = -AEMay;
+                  AWMay = -AWMay;
                   document.getElementById("AWMay").style.color = "red";
                 } else {
                   document.getElementById("AWMay").style.color = "green";
                 }
+                document.getElementById("AWMay").innerText =AWMay;
               } else {
                 document.getElementById("AWMay").innerText = "";
               }
@@ -934,11 +963,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWJun = res["history"][i].amount;
                 if (AWJun < 0) {
-                  AWJun = -AEJun;
+                  AWJun = -AWJun;
                   document.getElementById("AWJun").style.color = "red";
                 } else {
                   document.getElementById("AWJun").style.color = "green";
                 }
+                document.getElementById("AWJun").innerText = AWJun;
               } else {
                 document.getElementById("AWJun").innerText = "";
               }
@@ -961,11 +991,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWJul = res["history"][i].amount;
                 if (AWJul < 0) {
-                  AWJul = -AEJul;
+                  AWJul = -AWJul;
                   document.getElementById("AWJul").style.color = "red";
                 } else {
                   document.getElementById("AWJul").style.color = "green";
                 }
+                document.getElementById("AWJul").innerText =AWJul;
               } else {
                 document.getElementById("AWJul").innerText = "";
               }
@@ -988,11 +1019,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWAug = res["history"][i].amount;
                 if (AWAug < 0) {
-                  AWAug = -AEAug;
+                  AWAug = -AWAug;
                   document.getElementById("AWAug").style.color = "red";
                 } else {
                   document.getElementById("AWAug").style.color = "green";
                 }
+                document.getElementById("AWAug").innerText =AWAug;
               } else {
                 document.getElementById("AWAug").innerText = "";
               }
@@ -1015,11 +1047,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWSep = res["history"][i].amount;
                 if (AWSep < 0) {
-                  AWSep = -AESep;
+                  AWSep = -AWSep;
                   document.getElementById("AWSep").style.color = "red";
                 } else {
                   document.getElementById("AWSep").style.color = "green";
                 }
+                document.getElementById("AWSep").innerText =AWSep;
               } else {
                 document.getElementById("AWSep").innerText = "";
               }
@@ -1042,11 +1075,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWOct = res["history"][i].amount;
                 if (AWOct < 0) {
-                  AWOct = -AEOct;
+                  AWOct = -AWOct;
                   document.getElementById("AWOct").style.color = "red";
                 } else {
                   document.getElementById("AWOct").style.color = "green";
                 }
+                document.getElementById("AWOct").innerText =AWOct;
               } else {
                 document.getElementById("AWOct").innerText = "";
               }
@@ -1069,11 +1103,12 @@ function statsWest() {
               if (res["history"][i].amount) {
                 var AWNov = res["history"][i].amount;
                 if (AWNov < 0) {
-                  AWNov = -AENov;
+                  AWNov = -AWNov;
                   document.getElementById("AWNov").style.color = "red";
                 } else {
                   document.getElementById("AWNov").style.color = "green";
                 }
+                document.getElementById("AWNov").innerText =AWNov;
               } else {
                 document.getElementById("AWNov").innerText = "";
               }
@@ -1101,6 +1136,7 @@ function statsWest() {
                 } else {
                   document.getElementById("AWDec").style.color = "green";
                 }
+                document.getElementById("AWDec").innerText =AWDec;
               } else {
                 document.getElementById("AWDec").innerText = "";
               }
@@ -1184,11 +1220,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASJan = res["history"][i].amount;
                 if (ASJan < 0) {
-                  ASJan = -AEFeb;
+                  ASJan = -ASJan;
                   document.getElementById("ASJan").style.color = "red";
                 } else {
                   document.getElementById("ASJan").style.color = "green";
                 }
+                document.getElementById("ASJan").innerText =ASJan;
               } else {
                 document.getElementById("ASJan").innerText = "";
               }
@@ -1216,6 +1253,7 @@ function statsSouth() {
                 } else {
                   document.getElementById("ASFeb").style.color = "green";
                 }
+                document.getElementById("ASFeb").innerText =ASFeb;
               } else {
                 document.getElementById("ASFeb").innerText = "";
               }
@@ -1238,11 +1276,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASMar = res["history"][i].amount;
                 if (ASMar < 0) {
-                  ASMar = -AEFeb;
+                  ASMar = -ASMar;
                   document.getElementById("ASMar").style.color = "red";
                 } else {
                   document.getElementById("ASMar").style.color = "green";
                 }
+                document.getElementById("ASMar").innerText =ASMar;
               } else {
                 document.getElementById("ASMar").innerText = "";
               }
@@ -1265,11 +1304,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASApr = res["history"][i].amount;
                 if (ASApr < 0) {
-                  ASApr = -AEFeb;
+                  ASApr = -ASApr;
                   document.getElementById("ASApr").style.color = "red";
                 } else {
                   document.getElementById("ASApr").style.color = "green";
                 }
+                document.getElementById("ASApr").innerText =ASApr;
               } else {
                 document.getElementById("ASApr").innerText = "";
               }
@@ -1292,11 +1332,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASMay = res["history"][i].amount;
                 if (ASMay < 0) {
-                  ASMay = -AEFeb;
+                  ASMay = -ASMay;
                   document.getElementById("ASMay").style.color = "red";
                 } else {
                   document.getElementById("ASMay").style.color = "green";
                 }
+                document.getElementById("ASMay").innerText =ASMay;
               } else {
                 document.getElementById("ASMay").innerText = "";
               }
@@ -1319,11 +1360,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASJun = res["history"][i].amount;
                 if (ASJun < 0) {
-                  ASJun = -AEFeb;
+                  ASJun = -ASJun;
                   document.getElementById("ASJun").style.color = "red";
                 } else {
                   document.getElementById("ASJun").style.color = "green";
                 }
+                document.getElementById("ASJun").innerText =ASJun;
               } else {
                 document.getElementById("ASJun").innerText = "";
               }
@@ -1346,11 +1388,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASJul = res["history"][i].amount;
                 if (ASJul < 0) {
-                  ASJul = -AEFeb;
+                  ASJul = -ASJul;
                   document.getElementById("ASJul").style.color = "red";
                 } else {
                   document.getElementById("ASJul").style.color = "green";
                 }
+                document.getElementById("ASJul").innerText =ASJul;
               } else {
                 document.getElementById("ASJul").innerText = "";
               }
@@ -1373,11 +1416,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASAug = res["history"][i].amount;
                 if (ASAug < 0) {
-                  ASAug = -AEFeb;
+                  ASAug = -ASAug;
                   document.getElementById("ASAug").style.color = "red";
                 } else {
                   document.getElementById("ASAug").style.color = "green";
                 }
+                document.getElementById("ASAug").innerText =ASAug;
               } else {
                 document.getElementById("ASAug").innerText = "";
               }
@@ -1400,11 +1444,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASSep = res["history"][i].amount;
                 if (ASSep < 0) {
-                  ASSep = -AEFeb;
+                  ASSep = -ASSep;
                   document.getElementById("ASSep").style.color = "red";
                 } else {
                   document.getElementById("ASSep").style.color = "green";
                 }
+                document.getElementById("ASSep").innerText =ASSep;
               } else {
                 document.getElementById("ASSep").innerText = "";
               }
@@ -1427,11 +1472,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASOct = res["history"][i].amount;
                 if (ASOct < 0) {
-                  ASOct = -AEFeb;
+                  ASOct = -ASOct;
                   document.getElementById("ASOct").style.color = "red";
                 } else {
                   document.getElementById("ASOct").style.color = "green";
                 }
+                document.getElementById("ASOct").innerText =ASOct;
               } else {
                 document.getElementById("ASOct").innerText = "";
               }
@@ -1454,11 +1500,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASNov = res["history"][i].amount;
                 if (ASNov < 0) {
-                  ASNov = -AEFeb;
+                  ASNov = -ASNov;
                   document.getElementById("ASNov").style.color = "red";
                 } else {
                   document.getElementById("ASNov").style.color = "green";
                 }
+                document.getElementById("ASNov").innerText =ASNov;
               } else {
                 document.getElementById("ASNov").innerText = "";
               }
@@ -1481,11 +1528,12 @@ function statsSouth() {
               if (res["history"][i].amount) {
                 var ASDec = res["history"][i].amount;
                 if (ASDec < 0) {
-                  ASDec = -AEFeb;
+                  ASDec = -ASDec;
                   document.getElementById("ASDec").style.color = "red";
                 } else {
                   document.getElementById("ASDec").style.color = "green";
                 }
+                document.getElementById("ASDec").innerText = ASDec;
               } else {
                 document.getElementById("ASDec").innerText = "";
               }
@@ -1551,7 +1599,7 @@ function statsSouth() {
   xhttp.open("GET", teamStatsUrl + "?name=SOUTH", true);
   xhttp.send();
 }
-
+    //to reload data to the summary section on every 6th second
 setInterval(() => {
   // console.log(NCB, ECB, WCB, SCB);
   let arr = [NCB, ECB, ECB, SCB];
@@ -1579,4 +1627,4 @@ setInterval(() => {
   }
   // console.log(leading);
   document.getElementById("leading").innerText = leading;
-}, 3000);
+}, 6000);

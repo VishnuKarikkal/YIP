@@ -566,13 +566,14 @@ function remarksMonths()
 
 function remarkTableData()
 {//to load all documents that ready for "adding-remarks" to the remarks table
+let boxes=$(".bpChecks");let j=0;
+while(j<12){boxes[j].checked=false;boxes[j].disabled=true;j++}
   var xhttp=new XMLHttpRequest();
   xhttp.onreadystatechange = function()
                                 {
                                     if((this.readyState==4)&&(this.status==200))
                                     {
                                       var res=JSON.parse(this.responseText);
-                                      console.log(res);
                                       if(res['message']!="none")
                                       {
                                         let i=0;
@@ -581,6 +582,8 @@ function remarkTableData()
                                           switch(res['games'][i].month)
                                           {
                                             case "JAN": 
+                                            boxes[0].checked=false;
+                                            boxes[0].disabled=false;
                                             if(res['games'][i].teamName == "NORTH")
                                             {
                                               document.getElementById('northVoteJan').innerText=res['games'][i].vote;
@@ -599,6 +602,8 @@ function remarkTableData()
                                             }
                                             break;
                                 case "FEB":
+                                  boxes[1].checked=false;
+                                  boxes[1].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteFeb').innerText=res['games'][i].vote;
@@ -617,6 +622,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "MAR":
+                                  boxes[2].checked=false;
+                                  boxes[2].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteMar').innerText=res['games'][i].vote;
@@ -635,6 +642,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "APR":
+                                  boxes[3].checked=false;
+                                  boxes[3].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteApr').innerText=res['games'][i].vote;
@@ -653,6 +662,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "MAY":
+                                  boxes[4].checked=false;
+                                  boxes[4].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteMay').innerText=res['games'][i].vote;
@@ -671,6 +682,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "JUN":
+                                  boxes[5].checked=false;
+                                  boxes[5].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteJun').innerText=res['games'][i].vote;
@@ -689,6 +702,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "JUL":
+                                  boxes[6].checked=false;
+                                  boxes[6].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteJul').innerText=res['games'][i].vote;
@@ -707,6 +722,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "AUG":
+                                  boxes[7].checked=false;
+                                  boxes[7].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteAug').innerText=res['games'][i].vote;
@@ -725,6 +742,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "SEP":
+                                  boxes[8].checked=false;
+                                  boxes[8].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteSep').innerText=res['games'][i].vote;
@@ -743,6 +762,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "OCT":
+                                  boxes[9].checked=false;
+                                  boxes[9].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteOct').innerText=res['games'][i].vote;
@@ -761,6 +782,8 @@ function remarkTableData()
                                   }
                                   break;
                                 case "NOV":
+                                  boxes[10].checked=false;
+                                  boxes[10].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteNov').innerText=res['games'][i].vote;
@@ -779,6 +802,8 @@ function remarkTableData()
                                   }
                                   break;
                                 default:
+                                  boxes[11].checked=false;
+                                  boxes[11].disabled=false;
                                   if(res['games'][i].teamName == "NORTH")
                                   {
                                     document.getElementById('northVoteDec').innerText=res['games'][i].vote;
