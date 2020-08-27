@@ -1,4 +1,4 @@
-# YIP Yanumi Game
+# YIP - Yamuni Game
 
 ## Rules of the Game
 
