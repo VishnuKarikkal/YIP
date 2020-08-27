@@ -142,8 +142,7 @@ gameRouter.post("/addRemarks",(req,res)=>
 
 })
 
-<<<<<<< HEAD
-=======
+
 gameRouter.get('/endGame',(req,res)=>
 {
   //ends all games
@@ -187,5 +186,5 @@ teamSummary.updateMany({teamName:{$ne:null}},{$set:{balance:200}},(err,data)=>
   }
 })
 })
->>>>>>> d4a9ccbb4a0e54510ebf36f71aa6e97db83929af
+
 module.exports = gameRouter;
