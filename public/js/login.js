@@ -29,9 +29,10 @@ function checkLogIn()
 }
 //submit
 document.getElementById('submit').addEventListener('click',function(e){
-    e.preventDefault()
-    console.log('submit');
-    checkLogIn();
+   // e.preventDefault()
+   // console.log('submit');
+    //checkLogIn();
+    alert('click')
 })
 function signIn(){
     let data={ 'username':team,'password':password};
