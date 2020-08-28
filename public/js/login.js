@@ -44,7 +44,9 @@ function signIn(){
     })
         .then(
             function(response){
+                alert('here')
                 return response.json();
+
             }
         )
         .then(
@@ -52,7 +54,7 @@ function signIn(){
               setCookie('token', data.token, 1)
               window.localStorage.setItem('teamName', data.teamName);
                   window.location.href = '/';
-              alert('here');
+
           });
 
 }
