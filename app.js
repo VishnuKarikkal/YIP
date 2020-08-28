@@ -28,10 +28,14 @@ app.get("/", checkAuth, function (req, res) {
   if (req.userData.username.toUpperCase() == "ADMIN") {
     res.sendFile(__dirname + "/src/views/adminDashboard.html");
   } else {
-    res.sendFile(__dirname + "/src/views/welcome.html");
+    res.sendFile(__dirname + "/src/views/team.html");
   }
 });
+app.get("/welcome", function (req, res) {
 
+    res.sendFile(__dirname + "/src/views/welcome.html");
+
+});
 app.get("/login", function (req, res) {
   res.sendFile(__dirname + "/src/views/login.html");
 });

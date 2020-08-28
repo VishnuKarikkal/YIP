@@ -15,7 +15,7 @@ module.exports=(req,res,next)=>{
 
   }catch(error){
     console.log(error);
-    return res.redirect("/login")
+    return res.redirect("/welcome")
   }
 }
 function parseCookies (request) {
