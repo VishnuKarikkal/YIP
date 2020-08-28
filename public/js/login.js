@@ -23,7 +23,7 @@ function checkLogIn()
     else{
         signIn();
     }
-    return true;
+
 }
 //submit
 const form=document.getElementById('form');
@@ -47,7 +47,6 @@ function signIn(){
             function(response){
                 alert('here')
                 return response.json();
-
             }
         )
         .then(
