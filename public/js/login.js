@@ -30,9 +30,9 @@ function checkLogIn()
 //submit
 document.getElementById('submit').addEventListener('click',function(e){
    // e.preventDefault()
-   // console.log('submit');
-    //checkLogIn();
-    alert('click')
+    console.log('submit');
+   checkLogIn();
+
 })
 function signIn(){
     let data={ 'username':team,'password':password};
