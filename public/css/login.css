@@ -122,3 +122,9 @@ footer h6 {
   left: 50%;
   transform: translate(-50%, 0);
 }
+#password-error{
+  border-radius:10px;
+  background-color:whitesmoke;
+  color:red;
+  font-size:1.3rem;
+}

@@ -47,8 +47,7 @@ function signIn(){
         )
         .then(
           data=> {
-
-              showMessage(data.message);
+              showMessage(data);
               setTimeout(clearMessage,2500);
               if(data.redirect){
                   //window.sessionStorage.setItem('token',data.token);
@@ -67,7 +66,7 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 function showMessage(message){
-    document.getElementById('password-error').innerText=message;
+        document.getElementById('password-error').innerText = message.message;
 }
 function clearMessage(){
     document.getElementById('password-error').innerText='';

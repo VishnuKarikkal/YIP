@@ -42,7 +42,7 @@ loginRouter.post("/", function (req, res) {
             );
             console.log("authsuccessful");
             return res.status(200).json({
-              message: "Auth successful",
+              message: "",
               redirect: true,
               token: token,
                 teamName:user[0].username,
