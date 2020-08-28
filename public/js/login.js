@@ -37,18 +37,29 @@ document.getElementById('submit').addEventListener('click',function(e){
 function signIn(){
 
     let data={ 'username':team,'password':password};
-    $.post(url,data) .done(function( data ) {
-        setCookie('token',data.token,1)
-         window.localStorage.setItem('teamName',data.teamName);
-        if(data.teamName=="ADMIN"){
-            window.location.href='/';
-        }
-        else {
-            window.location.href = '/gameTeam';
-        }
-        alert('here');
-});
-
+    fetch(url,{
+        method:'POST',
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8'
+        },
+        body:JSON.stringify(data)
+    })
+        .then(
+            function(response){
+                return response.json();
+            }
+        )
+        .then(
+          data=> {
+              setCookie('token', data.token, 1)
+              window.localStorage.setItem('teamName', data.teamName);
+              if (data.teamName == "ADMIN") {
+                  window.location.href = '/';
+              } else {
+                  window.location.href = '/gameTeam';
+              }
+              alert('here');
+          });
 
 }
 function setCookie(cname, cvalue, exdays) {
