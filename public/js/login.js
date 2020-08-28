@@ -29,11 +29,9 @@ function checkLogIn()
 const form=document.getElementById('form');
 form.addEventListener('submit',function(e){
     e.preventDefault()
-    console.log('submit');
     checkLogIn();
 })
 function signIn(){
-     alert(`${team},${password}`);
     let data={ 'username':team,'password':password};
     fetch(url,{
         method:'POST',
@@ -44,7 +42,6 @@ function signIn(){
     })
         .then(
             function(response){
-                alert('here')
                 return response.json();
             }
         )
