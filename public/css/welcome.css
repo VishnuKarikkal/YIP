@@ -20,7 +20,6 @@ font-family: 'Rye', cursive;
   /* background-color: beige; */
 }
 body {
-  /* height: 100vh; */
   background: rgb(56, 210, 160);
   background: -moz-linear-gradient(
     312deg,
@@ -39,7 +38,6 @@ body {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#38d2a0",endColorstr="#00d4ff",GradientType=1);
 }
-
 .navbar-brand {
   transform: scale(1.1);
   font-family: "Rye", cursive;
@@ -54,7 +52,9 @@ form .nav-link {
 form .nav-link:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-
+.welcome{
+  font-size: 3rem;
+}
 p {
   font-weight: bold;
   font-size: 1.1em;
