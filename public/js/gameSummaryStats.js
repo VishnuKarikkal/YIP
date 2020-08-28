@@ -1,4 +1,4 @@
-var teamStatsUrl = "http://localhost:5000/gameData/teamStats";
+var teamStatsUrl = "/gameData/teamStats";
 
 var NCB = "";
 var ECB = "";

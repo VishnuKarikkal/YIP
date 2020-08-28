@@ -1,6 +1,6 @@
 var team;
 var password;
-var url='http://localhost:5000/userLogin/'
+var url='/userLogin/'
 
    document.getElementById('selectedTeam').addEventListener('change', event => {
        var e = document.getElementById("selectedTeam");
@@ -31,7 +31,6 @@ form.addEventListener('submit',function(e){
     e.preventDefault()
     console.log('submit');
     checkLogIn();
-
 })
 function signIn(){
      alert(`${team},${password}`);

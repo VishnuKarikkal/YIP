@@ -3,10 +3,10 @@ var noOfActiveGames=0;
 var activeGames=[];
 var historyMonths=[];
 
-var activeGameCheckUrl = "http://localhost:5000/game/activeGame";
-var votePostUrl='http://localhost:5000/game/vote';
-var teamStatsUrl='http://localhost:5000/gameData/teamStats';
-var teamHistoryUrl="http://localhost:5000/game/teamGameHistory";
+var activeGameCheckUrl = "/game/activeGame";
+var votePostUrl='/game/vote';
+var teamStatsUrl='/gameData/teamStats';
+var teamHistoryUrl="/game/teamGameHistory";
 
 var team=localStorage.getItem('teamName');
 var name=`name=${team}`;
@@ -132,7 +132,7 @@ document.getElementById('vote').addEventListener('click', event => {
   let month=document.getElementById('month').innerText;
   let vote=votedValue;
   if(vote){
-  $.post('http://localhost:5000/game/vote' , { teamName:teamName, month:month, vote:vote } )
+  $.post('/game/vote' , { teamName:teamName, month:month, vote:vote } )
 .done(function( data ) {
     console.log( "Data Loaded: " + data.message);
 
