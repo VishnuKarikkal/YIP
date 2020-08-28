@@ -1,14 +1,12 @@
 var team;
 var password;
 var url='http://localhost:5000/userLogin/'
-$(document).ready(function()
-{
+
    document.getElementById('selectedTeam').addEventListener('change', event => {
        var e = document.getElementById("selectedTeam");
        team = e.options[e.selectedIndex].value;
        console.log(team);
    });
-});
 
 function checkLogIn()
 {
