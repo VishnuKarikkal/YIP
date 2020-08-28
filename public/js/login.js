@@ -29,12 +29,13 @@ function checkLogIn()
 }
 //submit
 document.getElementById('submit').addEventListener('click',function(e){
-   // e.preventDefault()
+    e.preventDefault()
     console.log('submit');
    checkLogIn();
 
 })
 function signIn(){
+    alert('here');
     let data={ 'username':team,'password':password};
     $.post(url,data) .done(function( data ) {
         setCookie('token',data.token,1)
