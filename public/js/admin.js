@@ -4,12 +4,12 @@ var months=[];
 var bpChecked=0;
 var bpMonths=[];
 
-var gameCheckUrl='http://localhost:5000/gameData/gameStats';
-var calculateBalanceUrl='http://localhost:5000/gameData/calculateBalance';
-var readyForRemarksUrl='http://localhost:5000/gameData/readyForRemarks';
+var gameCheckUrl='/gameData/gameStats';
+var calculateBalanceUrl='/gameData/calculateBalance';
+var readyForRemarksUrl='/gameData/readyForRemarks';
 
-var postRemarksUrl='http://localhost:5000/game/addRemarks';
-var endGameUrl='http://localhost:5000/game/endGame';
+var postRemarksUrl='/game/addRemarks';
+var endGameUrl='/game/endGame';
 
 $(document).ready(function () {
   $(":checkbox").slice(0,12).click(function (e) {
@@ -374,7 +374,7 @@ function activateMonths()
 
   if(months.length>0)
   {
-    $.post('http://localhost:5000/game/activate' , {activateMonths:months } )
+    $.post('/game/activate' , {activateMonths:months } )
 .done(function( data )
     {
     console.log( "Data Loaded: " + data.message);
