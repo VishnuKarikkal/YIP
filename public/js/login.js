@@ -33,7 +33,7 @@ document.getElementById('submit').addEventListener('click',function(e){
 
 })
 function signIn(){
-
+     alert(`${team},${password}`);
     let data={ 'username':team,'password':password};
     fetch(url,{
         method:'POST',
@@ -51,11 +51,7 @@ function signIn(){
           data=> {
               setCookie('token', data.token, 1)
               window.localStorage.setItem('teamName', data.teamName);
-              if (data.teamName == "ADMIN") {
                   window.location.href = '/';
-              } else {
-                  window.location.href = '/gameTeam';
-              }
               alert('here');
           });
 
