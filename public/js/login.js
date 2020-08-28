@@ -31,24 +31,33 @@ function checkLogIn()
 document.getElementById('submit').addEventListener('click',function(e){
     e.preventDefault()
     console.log('submit');
-   checkLogIn();
+    checkLogIn();
 
 })
 function signIn(){
     alert('here');
     let data={ 'username':team,'password':password};
-    $.post(url,data) .done(function( data ) {
-        setCookie('token',data.token,1)
-   window.localStorage.setItem('teamName',data.teamName);
-        if(data.teamName=="ADMIN"){
-            window.location.href='/';
-        }
-        else {
-            window.location.href = '/gameTeam';
-        }
 
-});
-
+    fetch(url, {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+        .then(data => {
+            setCookie('token',data.token,1)
+            window.localStorage.setItem('teamName',data.teamName);
+            if(data.teamName=="ADMIN"){
+                window.location.href='/';
+            }
+            else {
+                window.location.href = '/gameTeam';
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
 
 }
 function setCookie(cname, cvalue, exdays) {
