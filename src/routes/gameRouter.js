@@ -93,6 +93,7 @@ gameRouter.post("/addRemarks",(req,res)=>
         let southRemark = (month.south) ? bonus : penalty;
         let eastRemark = (month.east) ? bonus : penalty;
         let westRemark = (month.west) ? bonus : penalty;
+        //north
         gameHistory.findOneAndUpdate({month: month.month, teamName: 'NORTH'}, {
           remarks: northRemark
         }).then(value => console.log(value));
@@ -102,6 +103,7 @@ gameRouter.post("/addRemarks",(req,res)=>
               teamSummary.findOneAndUpdate({teamName: 'NORTH'}, {balance: northBalance})
                   .then(value => console.log('updated'));
           })
+          //south
         gameHistory.findOneAndUpdate({month: month.month, teamName: 'SOUTH'}, {
           remarks: southRemark
         }).then(value => console.log(value));
@@ -111,6 +113,7 @@ gameRouter.post("/addRemarks",(req,res)=>
               teamSummary.findOneAndUpdate({teamName: 'SOUTH'}, {balance: southBalance})
                   .then(value => console.log('updated'));
           })
+          //west
         gameHistory.findOneAndUpdate({month: month.month, teamName: 'WEST'}, {
           remarks: westRemark
         }).then(value => console.log(value));
@@ -120,6 +123,7 @@ gameRouter.post("/addRemarks",(req,res)=>
               teamSummary.findOneAndUpdate({teamName: 'WEST'}, {balance: westBalance})
                   .then(value => console.log(value));
           })
+          //east
         gameHistory.findOneAndUpdate({month: month.month, teamName: 'EAST'}, {
           remarks: eastRemark
         }).then(value => console.log(value));

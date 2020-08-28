@@ -2,7 +2,7 @@ const express = require("express");
 const loginRouter = express.Router();
 const user = require("../model/user");
 const jwt = require("jsonwebtoken");
-const jwtKey = "secret" || process.env.JWT_KEY;
+const jwtKey = process.env.JWT_KEY||"secret" ;
 
 loginRouter.get("/", function (req, res) {
     user.find({}).then((val)=>{
