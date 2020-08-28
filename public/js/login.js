@@ -47,9 +47,15 @@ function signIn(){
         )
         .then(
           data=> {
-              setCookie('token', data.token, 1)
-              window.localStorage.setItem('teamName', data.teamName);
-                  window.location.href = '/';
+
+              showMessage(data.message);
+              setTimeout(clearMessage,2500);
+              if(data.redirect){
+                  //window.sessionStorage.setItem('token',data.token);
+                  setCookie('token',data.token,1)
+                  window.localStorage.setItem('teamName', data.teamName);
+                  window.location.href="/";
+              }
 
           });
 
@@ -59,4 +65,10 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function showMessage(message){
+    document.getElementById('password-error').innerText=message;
+}
+function clearMessage(){
+    document.getElementById('password-error').innerText='';
 }
