@@ -26,7 +26,8 @@ function checkLogIn()
     return true;
 }
 //submit
-document.getElementById('submit').addEventListener('click',function(e){
+const form=document.getElementById('form');
+form.addEventListener('submit',function(e){
     e.preventDefault()
     console.log('submit');
     checkLogIn();
