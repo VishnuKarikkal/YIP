@@ -282,10 +282,27 @@ function checkForActiveGameChanges(){
 fetch(activeGameCheckUrl).then(response=>{
     return response.json();
 }).then(data=>{
+  let activeGames=data.games;
+  if(activeGames.length>0){
+      fetch(teamHistoryUrl + "?" + name)
+          .then(res => res.json())
+          .then(response => {
+              const history = response['history']
+              activeGames.forEach(game => {
+                  let historyMonths = [];
 
-  if(data.games.length!=currentActiveMonthLength){
-      currentActiveMonthLength=data.games.length;
-      window.location.reload();
+                  history.forEach(item => {
+                      historyMonths.push(item.month);
+                  })
+                  if (!historyMonths.includes(game)) {
+                      gamesNotPlayed.push(game);
+                  }
+                  if(gamesNotPlayed.length>0){
+                      window.location.reload();
+                  }
+              })
+          })
+
   }
 });
 }
