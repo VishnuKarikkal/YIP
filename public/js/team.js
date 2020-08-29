@@ -2,12 +2,12 @@ var optionVoted = "";
 var noOfActiveGames=0;
 var activeGames=[];
 var historyMonths=[];
-
+var gamesNotPlayed;
 var activeGameCheckUrl = "/game/activeGame";
 var votePostUrl='/game/vote';
 var teamStatsUrl='/gameData/teamStats';
 var teamHistoryUrl="/game/teamGameHistory";
-
+var currentActiveMonthLength;
 var team=localStorage.getItem('teamName');
 var name=`name=${team}`;
 document.getElementById('teamName').innerText=team;
@@ -64,7 +64,8 @@ function gameCheck() {
                       console.log("2");console.log(activeGames)
     if(activeGames.length>0)    //if active games exist
     {
-      let gamesNotPlayed=[];  //active months in which games aren't played yet
+        currentActiveMonthLength=activeGames.length;
+       gamesNotPlayed=[];  //active months in which games aren't played yet
       teamGameHistory();
       console.log(gamesNotPlayed)
       activeGames.forEach(game=>
@@ -135,10 +136,10 @@ document.getElementById('vote').addEventListener('click', event => {
   $.post('/game/vote' , { teamName:teamName, month:month, vote:vote } )
 .done(function( data ) {
     console.log( "Data Loaded: " + data.message);
-
     teamStats(); //to load team game stats
   //check if any more active games avilable in the current time
-                                     if(noOfActiveGames>0)   //if games exits
+    window.location.reload();
+                               /*      if(noOfActiveGames>0)   //if games exits
                                      {
                                         noOfActiveGames=gamesNotPlayed.length-1;
                                         document.getElementById('month').innerText=gamesNotPlayed[0].month;
@@ -151,6 +152,7 @@ document.getElementById('vote').addEventListener('click', event => {
                                         document.getElementById('month').innerText="No Active Games!";
                                         document.getElementById('voteOptions').hidden=true;
                                       }
+*/
   });
   }
   else{
@@ -275,5 +277,15 @@ function teamStats()
     xhttp.open("GET",teamStatsUrl + "?" + name,true);
     xhttp.send();
 }
+setInterval(checkForActiveGameChanges,10000)
+function checkForActiveGameChanges(){
+fetch(activeGameCheckUrl).then(response=>{
+    return response.json();
+}).then(data=>{
 
-
+  if(data.games.length!=currentActiveMonthLength){
+      currentActiveMonth=data.games.length;
+      window.location.reload();
+  }
+});
+}

@@ -67,7 +67,9 @@ gameRouter.post("/vote", function (req, res) {
     month:req.body.month,
     totalBalance:team.balance
   };
-   gameHistory(data).save().then(value => res.status(200).json({message:'successfully voted!'}));
+   gameHistory(data).save().then(value => activatedMonth.find({}).then(function(data){
+       res.json({activateMonths:data.activateMonths,message:'successfull'})
+   }));
   //saving
    })
     //to save the vote of a team into the database : to 'gameHistorys' collection
