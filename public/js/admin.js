@@ -1187,6 +1187,5 @@ setInterval(refreshTables,5000);
 function refreshTables(){
   reloadgameControllerTable();
   teamStats();
-  //gameCheck()
 }
 
