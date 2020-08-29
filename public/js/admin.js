@@ -933,3 +933,12 @@ function endGame()
     xhttp.send();                                 
 }
 
+
+
+setInterval(refreshTables,5000);
+function refreshTables(){
+  remarkTableData();
+  teamStats();
+  gameCheck()
+}
+
