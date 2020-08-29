@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 body {
+  height: 100vh;
   background: rgb(0, 201, 162);
   background: -moz-linear-gradient(
     315deg,
@@ -33,13 +34,13 @@ body {
   font-size: 1.3em;
 }
 .box {
-  width: 350px;
   padding: 20px;
-  position: absolute;
-  top: 350px;
-  left: 50%;
+  width: 350px;
+  /* transform: translate(-50%, -50%); */
+  /* position: absolute; */
+  /* top: 350px; */
+  /* left: 50%; */
   text-align: center;
-  transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid black;
   border-radius: 10px;
@@ -117,14 +118,11 @@ body {
   color: red;
 }
 footer h6 {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  margin-top: 50px;
 }
-#password-error{
-  border-radius:10px;
-  background-color:whitesmoke;
-  color:red;
-  font-size:1.3rem;
+#password-error {
+  border-radius: 10px;
+  background-color: whitesmoke;
+  color: red;
+  font-size: 1.3rem;
 }
