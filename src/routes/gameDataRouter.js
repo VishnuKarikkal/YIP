@@ -526,7 +526,7 @@ if(votesD!="")
                         }
                     }   
                     break;
-                case "MAR":b
+                case "MAR":
                     if(item.teamName=="NORTH")
                     {
                         if(item.vote=="C")
@@ -541,7 +541,7 @@ if(votesD!="")
                             northBal=Number(northBal)+Number(dm);
                             isCon=true;
                             if(dm>=0){isCon=false}
-                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:da}}).then(console.log("updated"));
+                            gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dm}}).then(console.log("updated"));
                         }
                     }
                     else if(item.teamName=="SOUTH")
