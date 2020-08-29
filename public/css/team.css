@@ -20,6 +20,20 @@ form .nav-link {
 form .nav-link:hover {
   color: rgba(0, 0, 0, 0.8);
 }
+body {
+  /* Background color */
+  background: #00c3ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #9dec35,
+    #00c3ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    -45deg,
+    #9dec35,
+    #00c3ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .team-name {
   font-family: "Grenze Gotisch", cursive;
   /* font-family: 'Rye', cursive; */
@@ -71,9 +85,6 @@ form .nav-link:hover {
   line-height: 26px;
   outline: none;
 }
-#historyMonth {
-  font-family: "Titan One", cursive;
-}
 .row .card-body {
   font-family: "Baloo 2", cursive;
 }
@@ -87,6 +98,7 @@ form .nav-link:hover {
   color: darkorchid;
 }
 #historyMonth {
+  /* Card month font */
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
