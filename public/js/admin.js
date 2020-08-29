@@ -1153,7 +1153,11 @@ function isSliderGreen(Id){
 
 function endGame()
 {   //to end current games and reset all data in the database
-  month = "";
+ 
+  let response = confirm("ARE YOU SURE -(all data will be lost)-?!!");//getting admin response
+  if (response == true)   //if clicked OK
+  {
+    month = "";
   checked = 0; // resetting global variables
   months=[];
   bpChecked=0;
@@ -1178,7 +1182,13 @@ function endGame()
                                     }
                                   }
     xhttp.open("GET",endGameUrl,true);
-    xhttp.send();                                 
+    xhttp.send();   
+  } 
+  else 
+  {
+    alert("action canceled!");
+  }
+                               
 }
 
 

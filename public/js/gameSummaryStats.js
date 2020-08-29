@@ -15,7 +15,7 @@ function teamStats() {
       if (res["message"] != "none") {
         document.getElementById("northBal").innerText = res["balance"];
         NCB = res["balance"];
-    console.log(res['history']);
+    //console.log(res['history']);
         let i = 0;
         while (i < res["history"].length) {
           switch (res["history"][i].month) {
