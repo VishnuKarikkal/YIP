@@ -284,7 +284,7 @@ fetch(activeGameCheckUrl).then(response=>{
 }).then(data=>{
 
   if(data.games.length!=currentActiveMonthLength){
-      currentActiveMonth=data.games.length;
+      currentActiveMonthLength=data.games.length;
       window.location.reload();
   }
 });

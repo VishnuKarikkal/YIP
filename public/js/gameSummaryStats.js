@@ -1674,3 +1674,10 @@ setInterval(() => {
   // console.log(leading);
   document.getElementById("leading").innerText = leading;
 }, 6000);
+setInterval(refreshTables,5000);
+function refreshTables(){
+  statsWest();
+  statsSouth();
+  statsEast();
+  teamStats();
+}
