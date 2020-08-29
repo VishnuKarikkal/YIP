@@ -80,7 +80,7 @@ gameDataRouter.get("/calculateBalance",(req,res)=>
             }
         data.forEach(item=>
             {
-                if(item.teamName=="NORTH")      //storing alances of each team
+                if(item.teamName=="NORTH")      //storing balances of each team
                 {northBal=item.totalBalance;}
                 else if(item.teamName=="SOUTH")
                 {southBal=item.totalBalance;}
@@ -526,7 +526,7 @@ if(votesD!="")
                         }
                     }   
                     break;
-                case "MAR":
+                case "MAR":b
                     if(item.teamName=="NORTH")
                     {
                         if(item.vote=="C")
@@ -538,9 +538,9 @@ if(votesD!="")
                         }
                         else
                         {
-                            northBal=Number(northBal)+Number(da);
+                            northBal=Number(northBal)+Number(dm);
                             isCon=true;
-                            if(da>=0){isCon=false}
+                            if(dm>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:da}}).then(console.log("updated"));
                         }
                     }
