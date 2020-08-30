@@ -11,6 +11,7 @@ var teamHistoryUrl="/game/teamGameHistory";
 var currentActiveMonthLength;
 var team=localStorage.getItem('teamName');
 var name=`name=${team}`;
+var voted=false;
 document.getElementById('teamName').innerText=team;
 
 $(document).ready(function () {
@@ -130,35 +131,37 @@ let votedValue=null;
   })
 })
 document.getElementById('vote').addEventListener('click', event => {
-  let teamName=team.toUpperCase();  //document.getElementById('teamName').innerText
-  let month=document.getElementById('month').innerText;
-  let vote=votedValue;
-  if(vote){
-  $.post('/game/vote' , { teamName:teamName, month:month, vote:vote } )
-.done(function( data ) {
-    console.log( "Data Loaded: " + data.message);
-    teamStats(); //to load team game stats
-  //check if any more active games avilable in the current time
-    window.location.reload();
-                               /*      if(noOfActiveGames>0)   //if games exits
-                                     {
-                                        noOfActiveGames=gamesNotPlayed.length-1;
-                                        document.getElementById('month').innerText=gamesNotPlayed[0].month;
-                                        activeGames.shift();
-                                        //console.log(activeGames)
-                                        document.getElementById('voteOptions').hidden=false;
-                                      }
-                                      else      //no active game
-                                      {
-                                        document.getElementById('month').innerText="No Active Games!";
-                                        document.getElementById('voteOptions').hidden=true;
-                                      }
+    if(!voted) {
+        voted = true;
+        let teamName = team.toUpperCase();  //document.getElementById('teamName').innerText
+        let month = document.getElementById('month').innerText;
+        let vote = votedValue;
+        if (vote) {
+            $.post('/game/vote', {teamName: teamName, month: month, vote: vote})
+                .done(function (data) {
+                    console.log("Data Loaded: " + data.message);
+                    teamStats(); //to load team game stats
+                    //check if any more active games avilable in the current time
+                    window.location.reload();
+                    /*      if(noOfActiveGames>0)   //if games exits
+                          {
+                             noOfActiveGames=gamesNotPlayed.length-1;
+                             document.getElementById('month').innerText=gamesNotPlayed[0].month;
+                             activeGames.shift();
+                             //console.log(activeGames)
+                             document.getElementById('voteOptions').hidden=false;
+                           }
+                           else      //no active game
+                           {
+                             document.getElementById('month').innerText="No Active Games!";
+                             document.getElementById('voteOptions').hidden=true;
+                           }
 */
-  });
-  }
-  else{
-    alert('Please vote!');
-  }
+                });
+        } else {
+            alert('Please vote!');
+        }
+    }
 });
 
 function teamStats()
