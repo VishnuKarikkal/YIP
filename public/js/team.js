@@ -132,11 +132,12 @@ let votedValue=null;
 })
 document.getElementById('vote').addEventListener('click', event => {
     if(!voted) {
-        voted = true;
+
         let teamName = team.toUpperCase();  //document.getElementById('teamName').innerText
         let month = document.getElementById('month').innerText;
         let vote = votedValue;
         if (vote) {
+            voted = true;
             $.post('/game/vote', {teamName: teamName, month: month, vote: vote})
                 .done(function (data) {
                     console.log("Data Loaded: " + data.message);
