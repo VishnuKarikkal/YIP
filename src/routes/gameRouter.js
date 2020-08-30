@@ -109,7 +109,7 @@ gameRouter.post("/addRemarks",(req,res)=>
           teamSummary.findOne({teamName: 'NORTH'}).then(value => {
               let northBalance = Number(value.balance);
                   northBalance += Number(northRemark);
-              teamSummary.findOneAndUpdate({teamName: 'NORTH'}, {balance: northBalance})
+              teamSummary.findOneAndUpdate({teamName: 'NORTH'}, {$set:{balance: northBalance}})
                   .then(value => console.log('updated'));
           })
           //south
@@ -119,7 +119,7 @@ gameRouter.post("/addRemarks",(req,res)=>
               teamSummary.findOne({teamName: 'SOUTH'}).then(value => {
               let southBalance = Number(value.balance);
                   southBalance += Number(southRemark);
-              teamSummary.findOneAndUpdate({teamName: 'SOUTH'}, {balance: southBalance})
+              teamSummary.findOneAndUpdate({teamName: 'SOUTH'}, {$set:{balance: southBalance}})
                   .then(value => console.log('updated'));
           })
           //west
@@ -129,7 +129,7 @@ gameRouter.post("/addRemarks",(req,res)=>
           teamSummary.findOne({teamName: 'WEST'}).then(value => {
               let westBalance = Number(value.balance);
                   westBalance += Number(westRemark);
-              teamSummary.findOneAndUpdate({teamName: 'WEST'}, {balance: westBalance})
+              teamSummary.findOneAndUpdate({teamName: 'WEST'}, {$set:{balance: westBalance}})
                   .then(value => console.log(value));
           })
           //east
@@ -139,7 +139,7 @@ gameRouter.post("/addRemarks",(req,res)=>
           teamSummary.findOne({teamName: 'EAST'}).then(value => {
               let eastBalance = Number(value.balance);
                   eastBalance += Number(eastRemark);
-              teamSummary.findOneAndUpdate({teamName: 'EAST'}, {balance: eastBalance})
+              teamSummary.findOneAndUpdate({teamName: 'EAST'}, {$set:{balance: eastBalance}})
                   .then(value => console.log(value));
           })
 
