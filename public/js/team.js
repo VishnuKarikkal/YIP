@@ -4,6 +4,7 @@ var activeGames=[];
 var historyMonths=[];
 var gamesNotPlayed;
 var activeGameCheckUrl = "/game/activeGame";
+var activeGameStatus="/game/activeGameChange"
 var votePostUrl='/game/vote';
 var teamStatsUrl='/gameData/teamStats';
 var teamHistoryUrl="/game/teamGameHistory";
@@ -277,32 +278,14 @@ function teamStats()
     xhttp.open("GET",teamStatsUrl + "?" + name,true);
     xhttp.send();
 }
-setInterval(checkForActiveGameChanges,10000)
+setInterval(checkForActiveGameChanges,5000)
 function checkForActiveGameChanges(){
-fetch(activeGameCheckUrl).then(response=>{
+fetch(activeGameStatus).then(response=>{
     return response.json();
 }).then(data=>{
-  let activeGames=data.games;
-  if(activeGames.length>0){
-      fetch(teamHistoryUrl + "?" + name)
-          .then(res => res.json())
-          .then(response => {
-              const history = response['history']
-              activeGames.forEach(game => {
-                  let historyMonths = [];
-
-                  history.forEach(item => {
-                      historyMonths.push(item.month);
-                  })
-                  if (!historyMonths.includes(game)) {
-                      gamesNotPlayed.push(game);
-                  }
-                  if(gamesNotPlayed.length>0){
-                      window.location.reload();
-                  }
-              })
-          })
-
-  }
+    console.log(data);
+   if(data.reload){
+       window.location.reload();
+   }
 });
 }

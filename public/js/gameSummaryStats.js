@@ -1646,7 +1646,7 @@ function statsSouth() {
   xhttp.send();
 }
     //to reload data to the summary section on every 6th second
-setInterval(() => {
+function reloadSummaryData(){
   // console.log(NCB, ECB, WCB, SCB);
   let arr = [NCB, ECB, ECB, SCB];
   var largest = arr[0];
@@ -1673,11 +1673,10 @@ setInterval(() => {
   }
   // console.log(leading);
   document.getElementById("leading").innerText = leading;
-}, 6000);
+}
+
 setInterval(refreshTables,5000);
 function refreshTables(){
-  statsWest();
-  statsSouth();
-  statsEast();
   teamStats();
+  reloadSummaryData();
 }

@@ -3,7 +3,7 @@ const gameRouter = express.Router();
 const activatedMonth=require('../Model/activatedMonth')
 const gameHistory = require("../Model/gameHistory");
 const teamSummary=require("../Model/teamSummary");
-
+var activeGameStatus=false;
 gameRouter.get("/activeGame", function (req, res) {
     //to get all months that admin set to 'active' : from 'activemonths' collection
   const activatedMonths=[]; //to hold all months activated
@@ -25,8 +25,11 @@ gameRouter.get("/activeGame", function (req, res) {
       //if none is active
     }
   })
-   
+
 });
+gameRouter.get('/activeGameChange',function(req,res){
+    res.json({reload:activeGameStatus});
+})
 gameRouter.get("/teamGameHistory",(req,res)=>
 {
   let name=req.query.name; //team name
@@ -54,8 +57,11 @@ gameRouter.post("/activate",(req,res)=>
       console.log(doc);
     });
   })
+    activeGameStatus=true;
+    setTimeout(function(){activeGameStatus=false},5000);
   res.send({message:"months activated!"}); 
   //to activate the months selected by the admin while clicking 'activate' btn
+
 });
 gameRouter.post("/vote", function (req, res) {
    teamSummary.findOne({teamName:req.body.teamName}).then((team)=> //fetching finalBalance of the team
@@ -72,6 +78,7 @@ gameRouter.post("/vote", function (req, res) {
    }));
   //saving
    })
+
     //to save the vote of a team into the database : to 'gameHistorys' collection
 });
 gameRouter.post("/publish",(req,res)=>
