@@ -23,7 +23,7 @@
     />
   </head>
   <body onload="gameCheck()">
-    <!-- nav -->
+    <!-- Navigations -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand font-weight-bold" href="#">YAMUNI</a>
       <button
@@ -50,6 +50,11 @@
               >Scoreboard</a
             >
           </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="/doc"
+              >Documentation</a
+            >
+          </li>
         </ul>
         <form class="form-inline my-2">
           <a class="nav-link font-weight-bold ml-n3" href="/" onclick="logout()"
@@ -58,7 +63,8 @@
         </form>
       </div>
     </nav>
-    <!-- Gaming Area -->
+
+    <!-- Heading and Instruction-->
     <div class="container text-center mt-5">
       <!-- TEAM NAME Comes HERE -->
       <h1 id="teamName" class="display-3 team-name"></h1>
@@ -171,6 +177,7 @@
       </div>
     </div>
 
+    <!-- Game Controller -->
     <div class="input-controller container mx-auto my-5 text-center">
       <h1 class="display-4 text-center" id="month">Current Month</h1>
       <div id="voteOptions">
@@ -362,8 +369,9 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+
+    <!-- Animation Speed & Effects -->
     <script>
       var tl = gsap.timeline({ defaults: { duration: 0.5 } });
 
@@ -382,6 +390,8 @@
         )
         .from("footer", { x: 30, opacity: 0 });
     </script>
+
+    <!-- External JavaScript Files -->
     <script src="/js/session.js"></script>
     <script src="/js/team.js"></script>
   </body>
