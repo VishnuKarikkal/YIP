@@ -32,9 +32,7 @@ app.get("/", checkAuth, function (req, res) {
   }
 });
 app.get("/welcome", function (req, res) {
-
-    res.sendFile(__dirname + "/src/views/welcome.html");
-
+  res.sendFile(__dirname + "/src/views/welcome.html");
 });
 app.get("/login", function (req, res) {
   res.sendFile(__dirname + "/src/views/login.html");
@@ -42,6 +40,7 @@ app.get("/login", function (req, res) {
 app.get("/scoreboard", function (req, res) {
   res.sendFile(__dirname + "/src/views/index.html");
 });
+// Admin and Team Routing
 app.get("/gameTeam", checkAuth, function (req, res) {
   if (req.userData.username.toUpperCase() == "ADMIN") {
     res.sendFile(__dirname + "/src/views/adminDashboard.html");
@@ -49,6 +48,7 @@ app.get("/gameTeam", checkAuth, function (req, res) {
     res.sendFile(__dirname + "/src/views/team.html");
   }
 });
+// Admin Authentication and Response
 app.get("/gameAdmin", checkAuth, function (req, res) {
   console.log(req.userData);
   if (req.userData.username.toUpperCase() == "ADMIN") {
@@ -57,6 +57,14 @@ app.get("/gameAdmin", checkAuth, function (req, res) {
     res.send({ message: "you are not allowed to view this page" });
   }
 });
+// Download Documentation
+// app.get("/doc", checkAuth, (req, res) => {
+//   if (req.userData.username.toUpperCase() == "ADMIN") {
+//     res.sendFile(__dirname + "/src/views/adminDoc.pdf");
+//   } else {
+//     res.sendFile(__dirname + "/src/views/teamDoc.pdf");
+//   }
+// });
 
 app.listen(port, () => {
   console.log(`Server running in localhost:${port}`);
