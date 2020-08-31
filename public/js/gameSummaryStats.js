@@ -105,6 +105,7 @@ function fetchTeamStats(team) {
   xhttp.open("GET", teamStatsUrl + `?name=${team}`, true);
   xhttp.send();
 }
+
 function populateTeamStatsRow(month, i, res, l) {
   let amount = res["history"][i].amount;
   if (amount) {
@@ -129,7 +130,7 @@ function populateTeamStatsRow(month, i, res, l) {
     }
     document.getElementById(`R${l}${month}`).innerText = remark;
   } else {
-    document.getElementById(`R${l}${month}`).innerText = "";
+    document.getElementById(`R${l}${month}`).innerText = "0";
   }
 }
 
