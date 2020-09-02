@@ -100,54 +100,51 @@ gameRouter.post("/publish", (req, res) => {
   //to publish the votes of the teams to calculate the results {determines whether contribution or gain}
   //changes 'gameHistorys' collection(amount,isContribute,totalBalance) + 'teamSummary' collection(balance)
 });
-gameRouter.post("/addRemarks", function(req, res) {
+gameRouter.post("/addRemarks", function (req, res) {
   // console.log("reached here");
   console.log(req.body);
   const remarksArray = req.body.remarks;
   const bonus = req.body.bonus;
   const penalty = req.body.penalty;
   remarksArray.forEach(async (month) => {
-      let northRemark = month.north ? bonus : penalty;
-      let southRemark = month.south ? bonus : penalty;
-      let eastRemark = month.east ? bonus : penalty;
-      let westRemark = month.west ? bonus : penalty;
+    let northRemark = month.north ? bonus : penalty;
+    let southRemark = month.south ? bonus : penalty;
+    let eastRemark = month.east ? bonus : penalty;
+    let westRemark = month.west ? bonus : penalty;
 
-      await updateRemarks('NORTH', month.month, northRemark);
-      //north
-      await updateRemarks('SOUTH', month.month, southRemark);
-      //south
-      await updateRemarks('WEST', month.month, westRemark);
-      //west
-      await updateRemarks('EAST', month.month, eastRemark);
-      //east
+    await updateRemarks("NORTH", month.month, northRemark);
+    //north
+    await updateRemarks("SOUTH", month.month, southRemark);
+    //south
+    await updateRemarks("WEST", month.month, westRemark);
+    //west
+    await updateRemarks("EAST", month.month, eastRemark);
+    //east
   });
 });
 
-   function updateRemarks(team,month,remark){
-
-    gameHistory
-      .findOneAndUpdate(
-          { month: month, teamName: team },
-          {
-            remarks: remark,
-          }
-      )
-      .then((value) =>  teamSummary.findOne({ teamName: team }).then((value) => {
+function updateRemarks(team, month, remark) {
+  gameHistory
+    .findOneAndUpdate(
+      { month: month, teamName: team },
+      {
+        remarks: remark,
+      }
+    )
+    .then((value) =>
+      teamSummary.findOne({ teamName: team }).then((value) => {
         let balance = Number(value.balance);
         balance += Number(remark);
-         updateTeamSummary(team,balance);
-
-      } ));
-
+        updateTeamSummary(team, balance);
+      })
+    );
 }
- function updateTeamSummary(team,balance){
-     teamSummary.findOneAndUpdate(
-        { teamName: team },
-        { $set: { balance:balance } }
-    )
-        .then((value) => {
-            console.log(value);
-        });
+function updateTeamSummary(team, balance) {
+  teamSummary
+    .findOneAndUpdate({ teamName: team }, { $set: { balance: balance } })
+    .then((value) => {
+      console.log(value);
+    });
 }
 gameRouter.get("/endGame", (req, res) => {
   //ends all games
@@ -200,7 +197,6 @@ gameRouter.get("/endGame", (req, res) => {
   setTimeout(function () {
     activeGameStatus = false;
   }, 5000);
-
 });
 
 module.exports = gameRouter;
