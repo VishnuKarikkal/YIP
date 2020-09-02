@@ -100,38 +100,33 @@ gameRouter.post("/publish", (req, res) => {
   //to publish the votes of the teams to calculate the results {determines whether contribution or gain}
   //changes 'gameHistorys' collection(amount,isContribute,totalBalance) + 'teamSummary' collection(balance)
 });
-gameRouter.post("/addRemarks", (req, res) => {
+gameRouter.post("/addRemarks", function(req, res) {
   // console.log("reached here");
   console.log(req.body);
   const remarksArray = req.body.remarks;
   const bonus = req.body.bonus;
   const penalty = req.body.penalty;
-  remarksArray.forEach((month) => {
+  remarksArray.forEach(async (month) => {
       let northRemark = month.north ? bonus : penalty;
       let southRemark = month.south ? bonus : penalty;
       let eastRemark = month.east ? bonus : penalty;
       let westRemark = month.west ? bonus : penalty;
-      //north
-      updateRemarks('NORTH', month.month, northRemark).then(value => {
-          //north
-          updateRemarks('SOUTH', month.month, southRemark).then(value => {
-              //south
-              updateRemarks('WEST', month.month, westRemark).then(value => {
-                  //west
-                  updateRemarks('EAST', month.month, eastRemark).then(value => {
-                      //east
-                      console.log('all updated properly');
-                  })
-              })
-          })
 
-      });
-  });
+      await updateRemarks('NORTH', month.month, northRemark);
+      //north
+      await updateRemarks('SOUTH', month.month, southRemark);
+      //south
+       await updateRemarks('WEST', month.month, westRemark);
+      //west
+       await updateRemarks('EAST', month.month, eastRemark);
+      //east
+
+
 });
 
-async function updateRemarks(team,month,remark){
+   function updateRemarks(team,month,remark){
 
-  await gameHistory
+    gameHistory
       .findOneAndUpdate(
           { month: month, teamName: team },
           {
@@ -146,8 +141,8 @@ async function updateRemarks(team,month,remark){
       } ));
 
 }
-async function updateTeamSummary(team,balance){
-    await teamSummary.findOneAndUpdate(
+ function updateTeamSummary(team,balance){
+     teamSummary.findOneAndUpdate(
         { teamName: team },
         { $set: { balance:balance } }
     )
