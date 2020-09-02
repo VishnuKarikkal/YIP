@@ -112,86 +112,37 @@ gameRouter.post("/addRemarks", (req, res) => {
     let eastRemark = month.east ? bonus : penalty;
     let westRemark = month.west ? bonus : penalty;
     //north
-    gameHistory
-      .findOneAndUpdate(
-        { month: month.month, teamName: "NORTH" },
-        {
-          remarks: northRemark,
-        }
-      )
-      .then((value) => console.log(value));
-    teamSummary.findOne({ teamName: "NORTH" }).then((value) => {
-      let northBalance = Number(value.balance);
-      northBalance += Number(northRemark);
-      teamSummary
-        .findOneAndUpdate(
-          { teamName: "NORTH" },
-          { $set: { balance: northBalance } }
-        )
-        .then((value) => console.log("updated"));
-    });
+   updateRemarks('NORTH',month.month,northRemark);
     //south
-    gameHistory
-      .findOneAndUpdate(
-        { month: month.month, teamName: "SOUTH" },
-        {
-          remarks: southRemark,
-        }
-      )
-      .then((value) => console.log(value));
-    teamSummary.findOne({ teamName: "SOUTH" }).then((value) => {
-      let southBalance = Number(value.balance);
-      southBalance += Number(southRemark);
-      teamSummary
-        .findOneAndUpdate(
-          { teamName: "SOUTH" },
-          { $set: { balance: southBalance } }
-        )
-        .then((value) => console.log("updated"));
-    });
+   updateRemarks('SOUTH',month.month,southRemark);
     //west
-    gameHistory
-      .findOneAndUpdate(
-        { month: month.month, teamName: "WEST" },
-        {
-          remarks: westRemark,
-        }
-      )
-      .then((value) => console.log(value));
-    teamSummary.findOne({ teamName: "WEST" }).then((value) => {
-      let westBalance = Number(value.balance);
-      westBalance += Number(westRemark);
-      teamSummary
-        .findOneAndUpdate(
-          { teamName: "WEST" },
-          { $set: { balance: westBalance } }
-        )
-        .then((value) => console.log(value));
-    });
+    updateRemarks('WEST',month.month,westRemark);
     //east
-    gameHistory
-      .findOneAndUpdate(
-        { month: month.month, teamName: "EAST" },
-        {
-          remarks: eastRemark,
-        }
-      )
-      .then((value) => console.log(value));
-    teamSummary.findOne({ teamName: "EAST" }).then((value) => {
-      let eastBalance = Number(value.balance);
-      eastBalance += Number(eastRemark);
-      teamSummary
-        .findOneAndUpdate(
-          { teamName: "EAST" },
-          { $set: { balance: eastBalance } }
-        )
-        .then((value) => console.log(value));
-    });
+    updateRemarks('EAST',month.month,eastRemark);
   });
-  //to add bonus/penalty to the balances of each team whose votes are published
-  //changes 'gameHistorys' collection(ramarks) + 'teamSummary' collection(balance)
+
 });
 
+function updateRemarks(team,month,remark){
+  gameHistory
+      .findOneAndUpdate(
+          { month: month, teamName: team },
+          {
+            remarks: remark,
+          }
+      )
+      .then((value) =>  teamSummary.findOne({ teamName: team }).then((value) => {
+        let balance = Number(value.balance);
+        balance += Number(remark);
+        teamSummary
+            .findOneAndUpdate(
+                { teamName: team },
+                { $set: { balance:balance } }
+            )
+            .then((value) => console.log(value));
+      } ));
+
+}
 gameRouter.get("/endGame", (req, res) => {
   //ends all games
   //clears gamedatas (removes all documents) ,
