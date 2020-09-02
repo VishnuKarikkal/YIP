@@ -112,9 +112,9 @@ gameRouter.post("/addRemarks", (req, res) => {
     let eastRemark = month.east ? bonus : penalty;
     let westRemark = month.west ? bonus : penalty;
     //north
-   updateRemarks('NORTH',month.month,northRemark);
+  updateRemarks('NORTH',month.month,northRemark);
     //south
-   updateRemarks('SOUTH',month.month,southRemark);
+  updateRemarks('SOUTH',month.month,southRemark);
     //west
     updateRemarks('WEST',month.month,westRemark);
     //east
@@ -189,6 +189,10 @@ gameRouter.get("/endGame", (req, res) => {
       }
     }
   );
+  activeGameStatus = true;
+  setTimeout(function () {
+    activeGameStatus = false;
+  }, 5000);
 });
 
 module.exports = gameRouter;
