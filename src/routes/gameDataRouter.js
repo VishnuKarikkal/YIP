@@ -624,7 +624,6 @@ if(votesD!="")
                             isCon=true;
                             if(ca>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:ca}}).then(console.log("updated"));
-                        
                         }
                         else
                         {
@@ -632,7 +631,6 @@ if(votesD!="")
                             isCon=true;
                             if(da>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:da}}).then(console.log("updated"));
-                          
                         }
                     }
                     else if(item.teamName=="EAST")
@@ -643,7 +641,6 @@ if(votesD!="")
                             isCon=true;
                             if(ca>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:ca}}).then(console.log("updated"));
-                        
                         }
                         else
                         {
@@ -651,7 +648,6 @@ if(votesD!="")
                             isCon=true;
                             if(da>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:da}}).then(console.log("updated"));
-                        
                         }
                     }
                     else
@@ -662,7 +658,6 @@ if(votesD!="")
                             isCon=true;
                             if(ca>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:ca}}).then(console.log("updated"));
-                        
                         }
                         else
                         {
@@ -670,7 +665,6 @@ if(votesD!="")
                             isCon=true;
                             if(da>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:da}}).then(console.log("updated"));
-                           
                         }
                     }   
                     break;
@@ -691,7 +685,6 @@ if(votesD!="")
                             isCon=true;
                             if(dmy>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:dmy}}).then(console.log("updated"));
-                        
                         }
                     }
                     else if(item.teamName=="SOUTH")
@@ -748,7 +741,6 @@ if(votesD!="")
                             isCon=true;
                             if(dmy>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:dmy}}).then(console.log("updated"));
-                         
                         }
                     }   
                     break;
@@ -761,7 +753,6 @@ if(votesD!="")
                             isCon=true;
                             if(cjn>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:cjn}}).then(console.log("updated"));
-                        
                         }
                         else
                         {
@@ -769,7 +760,6 @@ if(votesD!="")
                             isCon=true;
                             if(djn>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:northBal,amount:djn}}).then(console.log("updated"));
-                        
                         }
                     }
                     else if(item.teamName=="SOUTH")
@@ -780,7 +770,6 @@ if(votesD!="")
                             isCon=true;
                             if(cjn>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:cjn}}).then(console.log("updated"));
-                        
                         }
                         else
                         {
@@ -788,7 +777,6 @@ if(votesD!="")
                             isCon=true;
                             if(djn>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:southBal,amount:djn}}).then(console.log("updated"));
-                          
                         }
                     }
                     else if(item.teamName=="EAST")
@@ -799,7 +787,6 @@ if(votesD!="")
                             isCon=true;
                             if(cjn>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:cjn}}).then(console.log("updated"));
-                        
                         }
                         else
                         {
@@ -807,7 +794,6 @@ if(votesD!="")
                             isCon=true;
                             if(djn>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:eastBal,amount:djn}}).then(console.log("updated"));
-                        
                         }
                     }
                     else
@@ -826,7 +812,6 @@ if(votesD!="")
                             isCon=true;
                             if(djn>=0){isCon=false}
                             gameHistory.updateOne({teamName:item.teamName,month:item.month},{$set:{isContribute:isCon,totalBalance:westBal,amount:djn}}).then(console.log("updated"));
-                        
                         }
                     }   
                     break;

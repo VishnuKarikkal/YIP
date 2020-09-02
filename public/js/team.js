@@ -169,7 +169,7 @@ function teamStats() {
       var res = JSON.parse(this.responseText);
 
       if (res["message"] != "none") {
-        document.getElementById("balance").innerText = res["balance"];
+        document.getElementById("balance").innerText = res["balance"].toFixed(3);
 
         let i = 0;
         while (i < res["history"].length) {

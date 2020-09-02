@@ -7,7 +7,6 @@ var prevgameData;
 var gameCheckUrl = "/gameData/gameStats";
 var calculateBalanceUrl = "/gameData/calculateBalance";
 var readyForRemarksUrl = "/gameData/readyForRemarks";
-
 var postRemarksUrl = "/game/addRemarks";
 var endGameUrl = "/game/endGame";
 
