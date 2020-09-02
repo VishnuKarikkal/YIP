@@ -112,19 +112,28 @@ gameRouter.post("/addRemarks", (req, res) => {
     let eastRemark = month.east ? bonus : penalty;
     let westRemark = month.west ? bonus : penalty;
     //north
-   updateRemarks('NORTH',month.month,northRemark);
-    //south
-   updateRemarks('SOUTH',month.month,southRemark);
-    //west
-    updateRemarks('WEST',month.month,westRemark);
-    //east
-    updateRemarks('EAST',month.month,eastRemark);
+    updateRemarks('NORTH',month.month,northRemark).then(value =>{
+        //north
+        updateRemarks('SOUTH',month.month,southRemark).then(value=>{
+            //south
+            updateRemarks('WEST',month.month,westRemark).then(value=>{
+                //west
+                updateRemarks('EAST',month.month,eastRemark).then(value=>{
+                    //east
+                    console.log('all updated properly');
+                })
+            })
+        })
+    } );
+
+
   });
 
 });
 
-function updateRemarks(team,month,remark){
-  gameHistory
+async function updateRemarks(team,month,remark){
+
+  await gameHistory
       .findOneAndUpdate(
           { month: month, teamName: team },
           {
@@ -134,14 +143,19 @@ function updateRemarks(team,month,remark){
       .then((value) =>  teamSummary.findOne({ teamName: team }).then((value) => {
         let balance = Number(value.balance);
         balance += Number(remark);
-        teamSummary
-            .findOneAndUpdate(
-                { teamName: team },
-                { $set: { balance:balance } }
-            )
-            .then((value) => console.log(value));
+         updateTeamSummary(team,balance);
+
       } ));
 
+}
+async function updateTeamSummary(team,balance){
+    await teamSummary.findOneAndUpdate(
+        { teamName: team },
+        { $set: { balance:balance } }
+    )
+        .then((value) => {
+            console.log(value);
+        });
 }
 gameRouter.get("/endGame", (req, res) => {
   //ends all games
@@ -189,6 +203,7 @@ gameRouter.get("/endGame", (req, res) => {
       }
     }
   );
+
 });
 
 module.exports = gameRouter;
