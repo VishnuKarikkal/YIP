@@ -116,12 +116,11 @@ gameRouter.post("/addRemarks", function(req, res) {
       //north
       await updateRemarks('SOUTH', month.month, southRemark);
       //south
-       await updateRemarks('WEST', month.month, westRemark);
+      await updateRemarks('WEST', month.month, westRemark);
       //west
-       await updateRemarks('EAST', month.month, eastRemark);
+      await updateRemarks('EAST', month.month, eastRemark);
       //east
-
-
+  });
 });
 
    function updateRemarks(team,month,remark){
