@@ -58,8 +58,16 @@ body {
 }
 .input-controller {
   padding: 5px;
-  border: 2px solid red;
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.game-stats {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+.game-history-box {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .display-4,
 .game-history {
@@ -84,6 +92,9 @@ body {
   font-size: 14px;
   line-height: 26px;
   outline: none;
+}
+.row .card {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 .row .card-body {
   font-family: "Baloo 2", cursive;

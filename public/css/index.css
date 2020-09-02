@@ -52,7 +52,10 @@ a {
 }
 .scoreboard-box,
 .stat-box {
-  background-color: rgba(0, 255, 255, 0.7);
+  /* background-color: rgba(0, 255, 255, 0.6); */
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 10px;
 }
 .stats-tbody td {
   font-weight: bold;

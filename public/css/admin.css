@@ -61,6 +61,9 @@ form .nav-link:hover {
 .instructions {
   font-family: "Piedra", cursive;
 }
+.modal-content{
+  background-color: rgba(255, 255, 255, 0.5);
+}
 .panel {
   display: flex;
   position: relative;
@@ -142,6 +145,13 @@ input:checked + .slider:before {
 }
 .stats-tbody td{
   font-weight: bold;
+}
+.stat-box,
+.scoreboard-box {
+  /* background-color: rgba(0, 255, 255, 0.6); */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 10px;
 }
 footer {
   position: relative;
