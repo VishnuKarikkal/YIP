@@ -107,28 +107,26 @@ gameRouter.post("/addRemarks", (req, res) => {
   const bonus = req.body.bonus;
   const penalty = req.body.penalty;
   remarksArray.forEach((month) => {
-    let northRemark = month.north ? bonus : penalty;
-    let southRemark = month.south ? bonus : penalty;
-    let eastRemark = month.east ? bonus : penalty;
-    let westRemark = month.west ? bonus : penalty;
-    //north
-    updateRemarks('NORTH',month.month,northRemark).then(value =>{
-        //north
-        updateRemarks('SOUTH',month.month,southRemark).then(value=>{
-            //south
-            updateRemarks('WEST',month.month,westRemark).then(value=>{
-                //west
-                updateRemarks('EAST',month.month,eastRemark).then(value=>{
-                    //east
-                    console.log('all updated properly');
-                })
-            })
-        })
-    } );
+      let northRemark = month.north ? bonus : penalty;
+      let southRemark = month.south ? bonus : penalty;
+      let eastRemark = month.east ? bonus : penalty;
+      let westRemark = month.west ? bonus : penalty;
+      //north
+      updateRemarks('NORTH', month.month, northRemark).then(value => {
+          //north
+          updateRemarks('SOUTH', month.month, southRemark).then(value => {
+              //south
+              updateRemarks('WEST', month.month, westRemark).then(value => {
+                  //west
+                  updateRemarks('EAST', month.month, eastRemark).then(value => {
+                      //east
+                      console.log('all updated properly');
+                  })
+              })
+          })
 
-
+      });
   });
-
 });
 
 async function updateRemarks(team,month,remark){
@@ -203,6 +201,11 @@ gameRouter.get("/endGame", (req, res) => {
       }
     }
   );
+
+  activeGameStatus = true;
+  setTimeout(function () {
+    activeGameStatus = false;
+  }, 5000);
 
 });
 
