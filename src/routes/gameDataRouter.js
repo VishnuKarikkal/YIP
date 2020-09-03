@@ -94,32 +94,18 @@ gameDataRouter.get("/calculateBalance", (req, res) => {
     if (!data) {
       res.send({ message: "none" });
     }
-    teamSummary.find().then((teams)=>
-      {
-        teams.forEach((team) => {
-          if (team.teamName == "NORTH") {
-            //storing balances of each team
-            northBal = team.totalBalance;
-          } else if (team.teamName == "SOUTH") {
-            southBal = team.totalBalance;
-          } else if (team.teamName == "EAST") {
-            eastBal = team.totalBalance;
-          } else {
-            westBal = team.totalBalance;
-          }
-      })
-    });
+    
     data.forEach((item) => {
-     // if (item.teamName == "NORTH") {
+      if (item.teamName == "NORTH") {
         //storing balances of each team
-     //   northBal = item.totalBalance;
-      //} else if (item.teamName == "SOUTH") {
-       // southBal = item.totalBalance;
-      //} else if (item.teamName == "EAST") {
-      //  eastBal = item.totalBalance;
-      //} else {
-       // westBal = item.totalBalance;
-      //}
+       northBal = item.totalBalance;
+      } else if (item.teamName == "SOUTH") {
+        southBal = item.totalBalance;
+      } else if (item.teamName == "EAST") {
+        eastBal = item.totalBalance;
+      } else {
+       westBal = item.totalBalance;
+      }
      
       //getting combination of votes of each team for each month
       switch (item.month) {
