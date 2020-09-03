@@ -21,7 +21,7 @@ gameDataRouter.get("/teamStats", function (req, res) {
             balance=data.balance;
         }
 //fetching gamedata
-        gameHistory.find({teamName:name}).then((data)=>
+        gameHistory.find({teamName:name,amount:{$ne:null}}).then((data)=>
             {console.log(data)
                 if(data!=null)
                 {
