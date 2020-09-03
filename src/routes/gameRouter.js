@@ -46,7 +46,7 @@ gameRouter.get("/teamGameHistory", (req, res) => {
 });
 
 gameRouter.post("/activate", (req, res) => {
-  console.log(req.body.activateMonths);
+  // console.log(req.body.activateMonths);
   let months = req.body.activateMonths; // array of months
   months.forEach((month) => {
     activatedMonth.updateOne(
@@ -106,51 +106,47 @@ gameRouter.post("/addRemarks", function (req, res) {
   const remarksArray = req.body.remarks;
   const bonus = req.body.bonus;
   const penalty = req.body.penalty;
-  let northBalance,southBalance,eastBalance,westBalance;
-  teamSummary.find({ }).then((teams) => {
-    teams.forEach((team)=>{
-      if(team.teamName=='NORTH'){
-         northBalance  = Number(team.balance);
-      }
-      else if(team.teamName=='SOUTH'){
-         southBalance  = Number(team.balance);
-      }
-      else if(team.teamName=='EAST'){
-         eastBalance  = Number(team.balance);
-      }
-      else if(team.teamName=='WEST'){
-         westBalance  = Number(team.balance);
-      }
+  let northBalance, southBalance, eastBalance, westBalance;
+  teamSummary
+    .find({})
+    .then((teams) => {
+      teams.forEach((team) => {
+        if (team.teamName == "NORTH") {
+          northBalance = Number(team.balance);
+        } else if (team.teamName == "SOUTH") {
+          southBalance = Number(team.balance);
+        } else if (team.teamName == "EAST") {
+          eastBalance = Number(team.balance);
+        } else if (team.teamName == "WEST") {
+          westBalance = Number(team.balance);
+        }
+      });
     })
-  }).then(
-      ()=>{
-        remarksArray.forEach((month) => {
-          let northRemark = month.north ? bonus : penalty;
-          let southRemark = month.south ? bonus : penalty;
-          let eastRemark = month.east ? bonus : penalty;
-          let westRemark = month.west ? bonus : penalty;
+    .then(() => {
+      remarksArray.forEach((month) => {
+        let northRemark = month.north ? bonus : penalty;
+        let southRemark = month.south ? bonus : penalty;
+        let eastRemark = month.east ? bonus : penalty;
+        let westRemark = month.west ? bonus : penalty;
 
-          updateRemarks("NORTH", month.month, northRemark);
-          //north
-          updateRemarks("SOUTH", month.month, southRemark);
-          //south
-          updateRemarks("WEST", month.month, westRemark);
-          //west
-          updateRemarks("EAST", month.month, eastRemark);
-          northBalance+=parseFloat(northRemark);
-          southBalance+=parseFloat(southRemark);
-          westBalance+=parseFloat(westRemark);
-          eastBalance+=parseFloat(eastRemark);
-          //east
-        });
-        updateTeamSummary('NORTH',northBalance);
-        updateTeamSummary('SOUTH',southBalance);
-        updateTeamSummary('WEST',westBalance);
-        updateTeamSummary('EAST',eastBalance);
-      }
-
-  )
-
+        updateRemarks("NORTH", month.month, northRemark);
+        //north
+        updateRemarks("SOUTH", month.month, southRemark);
+        //south
+        updateRemarks("WEST", month.month, westRemark);
+        //west
+        updateRemarks("EAST", month.month, eastRemark);
+        northBalance += parseFloat(northRemark);
+        southBalance += parseFloat(southRemark);
+        westBalance += parseFloat(westRemark);
+        eastBalance += parseFloat(eastRemark);
+        //east
+      });
+      updateTeamSummary("NORTH", northBalance);
+      updateTeamSummary("SOUTH", southBalance);
+      updateTeamSummary("WEST", westBalance);
+      updateTeamSummary("EAST", eastBalance);
+    });
 });
 
 function updateRemarks(team, month, remark) {
@@ -161,9 +157,7 @@ function updateRemarks(team, month, remark) {
         remarks: remark,
       }
     )
-    .then((value) =>
-        console.log(value)
-    );
+    .then((value) => console.log(value));
 }
 function updateTeamSummary(team, balance) {
   teamSummary
@@ -187,7 +181,7 @@ gameRouter.get("/endGame", (req, res) => {
         //if error - aborting
         res.json({ message: "none" });
       } else {
-        console.log(data);
+        // console.log(data);
         console.log("gamedatas cleared!");
       }
     }
@@ -200,7 +194,7 @@ gameRouter.get("/endGame", (req, res) => {
       if (err) {
         res.json({ message: "none" });
       } else {
-        console.log(data);
+        // console.log(data);
         console.log("activated months resetted!");
       }
     }
@@ -213,7 +207,7 @@ gameRouter.get("/endGame", (req, res) => {
       if (err) {
         res.json({ message: "none" });
       } else {
-        console.log(data);
+        // console.log(data);
         console.log("teamsummary resetted!");
       }
     }

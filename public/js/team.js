@@ -27,7 +27,7 @@ $(document).ready(function () {
       } else {
         optionVoted = "D";
       }
-      console.log(optionVoted);
+      // console.log(optionVoted);
     });
   });
 });
@@ -44,7 +44,7 @@ function gameCheck() {
       if (res["message"] != "none") {
         //if any active
         activeGames = res["games"];
-        console.log("1");
+        // console.log("1");
       } //no active game
       else {
         document.getElementById("month").innerText = "No Active Games!";
@@ -58,8 +58,8 @@ function gameCheck() {
 
   xhttp.open("GET", activeGameCheckUrl + "?" + name, false);
   xhttp.send();
-  console.log("2");
-  console.log(activeGames);
+  // console.log("2");
+  // console.log(activeGames);
   if (activeGames.length > 0) {
     //if active games exist
     currentActiveMonthLength = activeGames.length;
@@ -120,7 +120,7 @@ let voteBtns = document.getElementsByClassName("vote-btn");
 [...voteBtns].forEach(function (btn) {
   btn.addEventListener("click", function (btn) {
     votedValue = btn.target.innerText;
-    console.log(votedValue);
+    // console.log(votedValue);
   });
 });
 
@@ -169,7 +169,9 @@ function teamStats() {
       var res = JSON.parse(this.responseText);
 
       if (res["message"] != "none") {
-        document.getElementById("balance").innerText = res["balance"].toFixed(3);
+        document.getElementById("balance").innerText = res["balance"].toFixed(
+          3
+        );
 
         let i = 0;
         while (i < res["history"].length) {
@@ -283,7 +285,7 @@ function checkForActiveGameChanges() {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       if (data.reload) {
         window.location.reload();
       }

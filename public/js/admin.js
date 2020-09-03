@@ -495,7 +495,7 @@ function calculateLossOrGain() {
       var res = JSON.parse(this.responseText);
 
       if (res["message"] != "none") {
-        console.log(res["message"]);
+        // console.log(res["message"]);
         remarkTableData();
         gameCheck();
         document.getElementById("activateMonthBtn").disabled = true;
