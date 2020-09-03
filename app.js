@@ -60,7 +60,7 @@ app.get("/gameAdmin", checkAuth, function (req, res) {
 // Download Documentation
 app.get("/doc", checkAuth, (req, res) => {
   if (req.userData.username.toUpperCase() == "ADMIN") {
-    res.sendFile(__dirname + "/public/doc/TeamManual.pdf");
+    res.sendFile(__dirname + "/public/doc/AdminManual.pdf");
   } else {
     res.sendFile(__dirname + "/public/doc/TeamManual.pdf");
   }
