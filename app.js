@@ -58,13 +58,13 @@ app.get("/gameAdmin", checkAuth, function (req, res) {
   }
 });
 // Download Documentation
-// app.get("/doc", checkAuth, (req, res) => {
-//   if (req.userData.username.toUpperCase() == "ADMIN") {
-//     res.sendFile(__dirname + "/src/views/adminDoc.pdf");
-//   } else {
-//     res.sendFile(__dirname + "/src/views/teamDoc.pdf");
-//   }
-// });
+app.get("/doc", checkAuth, (req, res) => {
+  if (req.userData.username.toUpperCase() == "ADMIN") {
+    res.sendFile(__dirname + "/public/doc/TeamManual.pdf");
+  } else {
+    res.sendFile(__dirname + "/public/doc/TeamManual.pdf");
+  }
+});
 
 app.listen(port, () => {
   console.log(`Server running in localhost:${port}`);
