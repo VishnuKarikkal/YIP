@@ -2668,7 +2668,7 @@ gameDataRouter.get("/calculateBalance", (req, res) => {
                 )
                 .then(console.log("updated"));
             } else {
-              northBal = northBal + dd;
+              northBal = Number(northBal) + Number(dd);
               isCon = true;
               if (dd >= 0) {
                 isCon = false;
@@ -2706,7 +2706,7 @@ gameDataRouter.get("/calculateBalance", (req, res) => {
                 )
                 .then(console.log("updated"));
             } else {
-              southBal = southBal + dd;
+              southBal = Number(southBal) + Number(dd);
               isCon = true;
               if (dd >= 0) {
                 isCon = false;
