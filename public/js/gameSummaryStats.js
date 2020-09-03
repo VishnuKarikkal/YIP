@@ -137,7 +137,7 @@ function populateTeamStatsRow(month, i, res, l) {
 //to reload data to the summary section on every 6th second
 function reloadSummaryData() {
   // console.log(NCB, ECB, WCB, SCB);
-  let arr = [NCB, ECB, ECB, SCB];
+  let arr = [NCB, ECB, WCB, SCB];
   var largest = arr[0];
 
   for (var i = 0; i < arr.length; i++) {
