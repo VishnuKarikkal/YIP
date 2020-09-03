@@ -112,13 +112,13 @@ gameRouter.post("/addRemarks", function (req, res) {
     .then((teams) => {
       teams.forEach((team) => {
         if (team.teamName == "NORTH") {
-          northBalance = Number(team.balance);
+          northBalance = parseFloat(team.balance);
         } else if (team.teamName == "SOUTH") {
-          southBalance = Number(team.balance);
+          southBalance = parseFloat(team.balance);
         } else if (team.teamName == "EAST") {
-          eastBalance = Number(team.balance);
+          eastBalance = parseFloat(team.balance);
         } else if (team.teamName == "WEST") {
-          westBalance = Number(team.balance);
+          westBalance = parseFloat(team.balance);
         }
       });
     })
