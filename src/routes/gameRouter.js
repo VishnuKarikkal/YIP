@@ -106,21 +106,51 @@ gameRouter.post("/addRemarks", function (req, res) {
   const remarksArray = req.body.remarks;
   const bonus = req.body.bonus;
   const penalty = req.body.penalty;
-  remarksArray.forEach(async (month) => {
-    let northRemark = month.north ? bonus : penalty;
-    let southRemark = month.south ? bonus : penalty;
-    let eastRemark = month.east ? bonus : penalty;
-    let westRemark = month.west ? bonus : penalty;
+  let northBalance,southBalance,eastBalance,westBalance;
+  teamSummary.find({ }).then((teams) => {
+    teams.forEach((team)=>{
+      if(team.teamName=='NORTH'){
+         northBalance  = Number(team.balance);
+      }
+      else if(team.teamName=='SOUTH'){
+         southBalance  = Number(team.balance);
+      }
+      else if(team.teamName=='EAST'){
+         eastBalance  = Number(team.balance);
+      }
+      else if(team.teamName=='WEST'){
+         westBalance  = Number(team.balance);
+      }
+    })
+  }).then(
+      ()=>{
+        remarksArray.forEach((month) => {
+          let northRemark = month.north ? bonus : penalty;
+          let southRemark = month.south ? bonus : penalty;
+          let eastRemark = month.east ? bonus : penalty;
+          let westRemark = month.west ? bonus : penalty;
 
-    await updateRemarks("NORTH", month.month, northRemark);
-    //north
-    await updateRemarks("SOUTH", month.month, southRemark);
-    //south
-    await updateRemarks("WEST", month.month, westRemark);
-    //west
-    await updateRemarks("EAST", month.month, eastRemark);
-    //east
-  });
+          updateRemarks("NORTH", month.month, northRemark);
+          //north
+          updateRemarks("SOUTH", month.month, southRemark);
+          //south
+          updateRemarks("WEST", month.month, westRemark);
+          //west
+          updateRemarks("EAST", month.month, eastRemark);
+          northBalance+=parseFloat(northRemark);
+          southBalance+=parseFloat(southRemark);
+          westBalance+=parseFloat(westRemark);
+          eastBalance+=parseFloat(eastRemark);
+          //east
+        });
+        updateTeamSummary('NORTH',northBalance);
+        updateTeamSummary('SOUTH',southBalance);
+        updateTeamSummary('WEST',westBalance);
+        updateTeamSummary('EAST',eastBalance);
+      }
+
+  )
+
 });
 
 function updateRemarks(team, month, remark) {
@@ -132,11 +162,7 @@ function updateRemarks(team, month, remark) {
       }
     )
     .then((value) =>
-      teamSummary.findOne({ teamName: team }).then((value) => {
-        let balance = Number(value.balance);
-        balance += Number(remark);
-        updateTeamSummary(team, balance);
-      })
+        console.log(value)
     );
 }
 function updateTeamSummary(team, balance) {
